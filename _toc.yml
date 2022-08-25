@@ -5,12 +5,45 @@ format: jb-book
 root: intro
 parts:
   - caption: Getting started
+    numbered: True
     chapters:
-      - file: docs/introduction
+      - file: docs/1.0_introduction
       - file: docs/prerequisites
       - file: docs/gettingstarted
       - file: docs/license
   - caption: NeuroMiner interface
+    numbered: True
     chapters:
-      - file: docs/mainmenu
+      - file: docs/3.0_mainmenu
       - file: docs/3.1_mainmenu_input_data
+
+    # - caption: Define parameter template
+    #   chapters:
+    #   - file: docs/3.2_mainmenu_define_parameter_template
+    #   - file: docs/3.2.01_cross-validation_settings
+    #   - file: docs/3.2.001_data_fusion
+    #   - file: docs/3.2.03_classification_algorithm
+    #   - file: docs/3.2.04_learning_algorithm_parameters
+    #   - file: docs/3.2.05_ensemble_generation_strategies
+    #   - file: docs/3.2.06_visualization_options
+    #   - file: docs/3.2.07_model_saving_options
+    #   - file: docs/3.2.08_save_parameter_template
+    #   - file: docs/3.2.09_load_training_template
+    #   - file: docs/3.2.10_define_verbosity_level
+    #   - file: docs/3.2.11_multigroup
+    #   - file: docs/3.2.11_stacking
+    # - caption: Model training
+    #   chapters:
+    #   - files: docs/3.3_initialize_delete_analyses
+    #   - files: docs/3.4_preprocess_features
+    #   - files: docs/3.5_train_supervised_classifiers
+    #   - files: docs/3.6_visualize_classifiers
+    #   - files: docs/3.7_display_training_results
+    #   - files: docs/3.8_generate_master_files
+    #   - files: docs/3.9_OOCV_analysis
+    # - caption: Examples
+    #   chapters:
+    #   - files: docs/3.10_Example
+    # - caption: Reporting errors
+    #   chapters:
+    #   - files: docs/knownissues
