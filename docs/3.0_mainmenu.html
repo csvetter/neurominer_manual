@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Main Interface &#8212; NeuroMiner Manual</title>
+    <title>5. Load NeuroMiner structure &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Input data into NM {#mainmenu_3.1_input_data}" href="3.1_mainmenu_input_data.html" />
+    <link rel="next" title="11. SPM" href="3.1_mainmenu_input_data.html" />
     <link rel="prev" title="4. License" href="license.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -120,8 +120,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   1. NeuroMiner
+  <a class="reference internal" href="1.0_introduction.html">
+   1. Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -148,12 +148,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   5. Main Interface
+   5. Load NeuroMiner structure
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.1_mainmenu_input_data.html">
-   6. Input data into NM {#mainmenu_3.1_input_data}
+   11. SPM
   </a>
  </li>
 </ul>
@@ -221,6 +221,51 @@ title="Fullscreen mode"
 
 </button>
 
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.0_mainmenu.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
       aria-label="Download this page">
@@ -229,7 +274,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/mainmenu.md"
+        <a href="../_sources/docs/3.0_mainmenu.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -288,74 +333,74 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-neurominer-structure">
-   5.1. Load NeuroMiner structure
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Load NeuroMiner structure
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#save-neurominer-structure">
-   5.2. Save NeuroMiner structure
+   6. Save NeuroMiner structure
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clear-neurominer-structure">
-   5.3. Clear NeuroMiner structure
+   7. Clear NeuroMiner structure
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#change-working-directory">
-   5.4. Change Working Directory
+   8. Change Working Directory
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#open-manual">
-   5.5. Open Manual
+   9. Open Manual
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utilities">
-   5.6. Utilities
+   10. Utilities
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-root-paths-of-neuroimaging-tools-spm-freesurfer">
-     5.6.1. 1: Set root paths of neuroimaging tools (SPM/FreeSurfer)
+     10.1. 1: Set root paths of neuroimaging tools (SPM/FreeSurfer)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-preprocdata-path-master">
-     5.6.2. 2: Create PreprocData path master
+     10.2. 2: Create PreprocData path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-cvdatamat-path-master">
-     5.6.3. 3: Create CVdatamat path master
+     10.3. 3: Create CVdatamat path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-cvresults-path-master">
-     5.6.4. 4: Create CVresults path master
+     10.4. 4: Create CVresults path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-visdatamat-path-master">
-     5.6.5. 5: Create VISdatamat path master
+     10.5. 5: Create VISdatamat path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-optpreprocparam-path-master">
-     5.6.6. 6: Create OptPreprocParam path master
+     10.6. 6: Create OptPreprocParam path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-optmodel-path-master">
-     5.6.7. 7: Create OptModel path master
+     10.7. 7: Create OptModel path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#update-analyses-paths-to-new-root-directory">
-     5.6.8. 8: Update analyses’ paths to new root directory
+     10.8. 8: Update analyses’ paths to new root directory
     </a>
    </li>
   </ul>
@@ -369,7 +414,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Main Interface</h1>
+                <h1>Load NeuroMiner structure</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -379,74 +424,74 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-neurominer-structure">
-   5.1. Load NeuroMiner structure
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Load NeuroMiner structure
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#save-neurominer-structure">
-   5.2. Save NeuroMiner structure
+   6. Save NeuroMiner structure
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clear-neurominer-structure">
-   5.3. Clear NeuroMiner structure
+   7. Clear NeuroMiner structure
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#change-working-directory">
-   5.4. Change Working Directory
+   8. Change Working Directory
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#open-manual">
-   5.5. Open Manual
+   9. Open Manual
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utilities">
-   5.6. Utilities
+   10. Utilities
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-root-paths-of-neuroimaging-tools-spm-freesurfer">
-     5.6.1. 1: Set root paths of neuroimaging tools (SPM/FreeSurfer)
+     10.1. 1: Set root paths of neuroimaging tools (SPM/FreeSurfer)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-preprocdata-path-master">
-     5.6.2. 2: Create PreprocData path master
+     10.2. 2: Create PreprocData path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-cvdatamat-path-master">
-     5.6.3. 3: Create CVdatamat path master
+     10.3. 3: Create CVdatamat path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-cvresults-path-master">
-     5.6.4. 4: Create CVresults path master
+     10.4. 4: Create CVresults path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-visdatamat-path-master">
-     5.6.5. 5: Create VISdatamat path master
+     10.5. 5: Create VISdatamat path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-optpreprocparam-path-master">
-     5.6.6. 6: Create OptPreprocParam path master
+     10.6. 6: Create OptPreprocParam path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-optmodel-path-master">
-     5.6.7. 7: Create OptModel path master
+     10.7. 7: Create OptModel path master
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#update-analyses-paths-to-new-root-directory">
-     5.6.8. 8: Update analyses’ paths to new root directory
+     10.8. 8: Update analyses’ paths to new root directory
     </a>
    </li>
   </ul>
@@ -461,8 +506,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="main-interface">
-<h1><span class="section-number">5. </span>Main Interface<a class="headerlink" href="#main-interface" title="Permalink to this headline">#</a></h1>
+  <p id="mainmenu">#Main Interface</p>
 <p>NeuroMiner is software that has a text-based interface and works from
 the MATLAB command line. This implies that all analyses are implemented
 by selecting options from text menus and entering parameters when asked
@@ -621,14 +665,14 @@ now.</p>
 <p><strong>14: Utilities</strong> Contains functions related to FreeSurfer and ability
 to add SPM/FreeSurfer paths to the NeuroMiner environment.</p>
 <section id="load-neurominer-structure">
-<h2><span class="section-number">5.1. </span>Load NeuroMiner structure<a class="headerlink" href="#load-neurominer-structure" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">5. </span>Load NeuroMiner structure<a class="headerlink" href="#load-neurominer-structure" title="Permalink to this headline">#</a></h1>
 <p>As outlined in section <a class="reference external" href="#mainmenu">1</a>{reference-type=”ref”
 reference=”mainmenu”}, the NM structure is the core structure that
 NeuroMiner uses to store and process data. This option allows the user
 to load it from a .mat file.</p>
 </section>
 <section id="save-neurominer-structure">
-<h2><span class="section-number">5.2. </span>Save NeuroMiner structure<a class="headerlink" href="#save-neurominer-structure" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">6. </span>Save NeuroMiner structure<a class="headerlink" href="#save-neurominer-structure" title="Permalink to this headline">#</a></h1>
 <p>This option allows the user to save the NeuroMiner structure (NM) as a
 .mat file in a folder of the users choosing. Notably, any changes that
 are made to the settings of NeuroMiner during an active session are
@@ -639,71 +683,70 @@ after structure initialization; and 3) after preprocessing or analysis.
 This ensures that no data is lost.</p>
 </section>
 <section id="clear-neurominer-structure">
-<h2><span class="section-number">5.3. </span>Clear NeuroMiner structure<a class="headerlink" href="#clear-neurominer-structure" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">7. </span>Clear NeuroMiner structure<a class="headerlink" href="#clear-neurominer-structure" title="Permalink to this headline">#</a></h1>
 <p>This option will clear the NeuroMiner structure <strong>from the workspace</strong>.
 This will allow the user to select another structure or enter different
 data.</p>
 </section>
 <section id="change-working-directory">
-<h2><span class="section-number">5.4. </span>Change Working Directory<a class="headerlink" href="#change-working-directory" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">8. </span>Change Working Directory<a class="headerlink" href="#change-working-directory" title="Permalink to this headline">#</a></h1>
 <p>NeuroMiner will save files in the directory that it is loaded from. This
 option allows the user to change the working directory.</p>
 </section>
 <section id="open-manual">
-<h2><span class="section-number">5.5. </span>Open Manual<a class="headerlink" href="#open-manual" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">9. </span>Open Manual<a class="headerlink" href="#open-manual" title="Permalink to this headline">#</a></h1>
 <p>This feature is currently not functional. Please open the manual
 normally.</p>
 </section>
 <section id="utilities">
-<h2><span class="section-number">5.6. </span>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">10. </span>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">#</a></h1>
 <section id="set-root-paths-of-neuroimaging-tools-spm-freesurfer">
-<h3><span class="section-number">5.6.1. </span>1: Set root paths of neuroimaging tools (SPM/FreeSurfer)<a class="headerlink" href="#set-root-paths-of-neuroimaging-tools-spm-freesurfer" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.1. </span>1: Set root paths of neuroimaging tools (SPM/FreeSurfer)<a class="headerlink" href="#set-root-paths-of-neuroimaging-tools-spm-freesurfer" title="Permalink to this headline">#</a></h2>
 <p>If you want to process structural MRI (nii) or surface files from
 FreeSurfer (mgz) then the paths of these tools need to be established.
 This option will establish the paths. If the user does not establish the
 paths, then the neuroimaging functions will not be displayed.</p>
 </section>
 <section id="create-preprocdata-path-master">
-<h3><span class="section-number">5.6.2. </span>2: Create PreprocData path master<a class="headerlink" href="#create-preprocdata-path-master" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.2. </span>2: Create PreprocData path master<a class="headerlink" href="#create-preprocdata-path-master" title="Permalink to this headline">#</a></h2>
 <p>The option allows the user to update the existing path for only the
 pre-processed data.</p>
 </section>
 <section id="create-cvdatamat-path-master">
-<h3><span class="section-number">5.6.3. </span>3: Create CVdatamat path master<a class="headerlink" href="#create-cvdatamat-path-master" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.3. </span>3: Create CVdatamat path master<a class="headerlink" href="#create-cvdatamat-path-master" title="Permalink to this headline">#</a></h2>
 <p>This option facilitates the user to update path for the cross-validated
 data.</p>
 </section>
 <section id="create-cvresults-path-master">
-<h3><span class="section-number">5.6.4. </span>4: Create CVresults path master<a class="headerlink" href="#create-cvresults-path-master" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.4. </span>4: Create CVresults path master<a class="headerlink" href="#create-cvresults-path-master" title="Permalink to this headline">#</a></h2>
 <p>This enables to user to configure the cross-validated results in a new
 directory.</p>
 </section>
 <section id="create-visdatamat-path-master">
-<h3><span class="section-number">5.6.5. </span>5: Create VISdatamat path master<a class="headerlink" href="#create-visdatamat-path-master" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.5. </span>5: Create VISdatamat path master<a class="headerlink" href="#create-visdatamat-path-master" title="Permalink to this headline">#</a></h2>
 <p>This option sets up the user defined-updated path after running the
 visualisation.</p>
 </section>
 <section id="create-optpreprocparam-path-master">
-<h3><span class="section-number">5.6.6. </span>6: Create OptPreprocParam path master<a class="headerlink" href="#create-optpreprocparam-path-master" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.6. </span>6: Create OptPreprocParam path master<a class="headerlink" href="#create-optpreprocparam-path-master" title="Permalink to this headline">#</a></h2>
 <p>This is to create a master file that can be used for batch scripts or
 when repetitive actions are carried out on a set of files the user
 creates the file list once and does not waste to search specific file
 sets</p>
 </section>
 <section id="create-optmodel-path-master">
-<h3><span class="section-number">5.6.7. </span>7: Create OptModel path master<a class="headerlink" href="#create-optmodel-path-master" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.7. </span>7: Create OptModel path master<a class="headerlink" href="#create-optmodel-path-master" title="Permalink to this headline">#</a></h2>
 <p>this is to create a master file that can be used for batch scripts or
 when repetitive actions are carried out on a set of files the user
 creates the file list once and does not waste to search specific file
 sets.</p>
 </section>
 <section id="update-analyses-paths-to-new-root-directory">
-<h3><span class="section-number">5.6.8. </span>8: Update analyses’ paths to new root directory<a class="headerlink" href="#update-analyses-paths-to-new-root-directory" title="Permalink to this headline">#</a></h3>
+<h2><span class="section-number">10.8. </span>8: Update analyses’ paths to new root directory<a class="headerlink" href="#update-analyses-paths-to-new-root-directory" title="Permalink to this headline">#</a></h2>
 <p>This is an important utility option which allows the users to update the
 NM structure path, if the user wants to continue the analysis in another
 directory. By selecting this option, all the paths in the NM structure
 are updated according to the new/selected location.</p>
-</section>
 </section>
 </section>
 
@@ -744,7 +787,7 @@ are updated according to the new/selected location.</p>
     <a class='right-next' id="next-link" href="3.1_mainmenu_input_data.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Input data into NM {#mainmenu_3.1_input_data}</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>SPM</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
