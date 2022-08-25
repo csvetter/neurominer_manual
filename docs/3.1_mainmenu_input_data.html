@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Input data into NM {#mainmenu_3.1_input_data} &#8212; NeuroMiner Manual</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Main Interface" href="mainmenu.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/nm_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroMiner Manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   NeuroMiner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prerequisites.html">
+   Suggested Prerequisites
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gettingstarted.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="license.html">
+   License
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  NeuroMiner interface
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mainmenu.html">
+   Main Interface
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Input data into NM {#mainmenu_3.1_input_data}
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.1_mainmenu_input_data.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/docs/3.1_mainmenu_input_data.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spm">
+   SPM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyze-nifti-images">
+   ANALYZE/NIFTI images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cortical-surface-files">
+   Cortical surface files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-matlab-workspace">
+   Matrix data: MATLAB workspace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-from-a-mat-file">
+   Matrix data: from a .mat file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-from-a-text-file">
+   Matrix data: from a text file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-from-a-spreadsheet">
+   Matrix data: from a spreadsheet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">
+   Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Input data into NM {#mainmenu_3.1_input_data}</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spm">
+   SPM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyze-nifti-images">
+   ANALYZE/NIFTI images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cortical-surface-files">
+   Cortical surface files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-matlab-workspace">
+   Matrix data: MATLAB workspace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-from-a-mat-file">
+   Matrix data: from a .mat file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-from-a-text-file">
+   Matrix data: from a text file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-data-from-a-spreadsheet">
+   Matrix data: from a spreadsheet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">
+   Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="input-data-into-nm-mainmenu-3-1-input-data">
+<h1>Input data into NM {#mainmenu_3.1_input_data}<a class="headerlink" href="#input-data-into-nm-mainmenu-3-1-input-data" title="Permalink to this headline">#</a></h1>
+<p>NeuroMiner works with 3D neuroimaging (i.e., NIFTI, SPM, or FreeSurfer)
+and/or numerical data stored in matrices (e.g., Excel, csv, or MATLAB
+formats). For example, these are some of the data you can enter:\</p>
+<ul class="simple">
+<li><p>structural neuroimaging data (e.g., NIFTI files from an SPM study)\</p></li>
+<li><p>functional neuroimaging data (e.g., NIFTI files from 2nd level
+contrasts)\</p></li>
+<li><p>FreeSurfer data (e.g., thickness or gyrification)\</p></li>
+<li><p>clinical or cognitive data (e.g., in Excel)\</p></li>
+<li><p>genetics or other biological data (e.g., in csv)\</p></li>
+<li><p>functional connectivity matrices (e.g., in the MATLAB workspace)\</p></li>
+<li><p>DTI streamline matrices (e.g., in the MATLAB workspace)</p></li>
+</ul>
+<p>In NeuroMiner, each dataset is called a ‘modality’ and multiple
+modalities can be entered at the same time to allow data fusion
+(discussed below and in section
+<a class="reference external" href="#3.2.001_data_fusion">[3.2.001_data_fusion]</a>{reference-type=”ref”
+reference=”3.2.001_data_fusion”}). For example, you can choose to
+perform machine learning on structural neuroimaging data alone or in
+combination with cognitive data.</p>
+<p>If data has not been entered and NeuroMiner does not detect a “NM”
+structure in the MATLAB workspace, then the user will be given the
+option to “1: load data for model discovery and cross-validation”.
+Selecting this option will transfer the user to the “NM data workspace
+manager”, which is an adaptive menu that changes based on selections,
+such as the machine learning framework or the data input format.</p>
+<p>If no data has been selected the NeuroMiner menu will display a default
+menu that is configured for classification using NIFTI (neuroimaging) :<br />
+1 : Define machine learning framework [ classification ]<br />
+2 : Select data input format [ nifti ]<br />
+3 : Define no. of samples and sample identifiers [ ??? ]<br />
+4 : Involve unlabeled cases in the analyses [ no ]<br />
+5 : Select space-defining image [ ? ]<br />
+6 : Read in additional image(s) for weighting [no]<br />
+7 : Describe data [ ? ]</p>
+<p>The machine learning framework can be changed to regression, which will
+modify some of the input entries that should be clear if the
+classification framework is understood (e.g., changing the group labels
+to a continuous measure). If you are in neuroimaging mode (i.e., if you
+have established paths for SPM and/or FreeSurfer), selecting the second
+option will change the menu to read:<br />
+1 : SPM (basic models)<br />
+2 : ANALYZE/NIFTI images (3D)<br />
+3 : Cortical surface files (3D)<br />
+4 : Matrix data (2D)</p>
+<p>These options will now be outlined in order.</p>
+<section id="spm">
+<h2>SPM<a class="headerlink" href="#spm" title="Permalink to this headline">#</a></h2>
+<p>NeuroMiner gives the option of simply entering in an SPM.mat structure
+from a previous univariate analysis (e.g., t-tests, ANOVA, or
+regression). Each of the options in the following menu need to be
+selected:</p>
+<p>1: Define machine learning framework [ regression ]<br />
+2: Select data input format [ spm ]<br />
+3: Select path to SPM.mat [ ? ]<br />
+4: Select space-defining image [ ? ]<br />
+5: Read in additional image(s) for weighting [ No ]<br />
+6: Describe data [ ? ]</p>
+<p><strong>Select path to SPM.mat</strong> A pop-up dialogue box will appear where you
+need to select the SPM.mat structure.</p>
+<p><strong>Select space-defining image</strong> Please see the description in the box
+“Space Defining Image” regarding selection of brain regions using the
+WFU PickAtlas.</p>
+<p><strong>Read in additional image(s) for weighting</strong> This option gives you the
+opportunity to enter an image that will be used during preprocessing to
+weight the brain image features. It is specifically designed for when
+parcellated brain regions have been entered or when the WFU PickAtlas
+has been used to select brain parcels. In these cases, the image will
+consist of independent brain regions (e.g., the hippocampus, frontal
+lobe, cingulate cortex etc.). You can therefore enter a map of the same
+brain regions that have weights associated with each parcel based on the
+degree of importance of each region; e.g., 1 for the hippocampus, 2 for
+the frontal lobe, 3 for the cingulate. This weight map can then be used
+during preprocessing to up- or down-weight the features in the analysis
+(see section
+<a class="reference external" href="#3.2.02.10_preprocessing_pipeline">[3.2.02.10_preprocessing_pipeline]</a>{reference-type=”ref”
+reference=”3.2.02.10_preprocessing_pipeline”}).</p>
+<p><strong>Describe data</strong> Enter a short description of this data for later
+reference if there is more than one modality; e.g., “cobre structural
+imaging data”.</p>
+<p><strong>IMPORT</strong> Once the template is completed, you’ll be given the option to
+import the data into the NeuroMiner structure (i.e., the “NM”
+structure) in the MATLAB workspace. The subject identifiers will be the
+unique fields in the paths to the files (e.g., the subject directory or
+filename).</p>
+</section>
+<section id="analyze-nifti-images">
+<h2>ANALYZE/NIFTI images<a class="headerlink" href="#analyze-nifti-images" title="Permalink to this headline">#</a></h2>
+<p>Analyze or nifti images can be selected here. Once this option is
+selected, the menu will change to the following:</p>
+<p>1 : Define machine learning framework [ classification ]<br />
+2 : Select data input format [ nifti ]<br />
+3 : Define no. of samples and sample identifiers [ ??? ]<br />
+4 : Involve unlabeled cases in the analyses [ no ]<br />
+5 : Select space-defining image [ ? ]<br />
+6 : Read in additional image(s) for weighting [ No ]<br />
+7 : Describe data [ ? ]<br />
+<strong>Define no. of samples and sample identifiers</strong> Enter the number of
+groups (e.g., “2”) and then enter descriptors for these groups (e.g.,
+“patients” or “controls”). It’s important to note that sensitivity
+will be defined as the correct classification of individuals in the
+first group entered, so this is usually patients in clinical studies.</p>
+<p><strong>Involve unlabelled cases in the analysis</strong> This gives the option to
+use cases that do not have a label for semi-supervised learning.</p>
+<p><strong>Select space-defining image</strong> Please see the “Space Defining Image
+Box”.</p>
+<p><strong>Read in additional image(s) for weighting</strong> An image can be entered
+here and it can be used in later processing steps to weight the entered
+feature images.</p>
+<p><strong>Map image files to samples</strong> Use the SPM dialogue box pop-up to select
+the images for the samples together or for the groups separately. We
+recommend to print the absolute paths of the images in a text file and
+then use the “ed” feature of the SPM dialogue box (bottom left) to
+paste the paths. This can be one for the full group. You will then be
+prompted to enter the groups one after the other.</p>
+<p><strong>Define global multiplier</strong> For each subject, multiply the voxel values
+by a numeric value.</p>
+<p><strong>Adjust data for globals</strong> This option is primarily for structural
+neuroimaging data where it is necessary to adjust the images for the
+global brain volume (e.g., whole-brain volume or intra-cranial volume).
+Either a vector is required in the MATLAB workspace or a text file is
+required. It is <strong>critical</strong> to note that the values must be in the same
+order as the images for your analysis–i.e., the participant order
+<strong>must</strong> match because there is no subject matching procedure.</p>
+<p><strong>Inspect image information and check registration</strong> This option will
+allow the user to check the registration parameters to the template
+image and then display the images using the SPM check-reg function. This
+is useful to check whether the images are going to be imported properly.</p>
+<p><strong>Read in additional image(s) for weighting</strong> This option gives you the
+opportunity to enter an image that will be used during preprocessing to
+weight the brain image features. For example, when parcellated brain
+regions have been entered or when the WFU PickAtlas has been used to
+select brain parcels the image will consist of independent brain regions
+(e.g., the hippocampus, frontal lobe, cingulate cortex etc.). You can
+therefore enter a map of the same brain regions that have weights
+associated with each parcel based on the degree of importance of each
+region; e.g., 1 for the hippocampus, 2 for the frontal lobe, 3 for the
+cingulate. This weight map can then be used during preprocessing to up-
+or down-weight the features in the analysis (see section
+<a class="reference external" href="#3.2.02.10_preprocessing_pipeline">[3.2.02.10_preprocessing_pipeline]</a>{reference-type=”ref”
+reference=”3.2.02.10_preprocessing_pipeline”} and ‘Rank / Weight
+Features’). Alternatively, reliability coefficient images that are
+calculated during multi-site studies (e.g., with travelling subjects)
+can be entered here.</p>
+<p><strong>Describe data</strong> Enter a short description of the data (e.g., “cobre
+mwrp1 images”). This is important if there are more than one modality.</p>
+<p><strong>IMPORT nifti</strong> After successful completion of settings for Steps 1-7,
+an option for ‘IMPORT nifti’ will appear. Selecting this option will
+import the nifti images into the NM structure based on the
+space-defining image that was selected and based on any correction for
+global brain volume. The subject identifiers will be the unique fields
+in the paths to the files (e.g., the subject directory or filename).</p>
+</section>
+<section id="cortical-surface-files">
+<h2>Cortical surface files<a class="headerlink" href="#cortical-surface-files" title="Permalink to this headline">#</a></h2>
+<p>This option is for FreeSurfer .mgz files. The menu items will change to
+be the same as the above for NIFTI files.</p>
+<p>Please note that once NeuroMiner has finished processing, there is no
+utility currently to visualize the classifier results in the mgz format.</p>
+</section>
+<section id="matrix-data-matlab-workspace">
+<h2>Matrix data: MATLAB workspace<a class="headerlink" href="#matrix-data-matlab-workspace" title="Permalink to this headline">#</a></h2>
+<p>Matrix data is defined as any numeric data that is stored in a matrix
+file, such as an Excel file, CSV file, .mat file, or in the MATLAB
+workspace. The default menu is to enter variables from the MATLAB
+workspace as outlined in this section, but other choices can be made by
+selecting “Define data provenance”. The following section will outline
+the options specific to entry of data from the MATLAB workspace.</p>
+<p>Define machine learning framework [ classification ]<br />
+Select data input format [ matrix ]<br />
+Define data provenance [ MATLAB workspace ]<br />
+Enter name of matrix variable containing the predictor data [ ? ]<br />
+Enter name of label variable in MATLAB workspace [ ? ]<br />
+Enter name of case ID variable in MATLAB workspace [ ? ]<br />
+Enter name of feature descriptor variable in MATLAB workspace [ ? ]<br />
+Describe data [ ? ]<br />
+<strong>Enter name of matrix variable (cell array of string) in MATLAB
+workspace</strong> Enter the matrix containing the features (i.e., variables or
+predictors) that you want to use to predict the labels (i.e., the target
+or outcome variable). This variable must be a standard [n x m] MATLAB
+double (subjects = n; features = m). That is, the subjects must be
+entered row-wise and the features are column-wise.</p>
+<p><strong>Enter name of label variable (cell array of strings) in MATLAB
+workspace</strong> Labels are the targets of the prediction. For
+classification, these are group names or values (e.g., “control” and
+“patient”) and <strong>must</strong> be entered in a cell array of strings (see
+Box: Data Types in NeuroMiner). We strongly discourage the use of
+numbers to represent groups (e.g., “1” and “2”) due to display and
+visualisation later in processing.</p>
+<p><strong>Enter the name of case ID variable (cell array of strings) in MATLAB
+workspace</strong> Enter a vector with the case IDs of each subject. This must
+be a cell array of strings (see Box: Data Types in NeuroMiner).</p>
+<p><strong>Enter name of feature descriptor variable (cell array of strings) in
+MATLAB workspace</strong> Enter a vector with the names of the features. This
+must be a cell array of strings.</p>
+<p><strong>Inspect matrix data and select features for import</strong> Once the previous
+settings are entered, this option appears which will open a results
+display where the data can be viewed as a heatmap, scaled, and features
+can be added or removed either by the user or they can be filtered based
+on a threshold (see Fig. <a class="reference external" href="#fig:matrix_inspector">1</a>{reference-type=”ref”
+reference=”fig:matrix_inspector”}). For example, after scaling features,
+you could establish a threshold where features with a scaled value above
+0.8 are removed from the analysis. Alternatively, you might be concerned
+about the number of NaN (“Not a Number”) values being pruned or
+imputed in later analysis and so you could filter out the features with
+more than 25% missing values.</p>
+<p><img alt="You can inspect the data in the matrix inspector to understand thedata, identify errors, and exclude features or subjects. The descriptivestatistics that can be displayed by using the drop-down list at the topright are the mean, median, variance, interquartile range, %(Nan) (i.e.,&quot;Not a Number&quot; missing values), kurtosis, or skewness. The data canalso be scaled using the button underneath the drop-down list. Once adescriptive option is selected, you can then enter a filter to excludeeither F(Feats) or F(Cases) based on a value. When a feature filter isused, a red line will appear that signifies the filter value andfeatures above this value will be excluded and moved to the &quot;Featurepool&quot; at the bottom left of the screen. You can manually add orsubtract features or subjects using the arrows  between the featurepool and the features to import. Once features have been understood,filtered, or removed, press OK and return to the mainmenu." src="docs/Images/Matrix_inspector" />{#fig:matrix_inspector
+width=”1.2\linewidth”}</p>
+<p><strong>Describe data</strong> Enter a description of the data.</p>
+<p><strong>IMPORT data</strong> This option will import data to the NeuroMiner structure
+(“NM”) and progress to the next screen.</p>
+</section>
+<section id="matrix-data-from-a-mat-file">
+<h2>Matrix data: from a .mat file<a class="headerlink" href="#matrix-data-from-a-mat-file" title="Permalink to this headline">#</a></h2>
+<p>This is the same as entering data from the workspace, but you can just
+select a pre-existing .mat file with all the variables. These are
+displayed at the top of the screen and then you can enter them using the
+directions above.</p>
+</section>
+<section id="matrix-data-from-a-text-file">
+<h2>Matrix data: from a text file<a class="headerlink" href="#matrix-data-from-a-text-file" title="Permalink to this headline">#</a></h2>
+<p>The data can be stored in a .dat, .txt, or .csv file that has been saved
+with another program, such as Excel, R, or a database program. The file
+<strong>must</strong> contain labels for each of the IDs, labels, and features in the
+first row.</p>
+<p>Define machine learning framework [ classification ]<br />
+Select data input format [ matrix ]<br />
+Define data provenance [ Matrix from text file: ]<br />
+Define delimiter in text file [ tab ]<br />
+Specify column header containing the label data [ ? ]<br />
+Define column header containing the case IDs [ ? ]<br />
+Inspect matrix data and select features for import<br />
+Describe data [ ? ]<br />
+IMPORT</p>
+<p><strong>Define delimiter in text file</strong> Define the delimiter that was used to
+generate the file (i.e., comma, tab, etc.). It is critical to use the
+correct delimiter.</p>
+<p><strong>Specify column header containing the label data</strong> Write the column
+header variable name for the label data in your CSV file; e.g.,
+“Illness” or “PANSS-General”. For classification, the variable
+<strong>must</strong> be string variables instead of numerical coding (i.e., must be
+‘CTRL’ and ‘SCZ’ instead of numbers representing these groups).</p>
+<p><strong>Define column header containing the case IDs</strong> Write name of the
+column header variable name for the case IDs in your CSV file; e.g.,
+“ID”. These must be string variables (i.e., ‘ID123’ instead of 123).</p>
+<p><strong>Inspect matrix data and select features for import</strong> This feature
+opens a results display where the data can be viewed as a heatmap,
+scaled, and features can be added or removed either by the user or they
+can be filtered based on a threshold (see Fig.
+<a class="reference external" href="#fig:matrix_inspector">1</a>{reference-type=”ref”
+reference=”fig:matrix_inspector”}). For example, after scaling features,
+you could establish a threshold where features with a scaled value above
+0.8 are removed from the analysis or features that have more than 10%
+NaN (“Not a Number”) features are removed.</p>
+<p><strong>Describe data</strong> Enter a description of the data. This is important if
+you are entering multiple modalities.</p>
+<p><strong>IMPORT data</strong> Import data into the NM structure.</p>
+</section>
+<section id="matrix-data-from-a-spreadsheet">
+<h2>Matrix data: from a spreadsheet<a class="headerlink" href="#matrix-data-from-a-spreadsheet" title="Permalink to this headline">#</a></h2>
+<p>This option will import data from a spreadsheet (only xls and xlsx). As
+with CSV files, the file <strong>must</strong> contain labels for each of the IDs,
+labels, and features in the first row.</p>
+<p>Define machine learning framework [ classification ]<br />
+Select data input format [ matrix ]<br />
+Define data provenience [ Matrix from spreadsheet file: ]<br />
+Define name of sheet in spreadsheet file [ Tabelle1 ]<br />
+Specify column header containing the label data [ ? ]<br />
+Define column header containing the case IDs [ ? ]<br />
+Inspect matrix data and select features for import<br />
+Describe data [ ? ]<br />
+IMPORT</p>
+<p><strong>Define name of sheet in spreadsheet file</strong> Choose the sheet that you
+want to import.</p>
+<p><strong>Specify column header containing the label data</strong> Write the column
+header variable name for the label data in your spreadsheet file; e.g.,
+“Illness” or “PANSS-General”. For classification, the variable
+<strong>must</strong> be string variables instead of numerical coding (i.e., must be
+‘CTRL’ and ‘SCZ’ instead of numbers representing these groups).</p>
+<p><strong>Define column header containing the case IDs</strong> Write name of the
+column header variable name for the case IDs in your spreadsheet file;
+e.g., “ID”. These must be string variables (i.e., ‘ID123’ instead of
+123).</p>
+<p><strong>Inspect matrix data and select features for import</strong> This feature
+opens a results display where the data can be viewed as a heatmap,
+scaled, and features can be added or removed either by the user or they
+can be filtered based on a threshold (see Fig.
+<a class="reference external" href="#fig:matrix_inspector">1</a>{reference-type=”ref”
+reference=”fig:matrix_inspector”}). For example, after scaling features,
+you could establish a threshold where features with a scaled value above
+0.8 are removed from the analysis.</p>
+<p><strong>Describe data</strong> Enter a description of the data. This is important if
+you are entering multiple modalities.</p>
+<p><strong>IMPORT data</strong> Import data into the NM structure.</p>
+</section>
+<section id="add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">
+<h2>Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}<a class="headerlink" href="#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality" title="Permalink to this headline">#</a></h2>
+<p>Once data has been imported, you will be taken to the NM data workspace
+manager. Above the menu, you’ll see a section called “MODALITIES” that
+will display the modality that has been entered and some descriptive
+statistics (e.g., the dimensionality and the number of NaN (‘Not a
+Number’) missing features). The menu will display the following:</p>
+<p>1 : Add modality to NM workspace<br />
+2 : Modify modality in NM workspace<br />
+3 : Delete modality from NM workspace<br />
+4 : Delete all data from NM workspace<br />
+5 : Add covariate(s) to NM workspace<br />
+6: Delete covariate(s) from NM workspace<br />
+6 : Finish data import for discovery &amp; cross-validation analysis</p>
+<p><strong>1: Add modality to NM workspace</strong> This option gives you the ability to
+add another dataset to the workspace in order for later data fusion or
+stacked generalization. It can be another modality (e.g., matrix data
+and then neuroimaging data) or it can be the same modality (e.g.,
+structural neuroimaging data of one type and then of another type). The
+user will be then presented with the options that have been described
+above to repeat the process of data entry for another modality. It is
+critical to note that the subject identifiers have to be the same for
+each modality. In the case of NIFTI or SPM import, NeuroMiner will
+identify the subject IDs from the unique data in the file paths and thus
+any other data needs to have the same subject IDs (e.g., matrix data).</p>
+<p><strong>2: Modify modality in NM workspace</strong> This option takes you back to the
+“Input data into NM screen” where you can modify the settings or data
+described above.</p>
+<p><strong>3: Delete modality from NM workspace</strong> Delete a modality that has been
+entered.</p>
+<p><strong>4: Delete all data from NM workspace</strong> Delete all data and start
+again.</p>
+<p><strong>5: Add covariate(s) to NM workspace</strong> This is a critical feature of
+NeuroMiner that allows the entry of matrix data that can be used <strong>in
+later preprocessing steps</strong> to control for nuisance covariance (e.g.,
+age and sex). It is <strong>critical</strong> to note that this step <strong>simply enters
+the data and does not actually regress out the effects of the variables
+from your data</strong>. However, these data can be used to correct data for
+nuisance covariates later in the preprocessing steps (see section
+<a class="reference external" href="#3.2.02.2_preprocessing_pipeline">[3.2.02.2_preprocessing_pipeline]</a>{reference-type=”ref”
+reference=”3.2.02.2_preprocessing_pipeline”}).</p>
+<p>Please also note that if you want to normalise the data to a specific
+group (see section
+<a class="reference external" href="#3.2.02.6_preprocessing_pipeline">[3.2.02.6_preprocessing_pipeline]</a>{reference-type=”ref”
+reference=”3.2.02.6_preprocessing_pipeline”}), a binary vector (i.e.,
+zeros and ones) must be entered at this stage containing ones for the
+individuals in the group that you want to normalise to.</p>
+<p>The covariates must be stored in the MATLAB workspace–i.e., they must
+be loaded prior to starting NeuroMiner. They also must be a standard
+matrix double containing subjects in rows and covariates in columns. It
+is critical to note that the subjects <strong>must be in the same order as the
+other data that has been entered</strong>, regardless of what that data was.
+This is especially important if you are using an automatic method of
+selecting files for NIFTI images.</p>
+<p>After the entry of the MATLAB matrix name, the variables can be defined
+one-by-one or by using a vector. The covariate names will then be
+displayed in the “MODALITIES” section at the top of the screen.</p>
+<p><strong>Delete covariate(s) from NM workspace</strong> Delete the covariates from the
+workspace.</p>
+<p><strong>Finish data import for discovery &amp; cross-validation</strong> This option will
+finish the data import section. It is important to note that once this
+is selected <strong>you will no longer be able to modify any part of the
+data</strong>, including the addition of other modalities, covariates, or
+anything else. If there are changes, then you will need to enter the
+data again. Once the data has been processed, the user can however test
+models by entering out-of-sample data (e.g., external data from another
+center or group; see section
+[[mainmenu_3.9_input_data]]{#mainmenu_3.9_input_data
+label=”mainmenu_3.9_input_data”}).</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="mainmenu.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Main Interface</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Neurodiagnostics Lab LMU Munich<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
