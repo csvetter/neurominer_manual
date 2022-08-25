@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>11. SPM &#8212; NeuroMiner Manual</title>
+    <title>SPM &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="5. Load NeuroMiner structure" href="3.0_mainmenu.html" />
+    <link rel="next" title="Define parameter template" href="3.2_mainmenu_define_parameter_template.html" />
+    <link rel="prev" title="Main Interface" href="3.0_mainmenu.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,22 +121,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.0_introduction.html">
-   1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="prerequisites.html">
-   2. Suggested Prerequisites
+  <a class="reference internal" href="1.1_prerequisites.html">
+   Suggested Prerequisites
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gettingstarted.html">
-   3. Getting Started
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="license.html">
-   4. License
+  <a class="reference internal" href="1.2_gettingstarted.html">
+   Getting Started
   </a>
  </li>
 </ul>
@@ -147,12 +143,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
-   5. Load NeuroMiner structure
+   Main Interface
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   11. SPM
+   SPM
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
+   Define parameter template
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.01_paramtemp_cv_settings.html">
+     Cross-validation settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.3_mainmenu_initialize_delete_analyses.html">
+   Initialize analyses
   </a>
  </li>
 </ul>
@@ -334,42 +352,42 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   11. SPM
+   SPM
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#analyze-nifti-images">
-   12. ANALYZE/NIFTI images
+   ANALYZE/NIFTI images
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cortical-surface-files">
-   13. Cortical surface files
+   Cortical surface files
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-matlab-workspace">
-   14. Matrix data: MATLAB workspace
+   Matrix data: MATLAB workspace
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-from-a-mat-file">
-   15. Matrix data: from a .mat file
+   Matrix data: from a .mat file
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-from-a-text-file">
-   16. Matrix data: from a text file
+   Matrix data: from a text file
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-from-a-spreadsheet">
-   17. Matrix data: from a spreadsheet
+   Matrix data: from a spreadsheet
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">
-   18. Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}
+   Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}
   </a>
  </li>
 </ul>
@@ -393,42 +411,42 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   11. SPM
+   SPM
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#analyze-nifti-images">
-   12. ANALYZE/NIFTI images
+   ANALYZE/NIFTI images
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cortical-surface-files">
-   13. Cortical surface files
+   Cortical surface files
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-matlab-workspace">
-   14. Matrix data: MATLAB workspace
+   Matrix data: MATLAB workspace
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-from-a-mat-file">
-   15. Matrix data: from a .mat file
+   Matrix data: from a .mat file
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-from-a-text-file">
-   16. Matrix data: from a text file
+   Matrix data: from a text file
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-data-from-a-spreadsheet">
-   17. Matrix data: from a spreadsheet
+   Matrix data: from a spreadsheet
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">
-   18. Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}
+   Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}
   </a>
  </li>
 </ul>
@@ -486,7 +504,7 @@ option will change the menu to read:<br />
 4 : Matrix data (2D)</p>
 <p>These options will now be outlined in order.</p>
 <section id="spm">
-<h1><span class="section-number">11. </span>SPM<a class="headerlink" href="#spm" title="Permalink to this headline">#</a></h1>
+<h1>SPM<a class="headerlink" href="#spm" title="Permalink to this headline">#</a></h1>
 <p>NeuroMiner gives the option of simply entering in an SPM.mat structure
 from a previous univariate analysis (e.g., t-tests, ANOVA, or
 regression). Each of the options in the following menu need to be
@@ -526,7 +544,7 @@ unique fields in the paths to the files (e.g., the subject directory or
 filename).</p>
 </section>
 <section id="analyze-nifti-images">
-<h1><span class="section-number">12. </span>ANALYZE/NIFTI images<a class="headerlink" href="#analyze-nifti-images" title="Permalink to this headline">#</a></h1>
+<h1>ANALYZE/NIFTI images<a class="headerlink" href="#analyze-nifti-images" title="Permalink to this headline">#</a></h1>
 <p>Analyze or nifti images can be selected here. Once this option is
 selected, the menu will change to the following:</p>
 <p>1 : Define machine learning framework [ classification ]<br />
@@ -593,14 +611,14 @@ global brain volume. The subject identifiers will be the unique fields
 in the paths to the files (e.g., the subject directory or filename).</p>
 </section>
 <section id="cortical-surface-files">
-<h1><span class="section-number">13. </span>Cortical surface files<a class="headerlink" href="#cortical-surface-files" title="Permalink to this headline">#</a></h1>
+<h1>Cortical surface files<a class="headerlink" href="#cortical-surface-files" title="Permalink to this headline">#</a></h1>
 <p>This option is for FreeSurfer .mgz files. The menu items will change to
 be the same as the above for NIFTI files.</p>
 <p>Please note that once NeuroMiner has finished processing, there is no
 utility currently to visualize the classifier results in the mgz format.</p>
 </section>
 <section id="matrix-data-matlab-workspace">
-<h1><span class="section-number">14. </span>Matrix data: MATLAB workspace<a class="headerlink" href="#matrix-data-matlab-workspace" title="Permalink to this headline">#</a></h1>
+<h1>Matrix data: MATLAB workspace<a class="headerlink" href="#matrix-data-matlab-workspace" title="Permalink to this headline">#</a></h1>
 <p>Matrix data is defined as any numeric data that is stored in a matrix
 file, such as an Excel file, CSV file, .mat file, or in the MATLAB
 workspace. The default menu is to enter variables from the MATLAB
@@ -652,14 +670,14 @@ width=”1.2\linewidth”}</p>
 (“NM”) and progress to the next screen.</p>
 </section>
 <section id="matrix-data-from-a-mat-file">
-<h1><span class="section-number">15. </span>Matrix data: from a .mat file<a class="headerlink" href="#matrix-data-from-a-mat-file" title="Permalink to this headline">#</a></h1>
+<h1>Matrix data: from a .mat file<a class="headerlink" href="#matrix-data-from-a-mat-file" title="Permalink to this headline">#</a></h1>
 <p>This is the same as entering data from the workspace, but you can just
 select a pre-existing .mat file with all the variables. These are
 displayed at the top of the screen and then you can enter them using the
 directions above.</p>
 </section>
 <section id="matrix-data-from-a-text-file">
-<h1><span class="section-number">16. </span>Matrix data: from a text file<a class="headerlink" href="#matrix-data-from-a-text-file" title="Permalink to this headline">#</a></h1>
+<h1>Matrix data: from a text file<a class="headerlink" href="#matrix-data-from-a-text-file" title="Permalink to this headline">#</a></h1>
 <p>The data can be stored in a .dat, .txt, or .csv file that has been saved
 with another program, such as Excel, R, or a database program. The file
 <strong>must</strong> contain labels for each of the IDs, labels, and features in the
@@ -698,7 +716,7 @@ you are entering multiple modalities.</p>
 <p><strong>IMPORT data</strong> Import data into the NM structure.</p>
 </section>
 <section id="matrix-data-from-a-spreadsheet">
-<h1><span class="section-number">17. </span>Matrix data: from a spreadsheet<a class="headerlink" href="#matrix-data-from-a-spreadsheet" title="Permalink to this headline">#</a></h1>
+<h1>Matrix data: from a spreadsheet<a class="headerlink" href="#matrix-data-from-a-spreadsheet" title="Permalink to this headline">#</a></h1>
 <p>This option will import data from a spreadsheet (only xls and xlsx). As
 with CSV files, the file <strong>must</strong> contain labels for each of the IDs,
 labels, and features in the first row.</p>
@@ -735,7 +753,7 @@ you are entering multiple modalities.</p>
 <p><strong>IMPORT data</strong> Import data into the NM structure.</p>
 </section>
 <section id="add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">
-<h1><span class="section-number">18. </span>Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}<a class="headerlink" href="#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality" title="Permalink to this headline">#</a></h1>
+<h1>Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}<a class="headerlink" href="#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality" title="Permalink to this headline">#</a></h1>
 <p>Once data has been imported, you will be taken to the NM data workspace
 manager. Above the menu, you’ll see a section called “MODALITIES” that
 will display the modality that has been entered and some descriptive
@@ -836,8 +854,15 @@ label=”mainmenu_3.9_input_data”}).</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Load NeuroMiner structure</p>
+            <p class="prev-next-title">Main Interface</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.2_mainmenu_define_parameter_template.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Define parameter template</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

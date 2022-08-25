@@ -5,33 +5,46 @@ format: jb-book
 root: intro
 parts:
   - caption: Getting started
-    numbered: True
     chapters:
       - file: docs/1.0_introduction
-      - file: docs/prerequisites
-      - file: docs/gettingstarted
-      - file: docs/license
+      - file: docs/1.1_prerequisites
+      - file: docs/1.2_gettingstarted
   - caption: NeuroMiner interface
-    numbered: True
     chapters:
       - file: docs/3.0_mainmenu
       - file: docs/3.1_mainmenu_input_data
-
+      - file: docs/3.2_mainmenu_define_parameter_template
+        sections:
+          - file: docs/3.2.01_paramtemp_cv_settings
+      - file: docs/3.3_mainmenu_initialize_delete_analyses
+          # - file: docs/3.2.001_data_fusion
+          # - file: docs/3.2.03_classification_algorithm
+          # - file: docs/3.2.04_learning_algorithm_parameters
+          # - file: docs/3.2.05_ensemble_generation_strategies
+          # - file: docs/3.2.06_visualization_options
+          # - file: docs/3.2.07_model_saving_options
+          # - file: docs/3.2.08_save_parameter_template
+          # - file: docs/3.2.09_load_training_template
+          # - file: docs/3.2.10_define_verbosity_level
+          # - file: docs/3.2.11_multigroup
+          # - file: docs/3.2.11_stacking
+    # - file: docs/3.3_mainmenu_initialize_delete_analyses
+  #- file: docs/license
     # - caption: Define parameter template
     #   chapters:
     #   - file: docs/3.2_mainmenu_define_parameter_template
-    #   - file: docs/3.2.01_cross-validation_settings
-    #   - file: docs/3.2.001_data_fusion
-    #   - file: docs/3.2.03_classification_algorithm
-    #   - file: docs/3.2.04_learning_algorithm_parameters
-    #   - file: docs/3.2.05_ensemble_generation_strategies
-    #   - file: docs/3.2.06_visualization_options
-    #   - file: docs/3.2.07_model_saving_options
-    #   - file: docs/3.2.08_save_parameter_template
-    #   - file: docs/3.2.09_load_training_template
-    #   - file: docs/3.2.10_define_verbosity_level
-    #   - file: docs/3.2.11_multigroup
-    #   - file: docs/3.2.11_stacking
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
     # - caption: Model training
     #   chapters:
     #   - files: docs/3.3_initialize_delete_analyses
