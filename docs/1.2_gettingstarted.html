@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Initialize analyses {#3.3_initialize_delete_analyses} &#8212; NeuroMiner Manual</title>
+    <title>Getting Started &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Main Interface" href="3.0_mainmenu.html" />
+    <link rel="prev" title="Suggested Prerequisites" href="1.1_prerequisites.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,33 +118,21 @@ const thebe_selector_output = ".output, .cell_output"
   Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="1.0_introduction.html">
    Introduction
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.1_prerequisites.html">
-     Suggested Prerequisites
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.2_gettingstarted.html">
-     Getting Started
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="license.html">
-     License
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.1_prerequisites.html">
+   Suggested Prerequisites
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Getting Started
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -155,12 +143,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
-   1. Load NeuroMiner structure
+   Main Interface
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.1_mainmenu_input_data.html">
-   7. SPM
+   SPM
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
+   Define parameter template
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.01_paramtemp_cv_settings.html">
+     Cross-validation settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.3_mainmenu_initialize_delete_analyses.html">
+   Initialize analyses
   </a>
  </li>
 </ul>
@@ -253,7 +263,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.3_initialize_delete_analyses.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/1.2_gettingstarted.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -281,7 +291,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/3.3_initialize_delete_analyses.md"
+        <a href="../_sources/docs/1.2_gettingstarted.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -341,23 +351,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-initialization">
-   First Initialization
+  <a class="reference internal nav-link" href="#compatibility">
+   Compatibility
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-analyses">
-   Multiple Analyses
+  <a class="reference internal nav-link" href="#downloading-and-initializing-neurominer">
+   Downloading and Initializing NeuroMiner
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outputs-and-directory-structure">
-   Outputs and Directory Structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#once-an-analysis-has-been-initialized">
-   Once an Analysis has been Initialized
+  <a class="reference internal nav-link" href="#nomenclature">
+   Nomenclature
   </a>
  </li>
 </ul>
@@ -369,7 +374,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Initialize analyses {#3.3_initialize_delete_analyses}</h1>
+                <h1>Getting Started</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -380,23 +385,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-initialization">
-   First Initialization
+  <a class="reference internal nav-link" href="#compatibility">
+   Compatibility
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-analyses">
-   Multiple Analyses
+  <a class="reference internal nav-link" href="#downloading-and-initializing-neurominer">
+   Downloading and Initializing NeuroMiner
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outputs-and-directory-structure">
-   Outputs and Directory Structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#once-an-analysis-has-been-initialized">
-   Once an Analysis has been Initialized
+  <a class="reference internal nav-link" href="#nomenclature">
+   Nomenclature
   </a>
  </li>
 </ul>
@@ -409,147 +409,80 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="initialize-analyses-3-3-initialize-delete-analyses">
-<h1>Initialize analyses {#3.3_initialize_delete_analyses}<a class="headerlink" href="#initialize-analyses-3-3-initialize-delete-analyses" title="Permalink to this headline">#</a></h1>
-<p>As outlined in section <a class="reference external" href="#mainmenu">[mainmenu]</a>{reference-type=”ref”
-reference=”mainmenu”}, after the machine learning parameters have been
-defined in the parameter template (section
-<a class="reference external" href="#3.2_define_parameter_template">[3.2_define_parameter_template]</a>{reference-type=”ref”
-reference=”3.2_define_parameter_template”}) then you have to initialize
-them for further analysis using the initialisation manager. If analyses
-in the parameter template are changed, you must also re-initialise them
-using this menu. You can initialise and change as many analyses as you
-like.</p>
-<p>When an analysis is first initialised, a directory will be created
-containing details and parameters of the analysis in a log file (see
-below). During processing, NeuroMiner will store analysis files in this
-location for this analysis. These data reporting features allow you to
-keep track of analyses and provide a standardised NeuroMiner output
-format.</p>
-<p>It’s important to note that within NeuroMiner you can initialise one
-analysis, then change settings in the parameter template (see
-<a class="reference external" href="#3.2_define_parameter_template">[3.2_define_parameter_template]</a>{reference-type=”ref”
-reference=”3.2_define_parameter_template”}), and then initialize another
-analysis. This has two implications: 1) the results from different
-analyses can be compared; 2) with the results of different classifiers,
-you can use the advanced feature called stacked generalization (see
-<a class="reference external" href="#main_menu_3.10_stacking">[main_menu_3.10_stacking]</a>{reference-type=”ref”
-reference=”main_menu_3.10_stacking”}. It is important to note that
-simply changing settings in the parameter template does not have any
-effect on analyses until you initialise the analyses using this menu. If
-you want to change the settings of an analysis then change then in the
-parameter template and then reset the initialised analyses using the
-directions below.</p>
-<p>The initialization menu can be split into two parts: 1) when no other
-analysis is present; 2) when there are existing analyses. And will
-result in the outputs described below.</p>
-<section id="first-initialization">
-<h2>First Initialization<a class="headerlink" href="#first-initialization" title="Permalink to this headline">#</a></h2>
-<p>The following menu will appear:</p>
-<p>Define analysis identifier [ ? ]<br />
-Provide analysis description [ ? ]<br />
-Specify parent directory of the analysis [ ? ]<br />
-PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p><strong>Define analysis identifier</strong> Provide a brief description of the
-analysis; e.g., SVM_analysis1. This will be used as an analysis ID and
-also used as an identifier for the analysis-specific directory created
-by NeuroMiner.</p>
-<p><strong>Provide analysis description</strong> Here you can write a more extended
-analysis description; e.g., “this is a test analysis that was created
-using the default settings of NeuroMiner”. You can enter multiple lines
-if you would like and then enter a single period (i.e., “.”) to stop
-the process and enter the data.</p>
-<p><strong>Specify parent directory of the analysis</strong> This will activate a menu
-selector where you can specify a parent directory for the analysis
-folder to be stored.</p>
-<p><strong>PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></strong> This will activate the above settings.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
+<span id="start"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
+<section id="compatibility">
+<span id="start-compatibility"></span><h2>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">#</a></h2>
+<p>NeuroMiner has been tested using Windows, Linux (Cent OS), and Mac OS
+operating systems and works with MATLAB2020b and above. We recommend the
+“Statistics and Machine Learning” and the “Optimization” toolboxes
+in order to use advanced training options in the matLearn toolbox and
+for imputation functions.</p>
+<p>For non-supported operating systems, NeuroMiner has a number of programs
+installed that may require independent compilation using a C compiler
+(e.g., gcc for linux or Xcode for mac).</p>
+<p>For some functionalities, NeuroMiner resorts to recognized Python
+libraries. Thus, a Python installation (tested with Python 3.8) may be
+required. If you have never called a Python script from Matlab, you
+initially need to set the correct Python environment in Matlab. You can
+find instructions on how to set the Python version in the Matlab Help
+Center
+(<a class="reference external" href="https://de.mathworks.com/help/matlab/matlab_external/install-supported-python-implementation.html">link</a>).
+You only have to configure the path once.</p>
 </section>
-<section id="multiple-analyses">
-<h2>Multiple Analyses<a class="headerlink" href="#multiple-analyses" title="Permalink to this headline">#</a></h2>
-<p>If an analysis is already initialized, then entering the initialization
-menu will show the following:</p>
-<p>Generate new or manage existing analyses [ generate new: analysis 2 ]<br />
-Define analysis identifier [ ? ]<br />
-Provide analysis description [ ? ]<br />
-Specify parent directory of the analysis [ ? ]<br />
-PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p>NeuroMiner defaults to generating a new analysis (option 1), and new
-data for the aforementioned fields can be entered that were described
-above. Once this is completed, a new analysis directory will be
-established and you can proceed as normal. However, when there are
-multiple analyses, there is also the possibility of managing the
-existing analyses by selecting the first option, then selecting “manage
-existing”, which will show the following menu:</p>
-<p>Generate new or manage existing analyses [ manage existing ]<br />
-Select existing analysis [ Analysis 1 ]<br />
-Specify what to do with selected analysis [ complete reset ]<br />
-Define analysis identifier [ test1 ]<br />
-Provide analysis description [ provided ]<br />
-Specify parent directory of the analysis [ ]<br />
-PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p>The second option will allow you to select the analysis. If there are
-two or more analyses, then it will activate a “Select Analysis Menu”
-with the parameters at the top and then an analysis manager at the
-bottom. For example:<br />
-MODALITY 1: MATLAB matrix</p>
-<p>Preprocessing:<br />
-* Group processing mode: binary<br />
-* Step 1: Scale [ from 0 to 1 ], zero-out completely non-finite
-features<br />
-* Step 2: Prune non-informative columns from matrix [ Zero Var, Inf
-]<br />
-* Step 3: Imputation in Matrix Block [ All features ]: median of 7
-nearest neighbors (Euclidean)</p>
-<p>Machine Learning Method:<br />
-* GLM, Linear Regression Model, No Kernel<br />
-No optimization of preprocessing parameters<br />
-No optimization of ML parameters<br />
-Cross-Validation:<br />
-* CV2: 10x10, CV1: 10x10</p>
-<p>ANALYSIS MANAGER: CURRENT ANALYSIS: 2 (of 2 ANALYSES)</p>
-<p>1 : Select current analysis<br />
-2 : Generate new analysis<br />
-3 : <span class="math notranslate nohighlight">\(&lt;\)</span>= Go to previous analysis<br />
-<span class="math notranslate nohighlight">\(&lt;\)</span>== Back/Quit [Q]</p>
-<p>This menu will give the user the ability to view what has been
-initialised and to navigate through the analyses and choose the right
-one.</p>
-<p>Once an analysis has been selected, the user will be returned to the
-main menu and can then modify the analysis by selecting the third option
-to “Specify what to do with the analysis”:</p>
-<p>1 : delete<br />
-2 : completely reset<br />
-3 : reset parameters (risk of inconsistency)</p>
-<p>Here the user can select the option to delete the analysis, to
-completely reset and overwrite all the parameter settings with the new
-settings in the parameter template, or to reset parameters. Once an
-option is selected, you’ll be taken back to the main analysis manager
-and you will need to “PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;&gt;\)</span>” for the options to take effect.</p>
+<section id="downloading-and-initializing-neurominer">
+<span id="start-initializing"></span><h2>Downloading and Initializing NeuroMiner<a class="headerlink" href="#downloading-and-initializing-neurominer" title="Permalink to this headline">#</a></h2>
+<p>NeuroMiner works in two main modes: matrix and neuroimaging (i.e., NIFTI or FreeSurfer files). For neuroimaging using NIFTI data format, it is necessary to have a working copy of the <a class="reference external" href="http://www.fil.ion.ucl.ac.uk/spm/software/download/">Statistical Parametric Mapping (SPM) toolbox</a> installed. We
+also recommend downloading the <a class="reference external" href="http://fmri.wfubmc.edu/software/pickatlas">WFU Pickatlas toolbox</a>) to take advantage of this selection tool when inputting data. For surface-based analyses, it
+is necessary to have a <a class="reference external" href="https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall">FreeSurfer</a> distribution installed.</p>
+<p>Once the program is downloaded, it needs to be added to the MATLAB path by using the <strong>addpath</strong> command from the command line or by using the “Set Path” button on the toolbar (e.g., “addpath
+/home/NM/NeuroMiner”). NeuroMiner can then be launched by typing <strong>nm</strong> on the command line. To load the program faster, you can type <strong>nm nosplash</strong> and to enter expert mode type <strong>nm nosplash expert</strong>. The first time that NeuroMiner is run, a file selector box will appear first asking to define the SPM directory and then the FreeSurfer directory. If these directories are not available, then simply press cancel and NeuroMiner will be launched in non-imaging mode–i.e., a mode that restricts options only to matrix data (see <a class="reference internal" href="#fig-1-1-initialization"><span class="std std-ref">Fig. 1</span></a>; upper). Otherwise, NeuroMiner will be launched in matrix and neuroimaging mode (<a class="reference internal" href="#fig-1-1-initialization"><span class="std std-ref">Fig. 1</span></a>; lower).</p>
+<p id="fig-1-1-initialization"><img alt="Display screen of NeuroMiner in different modes. NeuroMiner will be loaded in non-imaging mode (upper) when the SPM or FreeSurfer directories are not provided during start-up (upper). If the directories have been provided, it will be started in standard imaging and matrix data mode (lower)." src="../_images/initialisation_imaging-nonimaging.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once NeuroMiner is initialized and added to the path, there can be incompatibilities between some MATLAB functions on some systems. For example, there can be a incompatibility with the function
+<strong>ttest2</strong>. In these cases, NeuroMiner needs to be removed from the path in order to use the original function.</p>
+</div>
 </section>
-<section id="outputs-and-directory-structure">
-<h2>Outputs and Directory Structure<a class="headerlink" href="#outputs-and-directory-structure" title="Permalink to this headline">#</a></h2>
-<p>Once an analysis has been initialised, a folder will be created like the
-following:</p>
-<p>NM_ID736740_54131_A1_your-description</p>
-<p>This outlines the NM identifier associated with the entered data (e.g.,
-ID736740_54131), the analysis that has been initialised (e.g., _A1_),
-and the description that you entered in the “Define analysis
-identifier”.</p>
-<p>Within the folder there is a “params” subfolder and also a log file
-(e.g., “NM_Analysis_test1.log”). The log file contains an “NM
-ANALYSIS LOG FILE” with a description of the computer and the versions
-of MATLAB and NeuroMiner, in addition to a description of all the
-analysis parameters that were conducted. The params subfolder has these
-details and more specific settings stored in a .mat file containing
-MATLAB structures that are used by NeuroMiner.</p>
-<p>Following intialization, you can then go to the main menu and preprocess
-or train the</p>
-</section>
-<section id="once-an-analysis-has-been-initialized">
-<h2>Once an Analysis has been Initialized<a class="headerlink" href="#once-an-analysis-has-been-initialized" title="Permalink to this headline">#</a></h2>
-<p>Once an analysis has been initialised, you can then preprocess the
-features and train the models using the directions below. These files
-will be stored in the directory for that analysis.</p>
+<section id="nomenclature">
+<span id="start-nomenclature"></span><h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">#</a></h2>
+<p>Machine learning uses different nomenclature compared to classical statistics. The following terms and their definitions are used throughout the manual (<a class="reference external" href="https://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;page=0&amp;catalog=&amp;q=STATS+315A%3A+Modern+Applied+Statistics%3A+Learning&amp;collapse=">Rob Tibshirani, Statistics 315a, Stanford</a>):</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Machine Learning</strong></p></th>
+<th class="head"><p><strong>Statistics</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Features</p></td>
+<td><p>Predictor variables</p></td>
+</tr>
+<tr class="row-odd"><td><p>Target variable/labels</p></td>
+<td><p>Outcome variables</p></td>
+</tr>
+<tr class="row-even"><td><p>Weights</p></td>
+<td><p>Parameters</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hyperparameters</p></td>
+<td><p>Parameters</p></td>
+</tr>
+<tr class="row-even"><td><p>Learning</p></td>
+<td><p>Fitting</p></td>
+</tr>
+<tr class="row-odd"><td><p>Generalization</p></td>
+<td><p>Test set performance</p></td>
+</tr>
+<tr class="row-even"><td><p>Supervised learning</p></td>
+<td><p>Regression/ Classification</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unsupervised learning</p></td>
+<td><p>Clustering, density estimation</p></td>
+</tr>
+<tr class="row-even"><td><p>Large grant = $1,000,000</p></td>
+<td><p>Large grant = $50,000</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -580,6 +513,20 @@ will be stored in the directory for that analysis.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1.1_prerequisites.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Suggested Prerequisites</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.0_mainmenu.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Main Interface</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

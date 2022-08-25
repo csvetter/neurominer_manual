@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Train supervised classifiers {#3.5_train_supervised_classifiers} &#8212; NeuroMiner Manual</title>
+    <title>Preprocess features {#3.4_preprocess_features} &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -149,6 +149,28 @@ const thebe_selector_output = ".output, .cell_output"
    SPM
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
+   Define parameter template
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.01_paramtemp_cv_settings.html">
+     Cross-validation settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.3_mainmenu_initialize_delete_analyses.html">
+   Initialize analyses
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -239,7 +261,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.5_train_supervised_classifiers.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.4_mainmenu_preprocess_features.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -267,7 +289,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/3.5_train_supervised_classifiers.md"
+        <a href="../_sources/docs/3.4_mainmenu_preprocess_features.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,7 +338,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Train supervised classifiers {#3.5_train_supervised_classifiers}</h1>
+                <h1>Preprocess features {#3.4_preprocess_features}</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -328,43 +350,34 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="train-supervised-classifiers-3-5-train-supervised-classifiers">
-<h1>Train supervised classifiers {#3.5_train_supervised_classifiers}<a class="headerlink" href="#train-supervised-classifiers-3-5-train-supervised-classifiers" title="Permalink to this headline">#</a></h1>
-<p>As depicted in Figure
-<a class="reference external" href="#fig:nm_flowchart">[fig:nm_flowchart]</a>{reference-type=”ref”
-reference=”fig:nm_flowchart”}, once the parameter template has been
-completed and initialized there is the option to train the models. This
-implies the use of a statistical technique, such as an SVM, along with
-the hyperparameter optimisation (e.g., optimising the C parameter) and
-any wrappers that might have been activated. The following menu will be
-displayed:</p>
-<p>1: Create analysis from scratch<br />
-2: Create analysis using precomputer preprocdata-MATs<br />
-3: Create analysis using precomputed CVdatamats<br />
-4: Create analysis using precomputed CVresult-MATs</p>
-<p><strong>1: Create analysis from scratch</strong><br />
-This is where the analysis has only been initialized and no data
-matrices have been stored. This will preprocess and then train
-classifiers. Please note, that if your matrices are large (e.g., with
-neuroimaging data) then this will take up a lot of RAM and as such it is
-recommended to preprocess the data first.</p>
-<p><strong>2: Create analysis using precomputer preprocdata-MATs</strong><br />
-This is when the user has preprocessed their data and stored the
-preprocessed files in a folder; i.e., they have TRAIN files.</p>
-<p><strong>3: Create analysis using precomputed CVdatamats</strong><br />
-This is when the user has completed an analysis (preprocessing and
-training) and they have the data matrix files stored in a folder; i.e.,
-“…CVdatamat_oCV…” files. When this option is selected, the
-analysis results from the CVdatamat files are then collated into a
-result file. It is useful especially when the program has crashed,
-and/or the NM structure has not been saved, and the user wants to get
-the results without re-running all the training again.</p>
-<p><strong>4: Create analysis using precomputed CVresult-MATs</strong><br />
-This is when the user already has the results file and they want to
-integrate the results into the NM structure. This is useful if there has
-been a crash and the data has been lost from the NM structure.</p>
-<p><img alt="Monitor progress during ananalysis." src="docs/Images/analysis_processing" />{#fig:analysis_processing
-width=”1.1\linewidth”}</p>
+  <section id="preprocess-features-3-4-preprocess-features">
+<h1>Preprocess features {#3.4_preprocess_features}<a class="headerlink" href="#preprocess-features-3-4-preprocess-features" title="Permalink to this headline">#</a></h1>
+<p>Once the data has been initialized, the user has the option to
+preprocess the features. In NeuroMiner nomenclature, this refers to any
+steps that are conducted within the cross-validation folds prior to
+training a model. For example, the data within each fold could be scaled
+and then imputed, or a principal components analysis could be conducted.</p>
+<p>When this option is selected, the user will be presented with the
+following:</p>
+<p>1 : Select analysis to operate on [Analysis 1]<br />
+2 : Overwrite existing preprocessed data files [ no ]<br />
+3 : Use existing preprocessing parameter files, if available [ no ]<br />
+4 : Write out computed parameters to disk (may require A LOT of disk
+space) [ no ]<br />
+5 : Select CV2 partitions to operate on [ 0 selected ]</p>
+<p><strong>2: Overwrite existing preprocessed data files</strong>. NeuroMiner will save
+preprocessed data files and selecting this option will overwrite them.</p>
+<p><strong>3: Use existing preprocessing parameter files, if available</strong>. The
+user has the option to save parameter files (e.g., betas from regression
+of age from a feature) and this option will allow them to use the
+existing files.</p>
+<p><strong>4: Write out computer parameters to disk</strong>. This option will write the
+parameters (e.g., beta coefficients) to disk. This is not recommended
+due to space limitations.</p>
+<p><strong>5: Select CV2 partition to operate on</strong>. This option will only appear
+if an analysis has been selected in step 1. It allows the user to select
+the folds that the preprocessing analysis will be applied to (see Box:
+Selecting CV folds in NeuroMiner).</p>
 </section>
 
     <script type="text/x-thebe-config">

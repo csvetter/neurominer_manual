@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Introduction" href="docs/1.0_introduction.html" />
+    <link rel="next" title="Introduction" href="docs/1.0_introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,22 +120,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="docs/1.0_introduction.html">
-   1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="docs/prerequisites.html">
-   2. Suggested Prerequisites
+  <a class="reference internal" href="docs/1.1_prerequisites.html">
+   Suggested Prerequisites
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="docs/gettingstarted.html">
-   3. Getting Started
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="docs/license.html">
-   4. License
+  <a class="reference internal" href="docs/1.2_gettingstarted.html">
+   Getting Started
   </a>
  </li>
 </ul>
@@ -147,12 +142,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="docs/3.0_mainmenu.html">
-   5. Load NeuroMiner structure
+   Main Interface
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="docs/3.1_mainmenu_input_data.html">
-   11. SPM
+   SPM
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="docs/3.2_mainmenu_define_parameter_template.html">
+   Define parameter template
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/3.2.01_paramtemp_cv_settings.html">
+     Cross-validation settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docs/3.3_mainmenu_initialize_delete_analyses.html">
+   Initialize analyses
   </a>
  </li>
 </ul>
@@ -382,29 +399,25 @@ for precision medicine approaches.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/1.0_introduction.html">1. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/prerequisites.html">2. Suggested Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/gettingstarted.html">3. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/license.html">4. License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/1.0_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/1.1_prerequisites.html">Suggested Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/1.2_gettingstarted.html">Getting Started</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">NeuroMiner interface</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.0_mainmenu.html">5. Load NeuroMiner structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.0_mainmenu.html#save-neurominer-structure">6. Save NeuroMiner structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.0_mainmenu.html#clear-neurominer-structure">7. Clear NeuroMiner structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.0_mainmenu.html#change-working-directory">8. Change Working Directory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.0_mainmenu.html#open-manual">9. Open Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.0_mainmenu.html#utilities">10. Utilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html">11. SPM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#analyze-nifti-images">12. ANALYZE/NIFTI images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#cortical-surface-files">13. Cortical surface files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-matlab-workspace">14. Matrix data: MATLAB workspace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-from-a-mat-file">15. Matrix data: from a .mat file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-from-a-text-file">16. Matrix data: from a text file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-from-a-spreadsheet">17. Matrix data: from a spreadsheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">18. Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.0_mainmenu.html">Main Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html">SPM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#analyze-nifti-images">ANALYZE/NIFTI images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#cortical-surface-files">Cortical surface files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-matlab-workspace">Matrix data: MATLAB workspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-from-a-mat-file">Matrix data: from a .mat file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-from-a-text-file">Matrix data: from a text file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#matrix-data-from-a-spreadsheet">Matrix data: from a spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.1_mainmenu_input_data.html#add-a-modality-add-covariates-and-finish-analysis-3-1-02-add-modality">Add a Modality, Add Covariates, and Finish Analysis {#3.1.02_add_modality}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.2_mainmenu_define_parameter_template.html">Define parameter template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/3.3_mainmenu_initialize_delete_analyses.html">Initialize analyses</a></li>
 </ul>
 </div>
 
@@ -438,7 +451,7 @@ for precision medicine approaches.</p>
     <a class='right-next' id="next-link" href="docs/1.0_introduction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
+        <p class="prev-next-title">Introduction</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

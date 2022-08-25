@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Train supervised classifiers {#3.5_train_supervised_classifiers} &#8212; NeuroMiner Manual</title>
+    <title>Suggested Prerequisites &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting Started" href="1.2_gettingstarted.html" />
+    <link rel="prev" title="Introduction" href="1.0_introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,14 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
   Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.0_introduction.html">
    Introduction
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="1.1_prerequisites.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Suggested Prerequisites
   </a>
  </li>
@@ -147,6 +149,28 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="3.1_mainmenu_input_data.html">
    SPM
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
+   Define parameter template
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.01_paramtemp_cv_settings.html">
+     Cross-validation settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.3_mainmenu_initialize_delete_analyses.html">
+   Initialize analyses
   </a>
  </li>
 </ul>
@@ -239,7 +263,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.5_train_supervised_classifiers.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/1.1_prerequisites.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -267,7 +291,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/3.5_train_supervised_classifiers.md"
+        <a href="../_sources/docs/1.1_prerequisites.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,7 +340,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Train supervised classifiers {#3.5_train_supervised_classifiers}</h1>
+                <h1>Suggested Prerequisites</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -328,43 +352,48 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="train-supervised-classifiers-3-5-train-supervised-classifiers">
-<h1>Train supervised classifiers {#3.5_train_supervised_classifiers}<a class="headerlink" href="#train-supervised-classifiers-3-5-train-supervised-classifiers" title="Permalink to this headline">#</a></h1>
-<p>As depicted in Figure
-<a class="reference external" href="#fig:nm_flowchart">[fig:nm_flowchart]</a>{reference-type=”ref”
-reference=”fig:nm_flowchart”}, once the parameter template has been
-completed and initialized there is the option to train the models. This
-implies the use of a statistical technique, such as an SVM, along with
-the hyperparameter optimisation (e.g., optimising the C parameter) and
-any wrappers that might have been activated. The following menu will be
-displayed:</p>
-<p>1: Create analysis from scratch<br />
-2: Create analysis using precomputer preprocdata-MATs<br />
-3: Create analysis using precomputed CVdatamats<br />
-4: Create analysis using precomputed CVresult-MATs</p>
-<p><strong>1: Create analysis from scratch</strong><br />
-This is where the analysis has only been initialized and no data
-matrices have been stored. This will preprocess and then train
-classifiers. Please note, that if your matrices are large (e.g., with
-neuroimaging data) then this will take up a lot of RAM and as such it is
-recommended to preprocess the data first.</p>
-<p><strong>2: Create analysis using precomputer preprocdata-MATs</strong><br />
-This is when the user has preprocessed their data and stored the
-preprocessed files in a folder; i.e., they have TRAIN files.</p>
-<p><strong>3: Create analysis using precomputed CVdatamats</strong><br />
-This is when the user has completed an analysis (preprocessing and
-training) and they have the data matrix files stored in a folder; i.e.,
-“…CVdatamat_oCV…” files. When this option is selected, the
-analysis results from the CVdatamat files are then collated into a
-result file. It is useful especially when the program has crashed,
-and/or the NM structure has not been saved, and the user wants to get
-the results without re-running all the training again.</p>
-<p><strong>4: Create analysis using precomputed CVresult-MATs</strong><br />
-This is when the user already has the results file and they want to
-integrate the results into the NM structure. This is useful if there has
-been a crash and the data has been lost from the NM structure.</p>
-<p><img alt="Monitor progress during ananalysis." src="docs/Images/analysis_processing" />{#fig:analysis_processing
-width=”1.1\linewidth”}</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="suggested-prerequisites">
+<h1>Suggested Prerequisites<a class="headerlink" href="#suggested-prerequisites" title="Permalink to this headline">#</a></h1>
+<p>NeuroMiner works exclusively from the MATLAB command line. There are some situations in which the variables need to be in a specific format in order for NeuroMiner to recognize them, as described later in this manual. You may also want to understand the NeuroMiner outputs stored in output variables. For these reasons, we recommend a minimal level of knowledge about command-line operation of MATLAB (see below).</p>
+<p><strong>MATLAB</strong>:</p>
+<ul class="simple">
+<li><p>Know the differences between vectors/matrices/cell-arrays/structures</p></li>
+<li><p>Know how to address certain cells/rows/columns of the variables</p></li>
+<li><p>Know how to delete/create/address items in a MATLAB structure</p></li>
+<li><p>Know the differences between numerical/string/binary variables</p></li>
+<li><p>Know how to add stuff to the MATLAB path and why this is needed</p></li>
+<li><p>Know how to import files into MATLAB</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a basic MATLAB tutorial see <a class="reference external" href="http://antoniahamilton.com/matlab.html">http://antoniahamilton.com/matlab.html</a> !</p>
+</div>
+<p>NeuroMiner is a program that uses a number of advanced machine learning tools. We have provided some description of the most important concepts and techniques, but the manual often assumes machine learning knowledge. For this reason, we recommend a basic understanding of machine learning concepts (see below).</p>
+<p><strong>Machine learning</strong>:</p>
+<ul class="simple">
+<li><p>What is the difference between training and test samples?</p></li>
+<li><p>What is cross-validation/nested cross-validation?</p></li>
+<li><p>What is preprocessing (for machine learning, not just MRI data)?</p></li>
+<li><p>What are filters and wrappers?</p></li>
+<li><p>What are features and classification targets?</p></li>
+<li><p>What is Principal Component Analysis (PCA)?</p></li>
+<li><p>What is a Support Vector Machine (SVM)?</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a basic tutorial see <a class="reference external" href="http://www.autonlab.org/tutorials/">http://www.autonlab.org/tutorials/</a> !</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following literature is recommended prior to using Neurominer:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=Machine+learning+classifiers+and+fMRI%3A+a+tutorial+overview">http://www.ncbi.nlm.nih.gov/pubmed/?term=Machine+learning+classifiers+and+fMRI:+a+tutorial+overview</a></p></li>
+<li><p><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2213158213001204">http://www.sciencedirect.com/science/article/pii/S2213158213001204</a></p></li>
+<li><p><a class="reference external" href="http://journal.frontiersin.org/article/10.3389/neuro.09.032.2009/full">http://journal.frontiersin.org/article/10.3389/neuro.09.032.2009/full</a></p></li>
+<li><p><a class="reference external" href="http://journal.frontiersin.org/Journal/10.3389/neuro.09.032.2009/full">http://journal.frontiersin.org/Journal/10.3389/neuro.09.032.2009/full</a></p></li>
+<li><p><a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/?term=Why+voxel-based+morphometric+analysis+should+be+used+with+great">http://www.ncbi.nlm.nih.gov/pubmed/?term=Why+voxel-based+morphometric+analysis+should+be+used+with+great</a></p></li>
+</ul>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -394,6 +423,20 @@ width=”1.1\linewidth”}</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1.0_introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="1.2_gettingstarted.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Getting Started</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

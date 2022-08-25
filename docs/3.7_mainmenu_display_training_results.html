@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Initialize analyses {#3.3_initialize_delete_analyses} &#8212; NeuroMiner Manual</title>
+    <title>Display training results {#3.7_display_training_results} &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -119,32 +117,20 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="1.0_introduction.html">
    Introduction
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.1_prerequisites.html">
-     Suggested Prerequisites
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.2_gettingstarted.html">
-     Getting Started
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="license.html">
-     License
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.1_prerequisites.html">
+   Suggested Prerequisites
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.2_gettingstarted.html">
+   Getting Started
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -155,12 +141,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
-   1. Load NeuroMiner structure
+   Main Interface
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.1_mainmenu_input_data.html">
-   7. SPM
+   SPM
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
+   Define parameter template
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.01_paramtemp_cv_settings.html">
+     Cross-validation settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.3_mainmenu_initialize_delete_analyses.html">
+   Initialize analyses
   </a>
  </li>
 </ul>
@@ -253,7 +261,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.3_initialize_delete_analyses.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.7_mainmenu_display_training_results.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -281,7 +289,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/3.3_initialize_delete_analyses.md"
+        <a href="../_sources/docs/3.7_mainmenu_display_training_results.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -341,23 +349,43 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-initialization">
-   First Initialization
+  <a class="reference internal nav-link" href="#accuracy-and-model-performance">
+   Accuracy and Model Performance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-analyses">
-   Multiple Analyses
+  <a class="reference internal nav-link" href="#model-comparisons">
+   Model Comparisons
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outputs-and-directory-structure">
-   Outputs and Directory Structure
+  <a class="reference internal nav-link" href="#classification-performance">
+   Classification Performance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#once-an-analysis-has-been-initialized">
-   Once an Analysis has been Initialized
+  <a class="reference internal nav-link" href="#generalization-error">
+   Generalization Error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-complexity">
+   Model Complexity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ensemble-diversity">
+   Ensemble Diversity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-selection-frequency">
+   Model Selection Frequency
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-group-results">
+   Multi-Group Results
   </a>
  </li>
 </ul>
@@ -369,7 +397,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Initialize analyses {#3.3_initialize_delete_analyses}</h1>
+                <h1>Display training results {#3.7_display_training_results}</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -380,23 +408,43 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-initialization">
-   First Initialization
+  <a class="reference internal nav-link" href="#accuracy-and-model-performance">
+   Accuracy and Model Performance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-analyses">
-   Multiple Analyses
+  <a class="reference internal nav-link" href="#model-comparisons">
+   Model Comparisons
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outputs-and-directory-structure">
-   Outputs and Directory Structure
+  <a class="reference internal nav-link" href="#classification-performance">
+   Classification Performance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#once-an-analysis-has-been-initialized">
-   Once an Analysis has been Initialized
+  <a class="reference internal nav-link" href="#generalization-error">
+   Generalization Error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-complexity">
+   Model Complexity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ensemble-diversity">
+   Ensemble Diversity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-selection-frequency">
+   Model Selection Frequency
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-group-results">
+   Multi-Group Results
   </a>
  </li>
 </ul>
@@ -409,147 +457,119 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="initialize-analyses-3-3-initialize-delete-analyses">
-<h1>Initialize analyses {#3.3_initialize_delete_analyses}<a class="headerlink" href="#initialize-analyses-3-3-initialize-delete-analyses" title="Permalink to this headline">#</a></h1>
-<p>As outlined in section <a class="reference external" href="#mainmenu">[mainmenu]</a>{reference-type=”ref”
-reference=”mainmenu”}, after the machine learning parameters have been
-defined in the parameter template (section
-<a class="reference external" href="#3.2_define_parameter_template">[3.2_define_parameter_template]</a>{reference-type=”ref”
-reference=”3.2_define_parameter_template”}) then you have to initialize
-them for further analysis using the initialisation manager. If analyses
-in the parameter template are changed, you must also re-initialise them
-using this menu. You can initialise and change as many analyses as you
-like.</p>
-<p>When an analysis is first initialised, a directory will be created
-containing details and parameters of the analysis in a log file (see
-below). During processing, NeuroMiner will store analysis files in this
-location for this analysis. These data reporting features allow you to
-keep track of analyses and provide a standardised NeuroMiner output
-format.</p>
-<p>It’s important to note that within NeuroMiner you can initialise one
-analysis, then change settings in the parameter template (see
-<a class="reference external" href="#3.2_define_parameter_template">[3.2_define_parameter_template]</a>{reference-type=”ref”
-reference=”3.2_define_parameter_template”}), and then initialize another
-analysis. This has two implications: 1) the results from different
-analyses can be compared; 2) with the results of different classifiers,
-you can use the advanced feature called stacked generalization (see
-<a class="reference external" href="#main_menu_3.10_stacking">[main_menu_3.10_stacking]</a>{reference-type=”ref”
-reference=”main_menu_3.10_stacking”}. It is important to note that
-simply changing settings in the parameter template does not have any
-effect on analyses until you initialise the analyses using this menu. If
-you want to change the settings of an analysis then change then in the
-parameter template and then reset the initialised analyses using the
-directions below.</p>
-<p>The initialization menu can be split into two parts: 1) when no other
-analysis is present; 2) when there are existing analyses. And will
-result in the outputs described below.</p>
-<section id="first-initialization">
-<h2>First Initialization<a class="headerlink" href="#first-initialization" title="Permalink to this headline">#</a></h2>
-<p>The following menu will appear:</p>
-<p>Define analysis identifier [ ? ]<br />
-Provide analysis description [ ? ]<br />
-Specify parent directory of the analysis [ ? ]<br />
-PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p><strong>Define analysis identifier</strong> Provide a brief description of the
-analysis; e.g., SVM_analysis1. This will be used as an analysis ID and
-also used as an identifier for the analysis-specific directory created
-by NeuroMiner.</p>
-<p><strong>Provide analysis description</strong> Here you can write a more extended
-analysis description; e.g., “this is a test analysis that was created
-using the default settings of NeuroMiner”. You can enter multiple lines
-if you would like and then enter a single period (i.e., “.”) to stop
-the process and enter the data.</p>
-<p><strong>Specify parent directory of the analysis</strong> This will activate a menu
-selector where you can specify a parent directory for the analysis
-folder to be stored.</p>
-<p><strong>PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></strong> This will activate the above settings.</p>
+  <section id="display-training-results-3-7-display-training-results">
+<h1>Display training results {#3.7_display_training_results}<a class="headerlink" href="#display-training-results-3-7-display-training-results" title="Permalink to this headline">#</a></h1>
+<p>Once initialization, preprocessing, and model training has been
+performed, the results can then be displayed using this option. The
+results display interface can be understood in three main divisions: 1)
+the accuracy and model performance (initial screen); 2) the model
+performance across the selected hyperparameters; 3) results concerning
+the individual features in the analysis.</p>
+<section id="accuracy-and-model-performance">
+<h2>Accuracy and Model Performance<a class="headerlink" href="#accuracy-and-model-performance" title="Permalink to this headline">#</a></h2>
+<p>See Fig. <a class="reference external" href="#fig:Display_ClassPlot">1</a>{reference-type=”ref”
+reference=”fig:Display_ClassPlot”}. The performance of a model can be
+fundamentally described by the degree to which the predictions match the
+target scores (e.g., how many people are classified correctly or how
+closely the features and target are related in a regression). In
+NeuroMiner, this is represented in multiple ways that each address a
+different aspect of the relationship between subjects, predictions, and
+targets.</p>
 </section>
-<section id="multiple-analyses">
-<h2>Multiple Analyses<a class="headerlink" href="#multiple-analyses" title="Permalink to this headline">#</a></h2>
-<p>If an analysis is already initialized, then entering the initialization
-menu will show the following:</p>
-<p>Generate new or manage existing analyses [ generate new: analysis 2 ]<br />
-Define analysis identifier [ ? ]<br />
-Provide analysis description [ ? ]<br />
-Specify parent directory of the analysis [ ? ]<br />
-PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p>NeuroMiner defaults to generating a new analysis (option 1), and new
-data for the aforementioned fields can be entered that were described
-above. Once this is completed, a new analysis directory will be
-established and you can proceed as normal. However, when there are
-multiple analyses, there is also the possibility of managing the
-existing analyses by selecting the first option, then selecting “manage
-existing”, which will show the following menu:</p>
-<p>Generate new or manage existing analyses [ manage existing ]<br />
-Select existing analysis [ Analysis 1 ]<br />
-Specify what to do with selected analysis [ complete reset ]<br />
-Define analysis identifier [ test1 ]<br />
-Provide analysis description [ provided ]<br />
-Specify parent directory of the analysis [ ]<br />
-PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p>The second option will allow you to select the analysis. If there are
-two or more analyses, then it will activate a “Select Analysis Menu”
-with the parameters at the top and then an analysis manager at the
-bottom. For example:<br />
-MODALITY 1: MATLAB matrix</p>
-<p>Preprocessing:<br />
-* Group processing mode: binary<br />
-* Step 1: Scale [ from 0 to 1 ], zero-out completely non-finite
-features<br />
-* Step 2: Prune non-informative columns from matrix [ Zero Var, Inf
-]<br />
-* Step 3: Imputation in Matrix Block [ All features ]: median of 7
-nearest neighbors (Euclidean)</p>
-<p>Machine Learning Method:<br />
-* GLM, Linear Regression Model, No Kernel<br />
-No optimization of preprocessing parameters<br />
-No optimization of ML parameters<br />
-Cross-Validation:<br />
-* CV2: 10x10, CV1: 10x10</p>
-<p>ANALYSIS MANAGER: CURRENT ANALYSIS: 2 (of 2 ANALYSES)</p>
-<p>1 : Select current analysis<br />
-2 : Generate new analysis<br />
-3 : <span class="math notranslate nohighlight">\(&lt;\)</span>= Go to previous analysis<br />
-<span class="math notranslate nohighlight">\(&lt;\)</span>== Back/Quit [Q]</p>
-<p>This menu will give the user the ability to view what has been
-initialised and to navigate through the analyses and choose the right
-one.</p>
-<p>Once an analysis has been selected, the user will be returned to the
-main menu and can then modify the analysis by selecting the third option
-to “Specify what to do with the analysis”:</p>
-<p>1 : delete<br />
-2 : completely reset<br />
-3 : reset parameters (risk of inconsistency)</p>
-<p>Here the user can select the option to delete the analysis, to
-completely reset and overwrite all the parameter settings with the new
-settings in the parameter template, or to reset parameters. Once an
-option is selected, you’ll be taken back to the main analysis manager
-and you will need to “PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;&gt;\)</span>” for the options to take effect.</p>
+<section id="model-comparisons">
+<h2>Model Comparisons<a class="headerlink" href="#model-comparisons" title="Permalink to this headline">#</a></h2>
+<p>See Fig.<a class="reference external" href="#fig:Display_Statistical_Comp">8</a>{reference-type=”ref”
+reference=”fig:Display_Statistical_Comp”}. When there is more than one
+analysis, statistical comparisons can be conducted between the model
+performances using a variety of statistics using the “Statistical
+Comparisons” option. The results of these comparisons are output in
+either excel spreadsheet files (i.e., xlsx) or in text files (i.e., csv)
+for Linux and Mac. The menu is quite intuitive (i.e., as below) where
+you select the analyses you want to compare on the right, you press the
+“Save As” button to choose a name, and then you select the “Compare”
+button to generate the files. The files will be generated in your
+working directory.</p>
+<p>See Fig. <a class="reference external" href="#fig:Display_Visual_Comp">9</a>{reference-type=”ref”
+reference=”fig:Display_Visual_Comp”}. The user can also perform “Visual
+Comparisons”. The user needs to select some performance measures that
+they want to compare visually in the top-half of the pop-up box using
+the “Select” column tick-boxes, then selects the analyses in the
+lower-half of the pop-up box. Then simply press “Visualise”. If the
+bar plots are not good then the user can change it to “Line plots” and
+then press “Visualise” again.</p>
 </section>
-<section id="outputs-and-directory-structure">
-<h2>Outputs and Directory Structure<a class="headerlink" href="#outputs-and-directory-structure" title="Permalink to this headline">#</a></h2>
-<p>Once an analysis has been initialised, a folder will be created like the
-following:</p>
-<p>NM_ID736740_54131_A1_your-description</p>
-<p>This outlines the NM identifier associated with the entered data (e.g.,
-ID736740_54131), the analysis that has been initialised (e.g., _A1_),
-and the description that you entered in the “Define analysis
-identifier”.</p>
-<p>Within the folder there is a “params” subfolder and also a log file
-(e.g., “NM_Analysis_test1.log”). The log file contains an “NM
-ANALYSIS LOG FILE” with a description of the computer and the versions
-of MATLAB and NeuroMiner, in addition to a description of all the
-analysis parameters that were conducted. The params subfolder has these
-details and more specific settings stored in a .mat file containing
-MATLAB structures that are used by NeuroMiner.</p>
-<p>Following intialization, you can then go to the main menu and preprocess
-or train the</p>
+<section id="classification-performance">
+<h2>Classification Performance<a class="headerlink" href="#classification-performance" title="Permalink to this headline">#</a></h2>
+<p>See Fig. <a class="reference external" href="#fig:Display_CVperf">2</a>{reference-type=”ref”
+reference=”fig:Display_CVperf”}. NeuroMiner was built to work with
+hyperparameter optimisation within a nested-cross validation framework
+as a standard. In this plot, you will see the inner-cycle, CV1, mean
+test performance plotted in blue and then the outer cycle, CV2, mean
+test performance plotted in red. Each point represents a hyperparameter
+combination. This gives an indication of how the hyperparameter
+combinations are influencing the test performance. On the right, the
+display also shows heatmaps that show how the performance in the CV1/CV2
+folds changes over the permutations.</p>
 </section>
-<section id="once-an-analysis-has-been-initialized">
-<h2>Once an Analysis has been Initialized<a class="headerlink" href="#once-an-analysis-has-been-initialized" title="Permalink to this headline">#</a></h2>
-<p>Once an analysis has been initialised, you can then preprocess the
-features and train the models using the directions below. These files
-will be stored in the directory for that analysis.</p>
+<section id="generalization-error">
+<h2>Generalization Error<a class="headerlink" href="#generalization-error" title="Permalink to this headline">#</a></h2>
+<p>See Fig. <a class="reference external" href="#fig:Display_GenError">3</a>{reference-type=”ref”
+reference=”fig:Display_GenError”}. Another way to look at CV2 test
+performance is with the generalization error, which is calculated in
+NeuroMiner as the CV1-test performance minus the CV2 test performance.</p>
+</section>
+<section id="model-complexity">
+<h2>Model Complexity<a class="headerlink" href="#model-complexity" title="Permalink to this headline">#</a></h2>
+<p>See Fig. <a class="reference external" href="#fig:Display_Complexity">4</a>{reference-type=”ref”
+reference=”fig:Display_Complexity”}. In NeuroMiner, complexity is
+defined as the percentage of support vectors divided by the number of
+subjects in the tested fold. This feature is useful to determine how
+varying parameter combinations may affect the fit of the model.</p>
+</section>
+<section id="ensemble-diversity">
+<h2>Ensemble Diversity<a class="headerlink" href="#ensemble-diversity" title="Permalink to this headline">#</a></h2>
+<p>See Fig. <a class="reference external" href="#fig:Display_EnsembleDiversity">5</a>{reference-type=”ref”
+reference=”fig:Display_EnsembleDiversity”}. This is a measure of Shannon
+entropy across CV1 models for each CV2 partition. A higher entropy means
+higher disagreement between the CV1 models. This measure is useful
+because increased entropy will often result in a better fitting model at
+the CV2 level. It is useful to note that entropy can be maximised as a
+performance criterion in addition to accuracy.</p>
+</section>
+<section id="model-selection-frequency">
+<h2>Model Selection Frequency<a class="headerlink" href="#model-selection-frequency" title="Permalink to this headline">#</a></h2>
+<p>See Fig. <a class="reference external" href="#fig:Display_ModelSelection">6</a>{reference-type=”ref”
+reference=”fig:Display_ModelSelection”}. Within an ensemble framework,
+the models that are selected within the inner, CV1, cycle are then
+applied to the outer test data. For example, if it is a 10x10 CV1
+framework with a winner-takes-all method of model selection, then 100
+models will be applied to the held-out CV2 test fold. This plot displays
+the percentage of times that each parameter combination was selected.</p>
+</section>
+<section id="multi-group-results">
+<h2>Multi-Group Results<a class="headerlink" href="#multi-group-results" title="Permalink to this headline">#</a></h2>
+<p>If a multi-group analysis is conducted then the results display will
+change to accommodate the groups. See figure
+<a class="reference external" href="#fig:Display_MultiGroup">7</a>{reference-type=”ref”
+reference=”fig:Display_MultiGroup”}.</p>
+<p><img alt="Option 1: classificationplot" src="../_images/Display_ClassPlot.pdf" />{#fig:Display_ClassPlot
+width=”1\linewidth”}</p>
+<p><img alt="Option 2: Cross-validationPerformance." src="../_images/Display_CVperf.png" />{#fig:Display_CVperf
+width=”1\linewidth”}</p>
+<p><img alt="Option 3: GeneralizationError." src="../_images/Display_GenError.png" />{#fig:Display_GenError
+width=”1\linewidth”}</p>
+<p><img alt="Option 4: ModelComplexity" src="../_images/Display_Complexity.png" />{#fig:Display_Complexity
+width=”1\linewidth”}</p>
+<p><img alt="Option 4: EnsembleDiversity" src="../_images/Display_EnsembleDiversity.png" />{#fig:Display_EnsembleDiversity
+width=”1\linewidth”}</p>
+<p><img alt="Option 5: Model SelectionFrequency" src="../_images/Display_ModelSelection.png" />{#fig:Display_ModelSelection
+width=”1\linewidth”}</p>
+<p><img alt="The multi-groupdisplay" src="../_images/Display_MultiGroup.png" />{#fig:Display_MultiGroup
+width=”1\linewidth”}</p>
+<p><img alt="Within the main results display, the user can go to the&quot;Comparisons&quot; menu item and then select the option to calculatestatistical differences between separatemodels" src="../_images/Display_Statistical_Comp.png" />{#fig:Display_Statistical_Comp
+width=”1\linewidth”}</p>
+<p><img alt="Within the main results display, the user can go to the&quot;Comparisons&quot; menu item and then select the option to display visualcomparisons between separatemodels" src="../_images/Display_Visual_Comp.png" />{#fig:Display_Visual_Comp
+width=”1\linewidth”}</p>
 </section>
 </section>
 
