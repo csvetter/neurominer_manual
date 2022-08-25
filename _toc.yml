@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Getting started
+    chapters:
+      - file: docs/introduction
+      - file: docs/prerequisites
+      - file: docs/gettingstarted
+      - file: docs/license
+  - caption: NeuroMiner interface
+    chapters:
+      - file: docs/mainmenu
+      - file: docs/3.1_mainmenu_input_data

@@ -1,0 +1,1154 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Appendix {#appendix .unnumbered} &#8212; NeuroMiner Manual</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/nm_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroMiner Manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prerequisites.html">
+   Suggested Prerequisites
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gettingstarted.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="license.html">
+   License
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/appendix.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/docs/appendix.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Appendix {#appendix .unnumbered}
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#invocation">
+     Invocation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#options">
+     Options
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout-changes">
+     Layout changes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#page-design">
+       Page design
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#section-headings">
+       Section headings
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#paragraphs">
+       Paragraphs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#footnotes">
+     Footnotes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#description-environment">
+       Description environment
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#positioning-of-margin-notes">
+       Positioning of margin notes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#headers-and-footers-pagestyle">
+       Headers and Footers {#pagestyle}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-commands">
+     Additional commands
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#marginlabel">
+       Marginlabel
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#attention">
+       Attention
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#seealso">
+       Seealso
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#maxipage-environment">
+       Maxipage environment
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fullpage-environment-fullpage">
+       Fullpage environment {#fullpage}
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#noparskip">
+       Noparskip
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setleftmarginwidth">
+       Setleftmarginwidth
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#descriptioncolon">
+       Descriptioncolon
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#descriptionleft">
+       Descriptionleft
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#maxipagerule">
+       Maxipagerule
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#condbreak">
+       Condbreak
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example">
+       Example
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pageperchapter">
+       Pageperchapter
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#smallborder">
+       Smallborder
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dvips">
+       Dvips
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pdftex">
+       Pdftex
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pagesize">
+       Pagesize
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ifpdfoutput">
+       Ifpdfoutput
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Appendix {#appendix .unnumbered}</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Appendix {#appendix .unnumbered}
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#invocation">
+     Invocation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#options">
+     Options
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout-changes">
+     Layout changes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#page-design">
+       Page design
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#section-headings">
+       Section headings
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#paragraphs">
+       Paragraphs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#footnotes">
+     Footnotes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#description-environment">
+       Description environment
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#positioning-of-margin-notes">
+       Positioning of margin notes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#headers-and-footers-pagestyle">
+       Headers and Footers {#pagestyle}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-commands">
+     Additional commands
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#marginlabel">
+       Marginlabel
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#attention">
+       Attention
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#seealso">
+       Seealso
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#maxipage-environment">
+       Maxipage environment
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fullpage-environment-fullpage">
+       Fullpage environment {#fullpage}
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#noparskip">
+       Noparskip
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setleftmarginwidth">
+       Setleftmarginwidth
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#descriptioncolon">
+       Descriptioncolon
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#descriptionleft">
+       Descriptionleft
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#maxipagerule">
+       Maxipagerule
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#condbreak">
+       Condbreak
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example">
+       Example
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pageperchapter">
+       Pageperchapter
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#smallborder">
+       Smallborder
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dvips">
+       Dvips
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pdftex">
+       Pdftex
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pagesize">
+       Pagesize
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ifpdfoutput">
+       Ifpdfoutput
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p>[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2cm]geometry</p>
+<section class="tex2jax_ignore mathjax_ignore" id="appendix-appendix-unnumbered">
+<h1>Appendix {#appendix .unnumbered}<a class="headerlink" href="#appendix-appendix-unnumbered" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="figures">
+<h1>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">#</a></h1>
+<p>This appendix describes how the actual page is build from its components
+and how they are influenced by TeX’s parameters. (
+Figure <a class="reference external" href="#bild">[bild]</a>{reference-type=”ref” reference=”bild”} has been
+created by Nelson Beebe at the University of Utah.)</p>
+<p>text area</p>
+<p>:   The normal text area (“Body”) contains the running text including
+footnotes, tables and figures. The headings, footer and margin notes
+do <em>not</em> belong to the text area.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The text area has the width and the height .
+
+In a two column layout the text area is split into two columns, with
+the width each and a space of between them. Thus the is a little bit
+smaller than half the .
+
+and should be a multiple of the width of one character in the `tt`
+font.
+
+should be multiple of the line height , increased by the constant
+value of .
+
+Indentations inside the text area are defined with and . These
+parameters should not be changed explicitly by the user but rather
+implicitly through environments.
+</pre></div>
+</div>
+<p>left margin</p>
+<p>:   The left margin is either or plus 1 inch. Both parameters have the
+same value, unless the <code class="docutils literal notranslate"><span class="pre">twoside</span></code> option is given.</p>
+<p>top margin</p>
+<p>:   The top margin is the sum of , and plus 1 inch.</p>
+<p>right margin</p>
+<p>:   The right margin is the paper width minus the left margin and the
+text area.</p>
+<p>bottom margin</p>
+<p>:   The bottom margin is the paper height minus the top margin and the
+text area.</p>
+<p>heading</p>
+<p>:   The heading is inside the top margin with a space of between the
+lower border of the header and the upper border of the text area.
+Above the header is a free space of increased by 1 inch.</p>
+<p>footing</p>
+<p>:   The footer is inside the bottom margin with a space of between the
+lower border of the text area and the lower border of the footer.</p>
+<p>margin notes</p>
+<p>:   Margin notes are inside the left or right margin. They have a width
+of and a space of between the margin note and the text area. The
+vertical space between two margin notes is .</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">paperheight</span></code> consists of the following elements (from top to
+bottom):</p>
+<blockquote>
+<div><p>1 inch<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+remaining page.</p>
+</div></blockquote>
+<p>On pages with margin notes in the right margin the <code class="docutils literal notranslate"><span class="pre">paperwidth</span></code> consists
+of the following elements:</p>
+<blockquote>
+<div><p>1 inch<br />
+  or  <br />
+<br />
+<br />
+<br />
+remaining page</p>
+</div></blockquote>
+<p>With the option <code class="docutils literal notranslate"><span class="pre">twoside</span></code> the left pages change to</p>
+<blockquote>
+<div><p>1 inch<br />
+<br />
+<br />
+remaining page</p>
+</div></blockquote>
+<p>The parameters , , and may be negative. In this case, the margin will be
+smaller than 1 inch. The same is true for and which leads to text that
+is wider than the text area.</p>
+<p>Extensive treatment and figures to this subject may be found in the
+[TUGboat]{.smallcaps} Vol.9, No.1 (April 1988).</p>
+<p>The parameter is no longer defined in  since no-one used it.</p>
+<p>by -1000 by 2</p>
+<p>by 2 by 3613</p>
+<p>= by 3613 by 1000</p>
+<p>by 50400 by 1807 by 2400 by 1807 by 50400 by 4207</p>
+<p>by 32522 by 10841</p>
+<p>by 32522 by 2800</p>
+<p>by 75 by 100 by 4207</p>
+<p>= by -4444 by -2000</p>
+<p>= by 4444</p>
+<p>by -7227</p>
+<p>= by -</p>
+<p>by 32522</p>
+<p>by 4 by 10</p>
+<p>by 3</p>
+<p>(61430,79497)</p>
+<p>(0,0)</p>
+<p>(0,0)(-0,-0) (61430,79497)[]</p>
+<p>(0,)</p>
+<p>(0,0)(-0,-0) (0,0)(1,0)7227 (7227,0)(-1,0)7227</p>
+<p>(7227,)</p>
+<p>(0,0)(-0,-0) (0,0)(0,1)7227 (0,7227)(0,-1)7227</p>
+<p>(7227,)</p>
+<p>(,) (0,0)(0,1) (0,)(1,0) (,0)(0,1) (3613,)</p>
+<p>(0,0)(-0,-0) (32522, 2000)[l]A line of text…</p>
+<p>(3613,)</p>
+<p>(0,0)(-0,–2000) ( 32522,2000)[l]Next line…</p>
+<p>(,)</p>
+<p>(0,0)(-0,–2000) (0,0)(0,1) 2000 (0, 2000)(0,-1) 2000</p>
+<p>(0,50400)</p>
+<p>(0,0)(-0,-0) (0,0)(1,0)3613 (3613,0)(-1,0)3613</p>
+<p>(0,50400)</p>
+<p>(0,0)(-0,-0) (0,0)(1,0)3613 (3613,0)(-1,0)3613</p>
+<p>(3613,4207)</p>
+<p>(0,0)(-0,-0) (32522, 50400)[]Page Text</p>
+<p>(3613,0)</p>
+<p>(0,0)(-0,-0) (32522, 2400)[]Page Footer</p>
+<p>(3613,0)</p>
+<p>(0,0)(–800,-0) (0,0)(0,1)2400 (0,2400)(0,-1)2400</p>
+<p>(,0)</p>
+<p>(0,0)(-800,-0) (0,0)(0,1)4207 (0,4207)(0,-1)4207</p>
+<p>(3613,)</p>
+<p>(0,0)(-0,-0) (0,0)(1,0)32522 (32522,0)(-1,0)32522</p>
+<p>(3613,4207)</p>
+<p>(0,0)(–800,-0) (0,0)(0,1) 50400 (0, 50400)(0,-1) 50400</p>
+<p>(3613,)</p>
+<p>(0,0)(–800,-0) (0,0)(0,1) 2400 (0, 2400)(0,-1) 2400</p>
+<p>(,)</p>
+<p>(0,0)(-800,–1807) (0,0)(0,1) 1807 (0, 1807)(0,-1) 1807</p>
+<p>(,)</p>
+<p>(0,0)(-800,–5420) (0,0)(0,1) 5420 (0, 5420)(0,-1) 5420</p>
+<p>(3613,)</p>
+<p>(0,0)(-0,-0) (32522, 2400)[]Page Header</p>
+<p>(,)</p>
+<p>(0,0)(-0,-0) ( 7227,4444)[]</p>
+<p>(,)</p>
+<p>(0,0)(–800,- -2000) (0,0)(0,1)2000 (0,2000)(0,-1)2000</p>
+<p>(,)</p>
+<p>(0,0)(-0,-0) ( 7227,4444)[]</p>
+<p>(,)</p>
+<p>(0,0)(-0,–800) (0,0)(1,0) 7227 ( 7227,0)(-1,0) 7227</p>
+<p>(,)</p>
+<p>(0,0)(- -2800,-800) (0,0)(1,0)2800 (2800,0)(-1,0)2800</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tables">
+<h1>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">#</a></h1>
+<p>s[[refman]]{#refman label=”refman”}</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">refman.sty</span></code> was defined at the EDV-Zentrum (computing center) of
+the TU<a class="footnote-reference brackets" href="#id2" id="id1">1</a> Wien. This layout is suitable for reference manuals,
+technical descriptions and similar applications. It is based on the
+ideas shown in previous sections: The layout has a wide left margin for
+headings and margin notes and smaller margins on the right side, the top
+and the bottom.</p>
+<p>In 1994 this layout was re-implemented as a class for the new . This
+made it possible to include some minor improvements, such as the support
+of different paper sizes. The <code class="docutils literal notranslate"><span class="pre">refman.sty</span></code> was split into two classes
+<code class="docutils literal notranslate"><span class="pre">refrep</span></code>, similar to <code class="docutils literal notranslate"><span class="pre">report</span></code> and <code class="docutils literal notranslate"><span class="pre">refart</span></code>, similar to <code class="docutils literal notranslate"><span class="pre">article</span></code>. These
+classes differ in the layout of the header and footer. The <code class="docutils literal notranslate"><span class="pre">refart</span></code> does
+not support the command.</p>
+<p>The current version of both classes is described in this document. It
+serves as an example for the layout.</p>
+<section id="invocation">
+<h2>Invocation<a class="headerlink" href="#invocation" title="Permalink to this headline">#</a></h2>
+<p>The LaTeX local guide (if available) shows if this class is available at
+your TeX installation or where to install it. To use the <code class="docutils literal notranslate"><span class="pre">refart</span></code> class,
+simply call it with the command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\documentclass[11pt,a4paper]{refart}
+\usepackage{german} % other packages you may want 
+</pre></div>
+</div>
+</section>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">refart</span></code> class replaces <code class="docutils literal notranslate"><span class="pre">article</span></code> and <code class="docutils literal notranslate"><span class="pre">refrep</span></code> replaces <code class="docutils literal notranslate"><span class="pre">report</span></code>.
+They support all options of these classes except for the <code class="docutils literal notranslate"><span class="pre">twocolumn</span></code>
+option.</p>
+<p>It supports the additional option <code class="docutils literal notranslate"><span class="pre">square</span></code> which makes the equal to the
+.</p>
+<p>Neither <code class="docutils literal notranslate"><span class="pre">refart</span></code> nor <code class="docutils literal notranslate"><span class="pre">refrep</span></code> support two column layout, thus the
+commands and must not be used.</p>
+<p>The index will be set in two column format and you can’t change it with
+the means of this class.</p>
+</section>
+<section id="layout-changes">
+<h2>Layout changes<a class="headerlink" href="#layout-changes" title="Permalink to this headline">#</a></h2>
+<section id="page-design">
+<h3>Page design<a class="headerlink" href="#page-design" title="Permalink to this headline">#</a></h3>
+<p>In this design the usable area for text () is calculated as the paper
+width minus 2 . The default value for is 1 Inch.</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">smallborder</span></code> reduces to 0.25 Inch. This is more suitable for
+documents viewed on screen, especially when combined with the <code class="docutils literal notranslate"><span class="pre">a5paper</span></code>
+and <code class="docutils literal notranslate"><span class="pre">landscape</span></code> options.</p>
+<p>Only a fraction of this width is used for the running text (), the
+remaining part forms a wide left margin () which is used for headings
+and margin notes. The is 70 % of the by default, but this can be changed
+with the command which accepts arguments between 0 and 1.</p>
+<p>The text height is calculated as the paper height minus 2 . The
+<code class="docutils literal notranslate"><span class="pre">topmargin</span></code> is modified by some pagestyles. (see
+<a class="reference external" href="#pagestyle">2.4.3</a>{reference-type=”ref” reference=”pagestyle”}).</p>
+<p>The pages are always set with a ragged bottom.</p>
+</section>
+<section id="section-headings">
+<h3>Section headings<a class="headerlink" href="#section-headings" title="Permalink to this headline">#</a></h3>
+<p>The headings for , , and extend into the left margin, thus using the
+full width of the page. They are not justified and hyphenation is
+discouraged. A small space is kept free above and below the heading.
+Headings for and are set in a bold font.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">refrep</span></code> class defines a different layout for the command: It always
+starts a new page and prints the chapter headings in a large bold font
+with a thick line above and below. This heading uses the full width of
+the page.</p>
+<p>A similar heading is created by the commands which is available in both
+classes. It uses a roman part number instead of the arabic section
+number.</p>
+<p>The commands sets the title of the document in the same layout when no
+special title page is requested. (This is the default for <code class="docutils literal notranslate"><span class="pre">refart</span></code>. To
+suppress the title page in a <code class="docutils literal notranslate"><span class="pre">refrep</span></code> document, you can use the
+<code class="docutils literal notranslate"><span class="pre">notitlepage</span></code> option.) The name of the author and the date is printed in
+italic flush right below the document title.</p>
+</section>
+<section id="paragraphs">
+<h3>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">#</a></h3>
+<p>Paragraphs are separated by a vertical space () of half a line
+(<code class="docutils literal notranslate"><span class="pre">0.5\baselineskip</span></code>) plus a stretchable length of 2 pt. Paragraphs are
+not indented.</p>
+<p>The vertical spacing inside, above and below a list environment is the
+same as in the running text.</p>
+</section>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">#</a></h2>
+<p>The footnote layout consists of a small margin (1em) which contains the
+footnote symbol. A small space is set between the symbol and the
+footnote text. The paragraphs of the footnote are not indented. There is
+currently no space between two footnotes, I’m not sure it this will stay
+this way. The footnote symbol is set as a superscript. This may change
+in later versions. I’m relying on user feedback to finally solve this.</p>
+<section id="description-environment">
+<h3>Description environment<a class="headerlink" href="#description-environment" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">description</span></code> environment will use the whole left margin for the
+description label.</p>
+<p>You will find examples in the
+section <a class="reference external" href="#layout">[layout]</a>{reference-type=”ref” reference=”layout”}.</p>
+</section>
+<section id="positioning-of-margin-notes">
+<h3>Positioning of margin notes<a class="headerlink" href="#positioning-of-margin-notes" title="Permalink to this headline">#</a></h3>
+<p>Margin notes () are always put into the left margin. They use the whole
+width of the margin.</p>
+<p>The minimum space between two margin notes is set to 0 to prevent them
+from being shifted around when many margin notes are used.</p>
+</section>
+<section id="headers-and-footers-pagestyle">
+<h3>Headers and Footers {#pagestyle}<a class="headerlink" href="#headers-and-footers-pagestyle" title="Permalink to this headline">#</a></h3>
+<p>The page style <code class="docutils literal notranslate"><span class="pre">plain</span></code> puts the page number into the footer in the right
+corner. When the option <code class="docutils literal notranslate"><span class="pre">twoside</span></code> is active, the page number of left
+pages is put into the left corner.</p>
+<p>The pagestyles <code class="docutils literal notranslate"><span class="pre">headings</span></code> and <code class="docutils literal notranslate"><span class="pre">myheadings</span></code> create a header which spans
+the whole width of the page. The headings contain the running head ( and
+in <code class="docutils literal notranslate"><span class="pre">refart</span></code> and and in <code class="docutils literal notranslate"><span class="pre">refrep</span></code>) when <code class="docutils literal notranslate"><span class="pre">headings</span></code> is used or a fixed text
+that can defined with the command when <code class="docutils literal notranslate"><span class="pre">myheadings</span></code> is used. The heading
+will be set in a slanted font and separated from the body by a thin
+line.</p>
+<p>In addition to the standard classes, <code class="docutils literal notranslate"><span class="pre">refman</span></code> supports a style for
+footers, which is used in this documentation. The information is exactly
+the same as in the headings but now printed in the footer with a thin
+line above.</p>
+<p>To use a user-defined string you can say:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\pagestyle{myfootings} % or myheadings
+\markboth{left title}{right title}
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">heading</span></code> and <code class="docutils literal notranslate"><span class="pre">myheading</span></code> commands increase the top margin by one
+line while the <code class="docutils literal notranslate"><span class="pre">footings</span></code> and <code class="docutils literal notranslate"><span class="pre">myfootings</span></code> commands decrease the top
+margin by one line. The page styles <code class="docutils literal notranslate"><span class="pre">empty</span></code> and <code class="docutils literal notranslate"><span class="pre">plain</span></code> leave the top
+margin unchanged. You should not combine headings and footings in one
+document.</p>
+<p>User feedback has shown that it is not a good idea to combine <code class="docutils literal notranslate"><span class="pre">plain</span></code>
+and <code class="docutils literal notranslate"><span class="pre">(my)heading</span></code> either. Therefore I changed the layout of the page to
+<code class="docutils literal notranslate"><span class="pre">empty</span></code>. Maybe it is necessary to define a <code class="docutils literal notranslate"><span class="pre">hplain</span></code> and <code class="docutils literal notranslate"><span class="pre">fplain</span></code>
+pagestyle or to define some magic to use the correct definition of
+<code class="docutils literal notranslate"><span class="pre">plain</span></code>. Feedback is welcome.</p>
+</section>
+</section>
+<section id="additional-commands">
+<h2>Additional commands<a class="headerlink" href="#additional-commands" title="Permalink to this headline">#</a></h2>
+<section id="marginlabel">
+<h3>Marginlabel<a class="headerlink" href="#marginlabel" title="Permalink to this headline">#</a></h3>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\marginlabel{xxx}</span></code> prints the text <code class="docutils literal notranslate"><span class="pre">xxx</span></code> right justified
+into the left margin. Please note that a will print it left justified.</p>
+<p>The word “Example” in the left margin is printed with the command
+<code class="docutils literal notranslate"><span class="pre">\marginlabel{Example:}</span></code></p>
+</section>
+<section id="attention">
+<h3>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">#</a></h3>
+<p>The command puts an exclamation mark with an arrow pointing to the text
+into the left margin. This is an example for .</p>
+<p>Since version 2.0c you can change the symbol used for the command using
+a <code class="docutils literal notranslate"><span class="pre">\renewcommand{\attentionsymbol}{\texttt\{:-)\}}</span></code> command. To get the
+default back use <code class="docutils literal notranslate"><span class="pre">\renewcommand{\attentionsymbol}</span></code>
+<code class="docutils literal notranslate"><span class="pre">{\large</span> <span class="pre">\bfseries</span> <span class="pre">!</span> <span class="pre">$\rightarrow$}</span></code></p>
+<p>Since version 2.0c takes an optional argument to define the symbol used
+in the margin. Thus you can change the symbol once, without having to
+restore it later. Do not abuse this feature, it is primarily meant as an
+support for the <code class="docutils literal notranslate"><span class="pre">manfnt</span></code> package which enables you to use the “dangerous
+bend” and “double dangerous bend” signs.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">manfnt</span></code> package is no longer enclosed with Refman, it has grown and
+is now a package of its own.</p>
+</section>
+<section id="seealso">
+<h3>Seealso<a class="headerlink" href="#seealso" title="Permalink to this headline">#</a></h3>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\seealso{n}</span></code> prints an arrow and its argument into the left
+margin. You will find examples for this in the left margin and in
+chapter 1.</p>
+</section>
+<section id="maxipage-environment">
+<h3>Maxipage environment<a class="headerlink" href="#maxipage-environment" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">maxipage</span></code> environment is a special kind of <code class="docutils literal notranslate"><span class="pre">minipage</span></code> which extends
+over the full width of the page. It can be used for long formulas or
+<code class="docutils literal notranslate"><span class="pre">tabular</span></code> environments. You may use <code class="docutils literal notranslate"><span class="pre">maxipage</span></code> environments inside
+floats. You cannot use margin notes inside a <code class="docutils literal notranslate"><span class="pre">maxipage</span></code> and no page
+break will occur while in a <code class="docutils literal notranslate"><span class="pre">maxipage</span></code>. A <code class="docutils literal notranslate"><span class="pre">maxipage</span></code> is always a
+paragraph of its own with a thick line above and below. You can disable
+these lines with the command. They are on by default.</p>
+<p>The following paragraph is an example for a <code class="docutils literal notranslate"><span class="pre">maxipage</span></code>:</p>
+<p>This very long line is an example for a <code class="docutils literal notranslate"><span class="pre">maxipage</span></code>. It extends over the
+full width of the page, including the left margin.</p>
+<p>This is normal text after the <code class="docutils literal notranslate"><span class="pre">maxipage</span></code>.</p>
+</section>
+<section id="fullpage-environment-fullpage">
+<h3>Fullpage environment {#fullpage}<a class="headerlink" href="#fullpage-environment-fullpage" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">fullpage</span></code> environment consists of one or more pages where the text
+extends over the full width of the page. You cannot use margin notes
+inside a <code class="docutils literal notranslate"><span class="pre">fullpage</span></code> environment. A <code class="docutils literal notranslate"><span class="pre">fullpage</span></code> will always start and end
+on a page of its own. It may be used for large tables, program listings
+or anything that does not fit into the normal layout.</p>
+<p>Page  is an example for a <code class="docutils literal notranslate"><span class="pre">fullpage</span></code>.</p>
+</section>
+<section id="noparskip">
+<h3>Noparskip<a class="headerlink" href="#noparskip" title="Permalink to this headline">#</a></h3>
+<p>The removes the vertical space between two paragraphs. It is similar to
+the command that removes the indent of the first line of a paragraph.</p>
+</section>
+<section id="setleftmarginwidth">
+<h3>Setleftmarginwidth<a class="headerlink" href="#setleftmarginwidth" title="Permalink to this headline">#</a></h3>
+<p>The command is no longer supported. You can achieve similar results by
+using the command.</p>
+</section>
+<section id="descriptioncolon">
+<h3>Descriptioncolon<a class="headerlink" href="#descriptioncolon" title="Permalink to this headline">#</a></h3>
+<p>By default a colon is printed after the description label. The command
+disables the colon, the re-enables it.</p>
+</section>
+<section id="descriptionleft">
+<h3>Descriptionleft<a class="headerlink" href="#descriptionleft" title="Permalink to this headline">#</a></h3>
+<p>The command sets the description label left justified into the margin.
+The default is right justified which will be achieved with</p>
+</section>
+<section id="maxipagerule">
+<h3>Maxipagerule<a class="headerlink" href="#maxipagerule" title="Permalink to this headline">#</a></h3>
+<p>You can disable the rules before and after a <code class="docutils literal notranslate"><span class="pre">maxipage</span></code> with the command
+and re-enable them with the command. The default is on. You should not
+mix <code class="docutils literal notranslate"><span class="pre">maxipage</span></code>s with and without rules in one document.</p>
+</section>
+<section id="condbreak">
+<h3>Condbreak<a class="headerlink" href="#condbreak" title="Permalink to this headline">#</a></h3>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\condbreak{2cm}</span></code> ensures, that the next 2 cm are either
+completely on this page or completely on the next. No page break will
+appear in the next 2 cm.</p>
+<p>This is really a hack to achieve what the command often fails to do.</p>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">example</span></code> environment acts like a <code class="docutils literal notranslate"><span class="pre">verse</span></code> environment but uses a
+<code class="docutils literal notranslate"><span class="pre">tt</span></code> font.</p>
+</section>
+<section id="pageperchapter">
+<h3>Pageperchapter<a class="headerlink" href="#pageperchapter" title="Permalink to this headline">#</a></h3>
+<p>The command creates page number that start with 1 for every new chapter.
+This may be useful for larger manuals. Since it works with chapters it
+is only available in the <code class="docutils literal notranslate"><span class="pre">refrep</span></code> class.</p>
+</section>
+<section id="smallborder">
+<h3>Smallborder<a class="headerlink" href="#smallborder" title="Permalink to this headline">#</a></h3>
+<p>The normal border around the page is 1 Inch. That is fine for a printed
+document, but wastes a lot of space when a document is meant for reading
+on screen. The option <code class="docutils literal notranslate"><span class="pre">smallborder</span></code> reduces the margin to 0.25 Inch.</p>
+<p>You can redefine the border with <code class="docutils literal notranslate"><span class="pre">{0.25in}</span></code>. Call
+<code class="docutils literal notranslate"><span class="pre">\setpagefraction{0.7}</span></code> afterwards to recalculate the page layout.</p>
+</section>
+<section id="dvips">
+<h3>Dvips<a class="headerlink" href="#dvips" title="Permalink to this headline">#</a></h3>
+<p>The option <code class="docutils literal notranslate"><span class="pre">dvips</span></code> tells DVIPS about the current page size.</p>
+</section>
+<section id="pdftex">
+<h3>Pdftex<a class="headerlink" href="#pdftex" title="Permalink to this headline">#</a></h3>
+<p>The option <code class="docutils literal notranslate"><span class="pre">pdftex</span></code> tells PDFTeXabout the current page size.</p>
+</section>
+<section id="pagesize">
+<h3>Pagesize<a class="headerlink" href="#pagesize" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pagesize</span></code> chooses the correct -command to tell the DVI-driver about the
+paper size. It works with DVIPS and DVIPDFMX for DVI output and
+PDFTeX for PDF output.</p>
+</section>
+<section id="ifpdfoutput">
+<h3>Ifpdfoutput<a class="headerlink" href="#ifpdfoutput" title="Permalink to this headline">#</a></h3>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">\ifpdfoutput{pdftext}{dvitext}</span></code> to write different text
+depending on the output format. This command was necessary to implement
+the <code class="docutils literal notranslate"><span class="pre">pagesize</span></code> option and is available for the user as well.</p>
+<p>The last four commands have been taken from KOMA-Script, thanks Markus.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Technical University</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Neurodiagnostics Lab LMU Munich<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
