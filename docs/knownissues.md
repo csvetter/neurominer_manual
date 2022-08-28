@@ -1,7 +1,8 @@
-Known Issues {#knownissues}
-============
+(knownissues)=
+# Known Issues
 
-NeuroMiner is currently undergoing testing and there are a number of
+
+<!-- NeuroMiner is currently undergoing testing and there are a number of
 known issues that require further work. These are the following.
 
 -   The results of external validation analyses are not displayed and
@@ -27,4 +28,4 @@ known issues that require further work. These are the following.
     convert to xls.
 
 -   The extraction of scores (e.g., decision scores) in the results
-    viewer does not function using Linux
+    viewer does not function using Linux -->

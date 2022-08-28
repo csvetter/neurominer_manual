@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cross-validation settings" href="3.2.01_paramtemp_cv_settings.html" />
-    <link rel="prev" title="SPM" href="3.1_mainmenu_input_data.html" />
+    <link rel="next" title="Data Fusion" href="3.2.00_paramtemp_data_fusion.html" />
+    <link rel="prev" title="Data entry in NeuroMiner" href="3.1_mainmenu_input_data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -143,12 +143,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
-   Main Interface
+   Main interface overview
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.1_mainmenu_input_data.html">
-   SPM
+   Data entry in NeuroMiner
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -162,6 +162,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="3.2.00_paramtemp_data_fusion.html">
+     Data Fusion
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="3.2.01_paramtemp_cv_settings.html">
      Cross-validation settings
     </a>
@@ -171,6 +176,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="3.3_mainmenu_initialize_delete_analyses.html">
    Initialize analyses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+   Out of Sample Cross-Validation {#mainmenu_OOCV}
   </a>
  </li>
 </ul>
@@ -354,45 +364,19 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="define-parameter-template">
 <span id="id1"></span><h1>Define parameter template<a class="headerlink" href="#define-parameter-template" title="Permalink to this headline">#</a></h1>
-<p>Once the data have been entered into NeuroMiner, the next step is to
-configure the settings that will be used to analyse the data. NeuroMiner
-does this by entering parameters (i.e., settings that define a system or
-sets the conditions of its operation) using the parameter template menu:</p>
-<p>1: Define data fusion options […]<br />
-2: Cross-validation settings […]<br />
-3: Preprocessing pipeline […]<br />
-4: Classification algorithm […]<br />
-5: Learning algorithm parameters […]<br />
-6: Ensemble generation strategies […]<br />
-7: Visualization options […]<br />
-8: Model saving options […]<br />
-9: Define verbosity level […]<br />
-10: Inspect workspace<br />
-11: Save parameter template […]<br />
-12: Load parameter template […]<br />
-In the case of machine learning analysis, the parameters are associated
-with all steps of the analysis and can be understood as a set of
-inter-dependent steps. These parameters are stored as a ‘template’
-within the NM structure and analyses can be initiated using this
-template. Additionally, the template can be saved (see ‘Save parameter
-template’) and imported to be used in other analyses.</p>
-<p>It is important to note that all settings that are defined in the
-parameter template do not take effect on the data until they are
-‘initialized’ using the main menu (see section
-<a class="reference external" href="#mainmenu">[mainmenu]</a>{reference-type=”ref” reference=”mainmenu”}).
-In other words, defining or changing a parameter template will not
-effect any existing analyses that have been initialized and/or run.</p>
-<p>The main steps in a machine learning analysis can be characterised as:</p>
+<p>Once the data have been entered into NeuroMiner, the next step is to configure the settings that will be used to analyze the data. NeuroMiner does this by entering parameters (i.e., settings that define a system or sets the conditions of its operation) using the parameter template menu:</p>
+<figure class="align-default" id="fig-3-2-nm-paramtemp-init">
+<img alt="The initial parameter template setup menu of neurominer" src="../_images/NM_paramtemp_init.png" />
+</figure>
+<p>In the case of machine learning analysis, the parameters are associated with all steps of the analysis and can be understood as a set of interdependent steps. These parameters are stored as a ’template’ within the NM structure and analyses can be initiated using this template. Additionally, the template can be saved (see ’Save parameter template’) and imported to be used in other analyses.</p>
+<p>It is important to note that all settings that are defined in the parameter template do not take effect on the data and cannot be used in model training until they are <a class="reference internal" href="3.3_mainmenu_initialize_delete_analyses.html#initialize-delete-analyses"><span class="std std-ref">’initialized’</span></a> using the main menu. In other words, defining or changing a parameter template will not affect any existing analyses.</p>
+<p>The main steps in a machine learning analysis can be characterized as:</p>
 <ol class="simple">
-<li><p>defining the cross-validation parameters; 2) extracting features; 3)
-applying a classification algorithm (see section
-<a class="reference external" href="#mainmenu">[mainmenu]</a>{reference-type=”ref” reference=”mainmenu”} and
-<a class="reference external" href="#fig:nm_flowchart">[fig:nm_flowchart]</a>{reference-type=”ref”
-reference=”fig:nm_flowchart”}). Additionally, users may want to optimise
-the selection of variables using feature selection. These main steps are
-separately organised in NeuroMiner and will be outlined in the following
-subsections.</p></li>
+<li><p><a class="reference internal" href="3.2.01_paramtemp_cv_settings.html#paramtemp-cv-settings"><span class="std std-ref">Defining the cross-validation parameters</span></a></p></li>
+<li><p><a class="reference internal" href="3.2.02_paramtemp_preprocessing_pipeline.html#paramtemp-preprocessing-pipeline"><span class="std std-ref">Extracting features</span></a></p></li>
+<li><p><a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html#paramtemp-classification-algorithm"><span class="std std-ref">Applying a classification algorithm</span></a></p></li>
 </ol>
+<p>Additionally, users may want to optimize the selection of variables using feature selection. These main steps are separately organized in NeuroMiner and will be outlined in the following subsections.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -428,13 +412,13 @@ subsections.</p></li>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">SPM</p>
+            <p class="prev-next-title">Data entry in NeuroMiner</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3.2.01_paramtemp_cv_settings.html" title="next page">
+    <a class='right-next' id="next-link" href="3.2.00_paramtemp_data_fusion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cross-validation settings</p>
+        <p class="prev-next-title">Data Fusion</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
