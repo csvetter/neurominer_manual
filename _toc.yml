@@ -39,8 +39,8 @@ parts:
       - file: docs/4.0_Example
   - caption: Functions in development
     chapters:
-      - file: docs/3.10_investigate_sample_size
-      - file: docs/DEV_brain_network_analysis
+      - file: docs/3.10_mainmenu_investigate_sample_size
+      #- file: docs/DEV_brain_network_analysis
 
 
   #- file: docs/license
