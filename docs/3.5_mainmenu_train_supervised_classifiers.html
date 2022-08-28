@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Train supervised classifiers {#3.5_train_supervised_classifiers} &#8212; NeuroMiner Manual</title>
+    <title>Train supervised classifiers &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Visualize classifiers" href="3.6_mainmenu_visualize_classifiers.html" />
+    <link rel="prev" title="Preprocess features" href="3.4_mainmenu_preprocess_features.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -138,7 +140,7 @@ const thebe_selector_output = ".output, .cell_output"
   NeuroMiner interface
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
    Main interface overview
@@ -169,6 +171,56 @@ const thebe_selector_output = ".output, .cell_output"
      Cross-validation settings
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.02_paramtemp_preprocessing_pipeline.html">
+     Preprocessing pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html">
+     Classification algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.04_paramtemp_learning_algorithm_parameters.html">
+     Learning algorithm parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.05_paramtemp_ensemble_generation_strategies.html">
+     Ensemble generation strategies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
+     Visualization options {#3.2.06_visualization_options}
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+     Model saving options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
+     Save parameter template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
+     Define verbosity level
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+     Stacking
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -177,8 +229,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="3.4_mainmenu_preprocess_features.html">
+   Preprocess features
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Train supervised classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html">
+   Visualize classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
+   Display training results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
+   Generate master files
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
-   Out of Sample Cross-Validation {#mainmenu_OOCV}
+   Out of Sample Cross-Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.0_Example.html">
+   Example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Functions in development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
   </a>
  </li>
 </ul>
@@ -348,7 +449,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Train supervised classifiers {#3.5_train_supervised_classifiers}</h1>
+                <h1>Train supervised classifiers</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -360,43 +461,50 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="train-supervised-classifiers-3-5-train-supervised-classifiers">
-<h1>Train supervised classifiers {#3.5_train_supervised_classifiers}<a class="headerlink" href="#train-supervised-classifiers-3-5-train-supervised-classifiers" title="Permalink to this headline">#</a></h1>
-<p>As depicted in Figure
-<a class="reference external" href="#fig:nm_flowchart">[fig:nm_flowchart]</a>{reference-type=”ref”
-reference=”fig:nm_flowchart”}, once the parameter template has been
+  <section class="tex2jax_ignore mathjax_ignore" id="train-supervised-classifiers">
+<span id="mainmenu-train-supervised-classifiers"></span><h1>Train supervised classifiers<a class="headerlink" href="#train-supervised-classifiers" title="Permalink to this headline">#</a></h1>
+<!-- As depicted in Figure
+[\[fig:nm_flowchart\]](#fig:nm_flowchart){reference-type="ref"
+reference="fig:nm_flowchart"}, once the parameter template has been
 completed and initialized there is the option to train the models. This
 implies the use of a statistical technique, such as an SVM, along with
 the hyperparameter optimisation (e.g., optimising the C parameter) and
 any wrappers that might have been activated. The following menu will be
-displayed:</p>
-<p>1: Create analysis from scratch<br />
-2: Create analysis using precomputer preprocdata-MATs<br />
-3: Create analysis using precomputed CVdatamats<br />
-4: Create analysis using precomputed CVresult-MATs</p>
-<p><strong>1: Create analysis from scratch</strong><br />
+displayed:
+
+1: Create analysis from scratch\
+2: Create analysis using precomputer preprocdata-MATs\
+3: Create analysis using precomputed CVdatamats\
+4: Create analysis using precomputed CVresult-MATs
+
+**1: Create analysis from scratch**\
 This is where the analysis has only been initialized and no data
 matrices have been stored. This will preprocess and then train
 classifiers. Please note, that if your matrices are large (e.g., with
 neuroimaging data) then this will take up a lot of RAM and as such it is
-recommended to preprocess the data first.</p>
-<p><strong>2: Create analysis using precomputer preprocdata-MATs</strong><br />
+recommended to preprocess the data first.
+
+**2: Create analysis using precomputer preprocdata-MATs**\
 This is when the user has preprocessed their data and stored the
-preprocessed files in a folder; i.e., they have TRAIN files.</p>
-<p><strong>3: Create analysis using precomputed CVdatamats</strong><br />
+preprocessed files in a folder; i.e., they have TRAIN files.
+
+**3: Create analysis using precomputed CVdatamats**\
 This is when the user has completed an analysis (preprocessing and
 training) and they have the data matrix files stored in a folder; i.e.,
-“…CVdatamat_oCV…” files. When this option is selected, the
+\"\...CVdatamat_oCV\...\" files. When this option is selected, the
 analysis results from the CVdatamat files are then collated into a
 result file. It is useful especially when the program has crashed,
 and/or the NM structure has not been saved, and the user wants to get
-the results without re-running all the training again.</p>
-<p><strong>4: Create analysis using precomputed CVresult-MATs</strong><br />
+the results without re-running all the training again.
+
+**4: Create analysis using precomputed CVresult-MATs**\
 This is when the user already has the results file and they want to
 integrate the results into the NM structure. This is useful if there has
-been a crash and the data has been lost from the NM structure.</p>
-<p><img alt="Monitor progress during ananalysis." src="docs/Images/analysis_processing" />{#fig:analysis_processing
-width=”1.1\linewidth”}</p>
+been a crash and the data has been lost from the NM structure.
+
+![Monitor progress during an
+analysis.](Images/analysis_processing){#fig:analysis_processing
+width="1.1\\linewidth"} -->
 </section>
 
     <script type="text/x-thebe-config">
@@ -426,6 +534,20 @@ width=”1.1\linewidth”}</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="3.4_mainmenu_preprocess_features.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Preprocess features</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.6_mainmenu_visualize_classifiers.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Visualize classifiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

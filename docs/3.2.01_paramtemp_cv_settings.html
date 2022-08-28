@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Initialize analyses" href="3.3_mainmenu_initialize_delete_analyses.html" />
+    <link rel="next" title="Preprocessing pipeline" href="3.2.02_paramtemp_preprocessing_pipeline.html" />
     <link rel="prev" title="Data Fusion" href="3.2.00_paramtemp_data_fusion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -171,6 +171,56 @@ const thebe_selector_output = ".output, .cell_output"
      Cross-validation settings
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.02_paramtemp_preprocessing_pipeline.html">
+     Preprocessing pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html">
+     Classification algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.04_paramtemp_learning_algorithm_parameters.html">
+     Learning algorithm parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.05_paramtemp_ensemble_generation_strategies.html">
+     Ensemble generation strategies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
+     Visualization options {#3.2.06_visualization_options}
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+     Model saving options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
+     Save parameter template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
+     Define verbosity level
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+     Stacking
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -179,8 +229,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="3.4_mainmenu_preprocess_features.html">
+   Preprocess features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.5_mainmenu_train_supervised_classifiers.html">
+   Train supervised classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html">
+   Visualize classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
+   Display training results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
+   Generate master files
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
-   Out of Sample Cross-Validation {#mainmenu_OOCV}
+   Out of Sample Cross-Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.0_Example.html">
+   Example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Functions in development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
   </a>
  </li>
 </ul>
@@ -551,10 +650,10 @@ In brief, leave-one-out cross-validation and k-fold cross-validation risk overfi
 <figure class="align-left" id="fig-3-2-01-nested-cv">
 <img alt="neurominer_cv_settings" src="../_images/nested_cv.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Nested cross-validation in NeuroMiner. A: The data is split into k number of folds in the outer CV2 set and a CV2 test set is held-out. The rest of the data goes into the ’nest’ where it is again subdivided into k-folds, a test fold is held-out, and the rest of the data is used for training. Models associated with each parameter combination (e.g., C or epsilon) are created in the CV1 training data and applied to the CV1 test data. B: accuracy is assessed across all parameter combinations for all CV1 models. The optimal parameter combination is chosen based on a criteria set by the user. For each CV1 fold, the training and test data, which has been preprocessed, is retrained with the winning parameter or parameter combination. The models are then applied to the held-out CV2 test data. In cases there are many (hyper)parameter combinations or when there is variable selection procedure then the user can specify to keep a percentage of top performing models for each fold (this is discussed in the section of the manual on the learning algorithm parameters).</span><a class="headerlink" href="#fig-3-2-01-nested-cv" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Nested cross-validation in NeuroMiner. A: The data is split into k number of folds in the outer CV2 set and a CV2 test set is held-out. The rest of the data goes into the ’nest’ where it is again subdivided into k-folds, a test fold is held-out, and the rest of the data is used for training. Models associated with each parameter combination (e.g., C or epsilon) are created in the CV1 training data and applied to the CV1 test data. B: accuracy is assessed across all parameter combinations for all CV1 models. The optimal parameter combination is chosen based on a criteria set by the user. For each CV1 fold, the training and test data, which has been preprocessed, is retrained with the winning parameter or parameter combination. The models are then applied to the held-out CV2 test data. In cases there are many (hyper)parameter combinations or when there is variable selection procedure then the user can specify to keep a percentage of top performing models for each fold (this is discussed in the section of the manual on the learning algorithm parameters).</span><a class="headerlink" href="#fig-3-2-01-nested-cv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A depiction of nested cross-validation is represented in <a class="reference internal" href="#fig-3-2-01-nested-cv"><span class="std std-numref">Fig. 7</span></a>. In NeuroMiner the outer cross-validation cycle of a nested cross-validation scheme is designated as <strong>CV2</strong> and the inner cross-validation folds are designated as <strong>CV1</strong>.Models are trained in the CV1 cycle and then the best performing models are applied to the CV2 data. This separation of CV2 and CV1 data avoids overfitting. Let’s look at the cross-validation frameworks included in NeuroMiner:</p>
+<p>A depiction of nested cross-validation is represented in <a class="reference internal" href="#fig-3-2-01-nested-cv"><span class="std std-numref">Fig. 8</span></a>. In NeuroMiner the outer cross-validation cycle of a nested cross-validation scheme is designated as <strong>CV2</strong> and the inner cross-validation folds are designated as <strong>CV1</strong>.Models are trained in the CV1 cycle and then the best performing models are applied to the CV2 data. This separation of CV2 and CV1 data avoids overfitting. Let’s look at the cross-validation frameworks included in NeuroMiner:</p>
 <section id="pooled">
 <h3>1 | Pooled<a class="headerlink" href="#pooled" title="Permalink to this headline">#</a></h3>
 <p>Outer and inner cross-validation folds will be automatically and randomly defined.</p>
@@ -604,7 +703,7 @@ In brief, leave-one-out cross-validation and k-fold cross-validation risk overfi
 </section>
 <section id="build-cv2-cv1-structure">
 <h2>Build CV2/CV1 structure<a class="headerlink" href="#build-cv2-cv1-structure" title="Permalink to this headline">#</a></h2>
-<p>Once the options have been selected above, then the user needs to build the CV2/CV1 structure. This literally creates all the folds and indexes the subjects that are to be included in the folds. These can be found in the NM structure (e.g., <a class="reference external" href="http://NM.cv">NM.cv</a>).</p>
+<p>Once the options have been selected above, then the user needs to build the CV2/CV1 structure. This literally creates all the folds and indexes the subjects that are to be included in the folds. These can be found in the NM structure (i.e., in “<a class="reference external" href="http://NM.cv">NM.cv</a>”).</p>
 <hr class="docutils" />
 </section>
 <section id="load-cv-structure">
@@ -661,10 +760,10 @@ within the NM structure.
             <p class="prev-next-title">Data Fusion</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3.3_mainmenu_initialize_delete_analyses.html" title="next page">
+    <a class='right-next' id="next-link" href="3.2.02_paramtemp_preprocessing_pipeline.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Initialize analyses</p>
+        <p class="prev-next-title">Preprocessing pipeline</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

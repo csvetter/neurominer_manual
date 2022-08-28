@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Preprocess features {#3.4_preprocess_features} &#8212; NeuroMiner Manual</title>
+    <title>Preprocess features &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Train supervised classifiers" href="3.5_mainmenu_train_supervised_classifiers.html" />
+    <link rel="prev" title="Initialize analyses" href="3.3_mainmenu_initialize_delete_analyses.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -138,7 +140,7 @@ const thebe_selector_output = ".output, .cell_output"
   NeuroMiner interface
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
    Main interface overview
@@ -169,6 +171,56 @@ const thebe_selector_output = ".output, .cell_output"
      Cross-validation settings
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.02_paramtemp_preprocessing_pipeline.html">
+     Preprocessing pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html">
+     Classification algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.04_paramtemp_learning_algorithm_parameters.html">
+     Learning algorithm parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.05_paramtemp_ensemble_generation_strategies.html">
+     Ensemble generation strategies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
+     Visualization options {#3.2.06_visualization_options}
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+     Model saving options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
+     Save parameter template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
+     Define verbosity level
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+     Stacking
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -176,9 +228,58 @@ const thebe_selector_output = ".output, .cell_output"
    Initialize analyses
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Preprocess features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.5_mainmenu_train_supervised_classifiers.html">
+   Train supervised classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html">
+   Visualize classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
+   Display training results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
+   Generate master files
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
-   Out of Sample Cross-Validation {#mainmenu_OOCV}
+   Out of Sample Cross-Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.0_Example.html">
+   Example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Functions in development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
   </a>
  </li>
 </ul>
@@ -348,7 +449,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Preprocess features {#3.4_preprocess_features}</h1>
+                <h1>Preprocess features</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -360,34 +461,40 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="preprocess-features-3-4-preprocess-features">
-<h1>Preprocess features {#3.4_preprocess_features}<a class="headerlink" href="#preprocess-features-3-4-preprocess-features" title="Permalink to this headline">#</a></h1>
-<p>Once the data has been initialized, the user has the option to
+  <section class="tex2jax_ignore mathjax_ignore" id="preprocess-features">
+<span id="mainmenu-preprocess-features"></span><h1>Preprocess features<a class="headerlink" href="#preprocess-features" title="Permalink to this headline">#</a></h1>
+<!-- Once the data has been initialized, the user has the option to
 preprocess the features. In NeuroMiner nomenclature, this refers to any
 steps that are conducted within the cross-validation folds prior to
 training a model. For example, the data within each fold could be scaled
-and then imputed, or a principal components analysis could be conducted.</p>
-<p>When this option is selected, the user will be presented with the
-following:</p>
-<p>1 : Select analysis to operate on [Analysis 1]<br />
-2 : Overwrite existing preprocessed data files [ no ]<br />
-3 : Use existing preprocessing parameter files, if available [ no ]<br />
+and then imputed, or a principal components analysis could be conducted.
+
+When this option is selected, the user will be presented with the
+following:
+
+1 : Select analysis to operate on \[Analysis 1\]\
+2 : Overwrite existing preprocessed data files \[ no \]\
+3 : Use existing preprocessing parameter files, if available \[ no \]\
 4 : Write out computed parameters to disk (may require A LOT of disk
-space) [ no ]<br />
-5 : Select CV2 partitions to operate on [ 0 selected ]</p>
-<p><strong>2: Overwrite existing preprocessed data files</strong>. NeuroMiner will save
-preprocessed data files and selecting this option will overwrite them.</p>
-<p><strong>3: Use existing preprocessing parameter files, if available</strong>. The
+space) \[ no \]\
+5 : Select CV2 partitions to operate on \[ 0 selected \]
+
+**2: Overwrite existing preprocessed data files**. NeuroMiner will save
+preprocessed data files and selecting this option will overwrite them.
+
+**3: Use existing preprocessing parameter files, if available**. The
 user has the option to save parameter files (e.g., betas from regression
 of age from a feature) and this option will allow them to use the
-existing files.</p>
-<p><strong>4: Write out computer parameters to disk</strong>. This option will write the
+existing files.
+
+**4: Write out computer parameters to disk**. This option will write the
 parameters (e.g., beta coefficients) to disk. This is not recommended
-due to space limitations.</p>
-<p><strong>5: Select CV2 partition to operate on</strong>. This option will only appear
+due to space limitations.
+
+**5: Select CV2 partition to operate on**. This option will only appear
 if an analysis has been selected in step 1. It allows the user to select
 the folds that the preprocessing analysis will be applied to (see Box:
-Selecting CV folds in NeuroMiner).</p>
+Selecting CV folds in NeuroMiner). -->
 </section>
 
     <script type="text/x-thebe-config">
@@ -417,6 +524,20 @@ Selecting CV folds in NeuroMiner).</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="3.3_mainmenu_initialize_delete_analyses.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Initialize analyses</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.5_mainmenu_train_supervised_classifiers.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Train supervised classifiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

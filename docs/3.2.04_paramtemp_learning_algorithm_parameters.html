@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ensemble generation strategies" href="3.2.05_paramtemp_ensemble_generation_strategies.html" />
+    <link rel="prev" title="Classification algorithm" href="3.2.03_paramtemp_classification_algorithm.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -138,7 +140,7 @@ const thebe_selector_output = ".output, .cell_output"
   NeuroMiner interface
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
    Main interface overview
@@ -149,16 +151,16 @@ const thebe_selector_output = ".output, .cell_output"
    Data entry in NeuroMiner
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
    Define parameter template
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.00_paramtemp_data_fusion.html">
      Data Fusion
@@ -169,6 +171,56 @@ const thebe_selector_output = ".output, .cell_output"
      Cross-validation settings
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.02_paramtemp_preprocessing_pipeline.html">
+     Preprocessing pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html">
+     Classification algorithm
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Learning algorithm parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.05_paramtemp_ensemble_generation_strategies.html">
+     Ensemble generation strategies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
+     Visualization options {#3.2.06_visualization_options}
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+     Model saving options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
+     Save parameter template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
+     Define verbosity level
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+     Stacking
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -177,8 +229,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="3.4_mainmenu_preprocess_features.html">
+   Preprocess features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.5_mainmenu_train_supervised_classifiers.html">
+   Train supervised classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html">
+   Visualize classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
+   Display training results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
+   Generate master files
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
-   Out of Sample Cross-Validation {#mainmenu_OOCV}
+   Out of Sample Cross-Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.0_Example.html">
+   Example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Functions in development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
   </a>
  </li>
 </ul>
@@ -362,50 +463,58 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="learning-algorithm-parameters">
 <span id="paramtemp-learning-algorithm-parameters"></span><h1>Learning algorithm parameters<a class="headerlink" href="#learning-algorithm-parameters" title="Permalink to this headline">#</a></h1>
-<p>Parameters for a learning algorithm (e.g., an SVM or SVR) change the way
-that the model is fitted to the data. A common example is the “C” or
-“slack” parameter for soft margin SVM that defines the penalty
-associated with misclassifying individuals–i.e., whether the model does
+<!-- Parameters for a learning algorithm (e.g., an SVM or SVR) change the way
+that the model is fitted to the data. A common example is the \"C\" or
+\"slack\" parameter for soft margin SVM that defines the penalty
+associated with misclassifying individuals--i.e., whether the model does
 not allow any error within the CV1 folds and very tightly fits the
 decision boundary, or whether it allows error in order to improve
 generalizability. As such, parameters such as these can greatly affect
 the model performance and it is common practice in machine learning to
-optimise the parameters for your specific problem and data.</p>
-<p>NeuroMiner was developed in order to optimise performance across
+optimise the parameters for your specific problem and data.
+
+NeuroMiner was developed in order to optimise performance across
 pre-defined parameter ranges within the nested cross-validation
 framework using a gridsearch, which protects against overfitting due to
 the application of the trained models to held-out data. Parameter
 default ranges are provied in NeuroMiner based on the literature and
 empirical testing, but we strongly recommend that the parameters are
-defined for your study and problem.</p>
-<p>As previously stated, NeuroMiner uses a dynamic menu configuration that
+defined for your study and problem.
+
+As previously stated, NeuroMiner uses a dynamic menu configuration that
 changes based on previous input. This is no different for the learning
 algorithm parameters, whereby the menu options will change based on what
-you have selected in the “Classification algorithm” section.</p>
-<p>Here we show an example for a RBF-Gaussian kernel Support Vector Machine
-<strong>classifier</strong>.</p>
-<ol class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Support_vector_machine#Parameter_selection">Define Slack/Regularization
-parameter(s)</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Support_vector_machine#Parameter_selection">Define Kernel
-parameter(s))</a></p></li>
-<li><p><a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define Weighting
-exponents</a></p></li>
-<li><p>Enable regularization of model selection</p></li>
-</ol>
-<p>Model selection regularization option controls the optimization module
+you have selected in the \"Classification algorithm\" section.
+
+Here we show an example for a RBF-Gaussian kernel Support Vector Machine
+**classifier**.
+
+1.  [Define Slack/Regularization
+    parameter(s)](https://en.wikipedia.org/wiki/Support_vector_machine#Parameter_selection)
+
+2.  [Define Kernel
+    parameter(s))](https://en.wikipedia.org/wiki/Support_vector_machine#Parameter_selection)
+
+3.  [Define Weighting
+    exponents](https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410)
+
+4.  Enable regularization of model selection
+
+Model selection regularization option controls the optimization module
 in Neurominer. When parameter(s) selection is necessary regularization
 might be advisable. If you answer yes to this question the following
-options will be available.</p>
-<ol class="simple">
-<li><p>Criterion for cross-parameter model selection</p></li>
-<li><p>Suboption 1 dependent on (a)</p></li>
-<li><p>Suboption 2 dependent on (a)</p></li>
-<li><p>Specify cross-parameter model selection process. This option
-controls the number of models (parameters combination) selected. One
-optimal model based on the criteria and regularization defined
-previously or an ensemble of the top performing models</p></li>
-</ol>
+options will be available.
+
+1.  Criterion for cross-parameter model selection
+
+2.  Suboption 1 dependent on (a)
+
+3.  Suboption 2 dependent on (a)
+
+4.  Specify cross-parameter model selection process. This option
+    controls the number of models (parameters combination) selected. One
+    optimal model based on the criteria and regularization defined
+    previously or an ensemble of the top performing models -->
 </section>
 
     <script type="text/x-thebe-config">
@@ -435,6 +544,20 @@ previously or an ensemble of the top performing models</p></li>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="3.2.03_paramtemp_classification_algorithm.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Classification algorithm</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.2.05_paramtemp_ensemble_generation_strategies.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ensemble generation strategies</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

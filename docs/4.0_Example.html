@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Example {#mainmenu_3.10_example} &#8212; NeuroMiner Manual</title>
+    <title>Example &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Investigate sample size (simulation)" href="3.10_mainmenu_investigate_sample_size.html" />
+    <link rel="prev" title="Out of Sample Cross-Validation" href="3.9_mainmenu_OOCV_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -171,6 +171,56 @@ const thebe_selector_output = ".output, .cell_output"
      Cross-validation settings
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.02_paramtemp_preprocessing_pipeline.html">
+     Preprocessing pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html">
+     Classification algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.04_paramtemp_learning_algorithm_parameters.html">
+     Learning algorithm parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.05_paramtemp_ensemble_generation_strategies.html">
+     Ensemble generation strategies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
+     Visualization options {#3.2.06_visualization_options}
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+     Model saving options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
+     Save parameter template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
+     Define verbosity level
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+     Stacking
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -179,8 +229,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="3.4_mainmenu_preprocess_features.html">
+   Preprocess features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.5_mainmenu_train_supervised_classifiers.html">
+   Train supervised classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html">
+   Visualize classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
+   Display training results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
+   Generate master files
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
-   Out of Sample Cross-Validation {#mainmenu_OOCV}
+   Out of Sample Cross-Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Functions in development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
   </a>
  </li>
 </ul>
@@ -338,60 +437,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-structural-neuroimaging-data">
-   Example: Structural NeuroImaging Data
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Example {#mainmenu_3.10_example}</h1>
+                <h1>Example</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-structural-neuroimaging-data">
-   Example: Structural NeuroImaging Data
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -399,364 +461,412 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="example-mainmenu-3-10-example">
-<h1>Example {#mainmenu_3.10_example}<a class="headerlink" href="#example-mainmenu-3-10-example" title="Permalink to this headline">#</a></h1>
-<p>For a first-time user, NeuroMiner might be best described using an
+  <section class="tex2jax_ignore mathjax_ignore" id="example">
+<span id="id1"></span><h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h1>
+<!-- For a first-time user, NeuroMiner might be best described using an
 example. This section will run through a simple example using structural
-neuroimaging data.</p>
-<section id="example-structural-neuroimaging-data">
-<h2>Example: Structural NeuroImaging Data<a class="headerlink" href="#example-structural-neuroimaging-data" title="Permalink to this headline">#</a></h2>
-<p>The sample data for this example is open source and can be found in
-(<a class="reference external" href="http://cobre.mrn.org/">link</a>). We processed the data with the Voxel
-Based Morphometry (VBM) toolbox and we’re going to use the mwrp1
+neuroimaging data.
+
+### Example: Structural NeuroImaging Data
+
+The sample data for this example is open source and can be found in
+([link](http://cobre.mrn.org/)). We processed the data with the Voxel
+Based Morphometry (VBM) toolbox and we're going to use the mwrp1
 (grey-matter segmented, realigned, warped, modulated) images. Each voxel
 of these images represents the relative volume of grey matter at any
 location. The aim of the analysis is to predict who is an individual
-with a diagnosis of schizophrenia and who doesn’t have a diagnosis
+with a diagnosis of schizophrenia and who doesn't have a diagnosis
 purely from the grey matter volumes. Based on previous research, the
 hypothesis is that those with schizophrenia will be able to be
-distinguished with approximately 70% accuracy.</p>
-<p>If the SPM path has been added to NeuroMiner, then the main menu will
-look like the following:</p>
-<p>1 : Load data for model discovery and cross-validation<br />
-2 : Load NeuroMiner structure<br />
-3 : Change working directory<br />
-4 : Utilities</p>
-<p>The first step is to enter the data using the first option, which will
-display the following menu:</p>
-<p>1 : Define machine learning framework [ classification ]<br />
-2 : Select data input format [ nifti ]<br />
-3 : Define no. of samples and sample identifiers [ ??? ]<br />
-4 : Involve unlabeled cases in the analyses [ no ]<br />
-5 : Select space-defining image [ ? ]<br />
-6 : Describe data [ ? ]</p>
-<p>So, we’re going to leave the machine learning framework as
+distinguished with approximately 70% accuracy.
+
+If the SPM path has been added to NeuroMiner, then the main menu will
+look like the following:
+
+1 : Load data for model discovery and cross-validation\
+2 : Load NeuroMiner structure\
+3 : Change working directory\
+4 : Utilities
+
+The first step is to enter the data using the first option, which will
+display the following menu:
+
+1 : Define machine learning framework \[ classification \]\
+2 : Select data input format \[ nifti \]\
+3 : Define no. of samples and sample identifiers \[ ??? \]\
+4 : Involve unlabeled cases in the analyses \[ no \]\
+5 : Select space-defining image \[ ? \]\
+6 : Describe data \[ ? \]
+
+So, we're going to leave the machine learning framework as
 classification because this is a classification problem, and since we
-haven’t conducted an SPM analysis we will also opt to import NIFTI files
-directly. I’ll then select the third option to define the number of
-samples and will define the following:</p>
-<p>Number of groups? : 2<br />
-Define name of group number 1 : SCZ<br />
-Define name of group number 2 : CTRL</p>
-<p>I’ve entered the individuals which a schizophrenia diagnosis first
+haven't conducted an SPM analysis we will also opt to import NIFTI files
+directly. I'll then select the third option to define the number of
+samples and will define the following:
+
+Number of groups? : 2\
+Define name of group number 1 : SCZ\
+Define name of group number 2 : CTRL
+
+I've entered the individuals which a schizophrenia diagnosis first
 because then the sensitivity accuracy of the analysis will be based on
 this group rather than the controls. Once this data is entered, then the
-menu changes to the following:</p>
-<p>1 : Define machine learning framework [ classification ]<br />
-2 : Select data input format [ nifti ]<br />
-3 : Modify no. samples [ N=2 ] and sample identifiers [ SCZ, CTRL ]<br />
-4 : Involve unlabeled cases in the analyses [ no ]<br />
-5 : Select space-defining image [ ? ]<br />
-6 : Map image files to samples [ ? ]<br />
-7 : Describe data [ ? ]</p>
-<p>I don’t want to “Involve unlabeled cases in the analysis”, so I’ll
+menu changes to the following:
+
+1 : Define machine learning framework \[ classification \]\
+2 : Select data input format \[ nifti \]\
+3 : Modify no. samples \[ N=2 \] and sample identifiers \[ SCZ, CTRL \]\
+4 : Involve unlabeled cases in the analyses \[ no \]\
+5 : Select space-defining image \[ ? \]\
+6 : Map image files to samples \[ ? \]\
+7 : Describe data \[ ? \]
+
+I don't want to \"Involve unlabeled cases in the analysis\", so I'll
 then select the space-defining image (i.e., the mask; keep in-mind that
-the images will be resliced to this). I’ll either be able to select a
+the images will be resliced to this). I'll either be able to select a
 region from the WFU PickAtlas or just use my own mask. For this
-analysis, I don’t want to select individual regions, so I’m going to
+analysis, I don't want to select individual regions, so I'm going to
 select option 2 and use a pre-prepared ICBM mask in my templates folder.
 Then because the template is not completely binary and there is a
-transition from 0 to 1 at the border of the brain, I’m going to select a
+transition from 0 to 1 at the border of the brain, I'm going to select a
 threshold of 0.5 and then define the regions that are greater than or
-equal to this threshold (i.e., <span class="math notranslate nohighlight">\(&gt;\)</span>=).</p>
-<p>I then select option 6 to “Map image files to samples” and a file
+equal to this threshold (i.e., $>$=).
+
+I then select option 6 to \"Map image files to samples\" and a file
 selector box will appear that is the same as in SPM. At the top of the
-box, you will see what the box is for: “Select nifti for sample 1:
-SCZ”. To select the images, I could navigate to the directory on the
+box, you will see what the box is for: \"Select nifti for sample 1:
+SCZ\". To select the images, I could navigate to the directory on the
 left and select images, but we recommend to have a file that stores the
 absolute paths of each of the images in a separate text file. This is
 because it keeps a record of what has been entered, but mainly because
 the order of the images is very important for later steps. As an
-example, my file looks like this:</p>
-<p>/NeuroDiagStor1/COBRE/Data/0040000/mwrp1mprage.nii<br />
-/NeuroDiagStor1/COBRE/Data/0040001/mwrp1mprage.nii<br />
-/NeuroDiagStor1/COBRE/Data/0040002/mwrp1mprage.nii<br />
-…</p>
-<p>Once I have this file, I then press the small button on the bottom left
-called “Ed” and an editor will appear. Then I paste the files into
+example, my file looks like this:
+
+/NeuroDiagStor1/COBRE/Data/0040000/mwrp1mprage.nii\
+/NeuroDiagStor1/COBRE/Data/0040001/mwrp1mprage.nii\
+/NeuroDiagStor1/COBRE/Data/0040002/mwrp1mprage.nii\
+\...
+
+Once I have this file, I then press the small button on the bottom left
+called \"Ed\" and an editor will appear. Then I paste the files into
 this editor, first for the SCZ group and then for the CTRL group. I then
 go back to the main menu and enter the global grey matter volumes (or
 the intracranial volume) with data that I have loaded into the MATLAB
 workspace. It is critical that these global volume data are in the same
 order as the subjects that I have just entered into NeuroMiner. If they
-are in the wrong order then the results of the analysis will be invalid.</p>
-<p>I then go back to the main menu and there will now be an option to
-“Inspect images”. I press this, check that the images have been read
+are in the wrong order then the results of the analysis will be invalid.
+
+I then go back to the main menu and there will now be an option to
+\"Inspect images\". I press this, check that the images have been read
 correctly and then enter a few images to visually inspect. In this case,
 1:4. This will display the space-defining mask image as well as the
 first 4 of my mwrp images. They look good, so I will then choose
-“Describe data” and enter: COBREmwrp1. After this, I will “IMPORT”
+\"Describe data\" and enter: COBREmwrp1. After this, I will \"IMPORT\"
 the images and this will lead to reslicing and masking with the
-space-defining image (i.e., my ICBM template).</p>
-<p>After the data has been imported, a “MODALITIES” menu will appear with
+space-defining image (i.e., my ICBM template).
+
+After the data has been imported, a \"MODALITIES\" menu will appear with
 the analysis descriptor (i.e., COBREmwrp1) at the top, then some details
 about the images. It is important to check that these settings are
 correct, and the dimensionality of the images. NeuroMiner automatically
-reports the number of features and the percentage of zero/NaN (“not a
-number”) features. This is important for later analysis (e.g., if there
+reports the number of features and the percentage of zero/NaN (\"not a
+number\") features. This is important for later analysis (e.g., if there
 are NaN features then they probably need to be excluded. It is also
 important to note that for this analysis, no covariates have been found
-in the NM workspace because they have not been entered yet.</p>
-<p>I want to enter covariates of age and sex, so I will choose option “5:
-Add covariate(s) to NM workspace”. These covariates must be already
+in the NM workspace because they have not been entered yet.
+
+I want to enter covariates of age and sex, so I will choose option \"5:
+Add covariate(s) to NM workspace\". These covariates must be already
 loaded prior to entering into NeuroMiner, otherwise you will have to
 exit the program, load the covariates, and then enter the program again.
-After pressing 5, I will then enter the variable that I’ve previously
-loaded “cobre_covars” and then name the covariates “one-by-one”
-because there are only two: age and sex. It’s important to note that
-these variables will just be entered to the NM structure and the <strong>will
-not be controlled for these variables</strong> until you add this as a
-preprocessing step.</p>
-<p>So now that my variables are in then I’ll choose “6: Finish data import
-for discovery &amp; cross-validation analysis”. This means that the data
-will be saved in the NeuroMiner structure and I don’t be able to modify
+After pressing 5, I will then enter the variable that I've previously
+loaded \"cobre_covars\" and then name the covariates \"one-by-one\"
+because there are only two: age and sex. It's important to note that
+these variables will just be entered to the NM structure and the **will
+not be controlled for these variables** until you add this as a
+preprocessing step.
+
+So now that my variables are in then I'll choose \"6: Finish data import
+for discovery & cross-validation analysis\". This means that the data
+will be saved in the NeuroMiner structure and I don't be able to modify
 it or add to it again. NeuroMiner locks the data down like this in order
 to make sure that latter analyses and organisation, relate to the same
-dataset. So, now that the data are in, I’ll be taken to the main
-NeuroMiner menu where I can set-up my analyses.</p>
-<p>1 : Inspect data used for model discovery and cross-validation<br />
-2 : Set up NM parameter workspace<br />
-3 : Initialize &amp; manage analyses<br />
-4 : Preprocess features<br />
-5 : Train supervised classifiers<br />
-6 : Load NeuroMiner structure<br />
-7 : Save NeuroMiner structure<br />
-8 : Clear NeuroMiner structure<br />
-9 : Change working directory<br />
-10 : Utilities</p>
-<p>As described in section <a class="reference external" href="#mainmenu">[mainmenu]</a>{reference-type=”ref”
-reference=”mainmenu”}, I will need to first set up a parameter template
+dataset. So, now that the data are in, I'll be taken to the main
+NeuroMiner menu where I can set-up my analyses.
+
+1 : Inspect data used for model discovery and cross-validation\
+2 : Set up NM parameter workspace\
+3 : Initialize & manage analyses\
+4 : Preprocess features\
+5 : Train supervised classifiers\
+6 : Load NeuroMiner structure\
+7 : Save NeuroMiner structure\
+8 : Clear NeuroMiner structure\
+9 : Change working directory\
+10 : Utilities
+
+As described in section [\[mainmenu\]](#mainmenu){reference-type="ref"
+reference="mainmenu"}, I will need to first set up a parameter template
 with the settings that I want, initialize the analysis, and then run it.
-For this reason, I’ll go to “2: Set up NM parameter workspace” and it
+For this reason, I'll go to \"2: Set up NM parameter workspace\" and it
 will take me to the following menu (see section
-<a class="reference external" href="#3.2_define_parameter_template">[3.2_define_parameter_template]</a>{reference-type=”ref”
-reference=”3.2_define_parameter_template”}):</p>
-<p>1 : Cross-validation settings [ ??? ]<br />
-2 : Preprocessing pipeline [ … ]<br />
-3 : Classification algorithm [ … ]<br />
-4 : Learning algorithm parameters [ … ]<br />
-5 : Ensemble generation strategies [ … ]<br />
-6 : Visualization options [ … ]<br />
-7 : Model saving options [ ??? ]<br />
-8 : Save parameter template<br />
-9 : Load training template<br />
-10 : Define verbosity level [ Detailed output ]</p>
-<p>The fields with question marks “???” need to be completed before the
+[\[3.2_define_parameter_template\]](#3.2_define_parameter_template){reference-type="ref"
+reference="3.2_define_parameter_template"}):
+
+1 : Cross-validation settings \[ ??? \]\
+2 : Preprocessing pipeline \[ \... \]\
+3 : Classification algorithm \[ \... \]\
+4 : Learning algorithm parameters \[ \... \]\
+5 : Ensemble generation strategies \[ \... \]\
+6 : Visualization options \[ \... \]\
+7 : Model saving options \[ ??? \]\
+8 : Save parameter template\
+9 : Load training template\
+10 : Define verbosity level \[ Detailed output \]
+
+The fields with question marks \"???\" need to be completed before the
 analysis can be initialized or run, whereas the other sections are
 pre-set with default settings. The first thing that I need to do is to
 set-up cross-validation in step 1. Pressing this enters the
 cross-validation menu (see section
-<a class="reference external" href="#3.2.01_cross-validation_settings">[3.2.01_cross-validation_settings]</a>{reference-type=”ref”
-reference=”3.2.01_cross-validation_settings”}):</p>
-<p>1 : Select cross-validation framework [ (Pooled) cross-validation ]<br />
-2 : Define no. of CV2 permutations [ P2 = 10 ]<br />
-3 : Define no. of CV2 folds [ K2 = 10 ]<br />
-4 : Define no. of CV1 permutations [ P1 = 10 ]<br />
-5 : Define no. of CV1 folds [ K1 = 10 ]<br />
-6 : Equalize class sizes at the CV1 cycle by undersampling [no]<br />
-7 : Build CV2/CV1 structure<br />
-8 : Load CV structure<br />
-9 : Save CV structure</p>
-<p>It’s automatically set-up with repeated, nested, cross-validation, which
+[\[3.2.01_cross-validation_settings\]](#3.2.01_cross-validation_settings){reference-type="ref"
+reference="3.2.01_cross-validation_settings"}):
+
+1 : Select cross-validation framework \[ (Pooled) cross-validation \]\
+2 : Define no. of CV2 permutations \[ P2 = 10 \]\
+3 : Define no. of CV2 folds \[ K2 = 10 \]\
+4 : Define no. of CV1 permutations \[ P1 = 10 \]\
+5 : Define no. of CV1 folds \[ K1 = 10 \]\
+6 : Equalize class sizes at the CV1 cycle by undersampling \[no\]\
+7 : Build CV2/CV1 structure\
+8 : Load CV structure\
+9 : Save CV structure
+
+It's automatically set-up with repeated, nested, cross-validation, which
 is the gold standard cross-validation set-up currently (see Fig.
-<a class="reference external" href="#fig:nested-CV">[fig:nested-CV]</a>{reference-type=”ref”
-reference=”fig:nested-CV”}). I could change these settings, but in this
-case I think they’re great for my sample so I’ll just choose the option
-to “7: Build CV2/CV1 structure”. This will then build the structure
-and then I’ll go back to the paramter settings menu by simply pressing
-the enter key because here the default option is to quit the menu.</p>
-<p>I’ll then enter the pre-processing menu by typing “2” and hitting
-enter. This will show me a few default settings:</p>
-<p>=========================<br />
-CV-PREPROCESSING PIPELINE<br />
-=========================<br />
-<span class="math notranslate nohighlight">\(&gt;&gt;\)</span> Step 1: Scale [ from 0 to 1 ], zero-out completely non-finite
-features<br />
-Step 2: Prune non-informative columns from matrix [ Zero Var, Nan, Inf
-]</p>
-<p>And the other settings that I could add are:<br />
-1 : Enable spatial operations using Spatial OP Wizard<br />
-2 : Add preprocessing step<br />
-3 : Remove preprocessing step<br />
-4 : Insert preprocessing step<br />
-5 : Replace current preprocessing step<br />
-6 : Modify current preprocessing step<br />
-7 : Next step <span class="math notranslate nohighlight">\(&gt;&gt;\)</span><br />
-8 : Change order of preprocessing steps</p>
-<p>For this analysis, I don’t want to scale the data first because in
+[\[fig:nested-CV\]](#fig:nested-CV){reference-type="ref"
+reference="fig:nested-CV"}). I could change these settings, but in this
+case I think they're great for my sample so I'll just choose the option
+to \"7: Build CV2/CV1 structure\". This will then build the structure
+and then I'll go back to the paramter settings menu by simply pressing
+the enter key because here the default option is to quit the menu.
+
+I'll then enter the pre-processing menu by typing \"2\" and hitting
+enter. This will show me a few default settings:
+
+=========================\
+CV-PREPROCESSING PIPELINE\
+=========================\
+$>>$ Step 1: Scale \[ from 0 to 1 \], zero-out completely non-finite
+features\
+Step 2: Prune non-informative columns from matrix \[ Zero Var, Nan, Inf
+\]
+
+And the other settings that I could add are:\
+1 : Enable spatial operations using Spatial OP Wizard\
+2 : Add preprocessing step\
+3 : Remove preprocessing step\
+4 : Insert preprocessing step\
+5 : Replace current preprocessing step\
+6 : Modify current preprocessing step\
+7 : Next step $>>$\
+8 : Change order of preprocessing steps
+
+For this analysis, I don't want to scale the data first because in
 previous tests I found that this introduced some noise in the ventrices
-and I don’t need to prune non-informative columns because I know that
+and I don't need to prune non-informative columns because I know that
 there are no NaN or Zero variance features in the data from when I did
-the import. So I’ll remove both of these by pressing “3” and then
-“3” again.</p>
-<p>Now that the CV-PREPROCESSING PIPELINE is empty, I’ll add the operations
-I want using option “2: Add preprocessing step” and will see this
-menu:</p>
-<p>1 : Correct data for nuisance covariates using partial correlations<br />
-2 : Apply dimensionality reduction method to data<br />
-3 : Standardize data<br />
-4 : Scale data<br />
-5 : Normalize to group mean<br />
-6 : Normalize data to unit vector<br />
-7 : Apply binning method to data<br />
-8 : Prune non-informative columns from data matrix<br />
-9 : Rank / Weight features<br />
-10 : Correct group offsets from global group mean<br />
-11 : Extract variance components from data</p>
-<p>Then I’ll add the option to “Correct data for nuisance covariates”
+the import. So I'll remove both of these by pressing \"3\" and then
+\"3\" again.
+
+Now that the CV-PREPROCESSING PIPELINE is empty, I'll add the operations
+I want using option \"2: Add preprocessing step\" and will see this
+menu:
+
+1 : Correct data for nuisance covariates using partial correlations\
+2 : Apply dimensionality reduction method to data\
+3 : Standardize data\
+4 : Scale data\
+5 : Normalize to group mean\
+6 : Normalize data to unit vector\
+7 : Apply binning method to data\
+8 : Prune non-informative columns from data matrix\
+9 : Rank / Weight features\
+10 : Correct group offsets from global group mean\
+11 : Extract variance components from data
+
+Then I'll add the option to \"Correct data for nuisance covariates\"
 (section
-<a class="reference external" href="#3.2.02.2_preprocessing_pipeline">[3.2.02.2_preprocessing_pipeline]</a>{reference-type=”ref”
-reference=”3.2.02.2_preprocessing_pipeline”}). I’ll then select option 1
-and select both covariates by entering “1:2”, and I’ll keep the rest
+[\[3.2.02.2_preprocessing_pipeline\]](#3.2.02.2_preprocessing_pipeline){reference-type="ref"
+reference="3.2.02.2_preprocessing_pipeline"}). I'll then select option 1
+and select both covariates by entering \"1:2\", and I'll keep the rest
 of the default settings so that age and sex will the regressed from the
-entire sample. After I’ve set these options, I’ll then quit to go back
-to the preprocessing menu.</p>
-<p>After covarying for nuisance covariates, I now want to perform a
-dimensionality reduction so I will select “2: add preprocessing step”
-and then “Apply dimensionality reduction method to data” (section
-<a class="reference external" href="#3.2.02.3_preprocessing_pipeline">[3.2.02.3_preprocessing_pipeline]</a>{reference-type=”ref”
-reference=”3.2.02.3_preprocessing_pipeline”}). There are a lot of
+entire sample. After I've set these options, I'll then quit to go back
+to the preprocessing menu.
+
+After covarying for nuisance covariates, I now want to perform a
+dimensionality reduction so I will select \"2: add preprocessing step\"
+and then \"Apply dimensionality reduction method to data\" (section
+[\[3.2.02.3_preprocessing_pipeline\]](#3.2.02.3_preprocessing_pipeline){reference-type="ref"
+reference="3.2.02.3_preprocessing_pipeline"}). There are a lot of
 options, but basically it seems that PCA works well most of the time so
-I’ll select “1: Principal components analysis”. Then I’ll keep all the
+I'll select \"1: Principal components analysis\". Then I'll keep all the
 defaults because these work well too, and return to the main menu. In
 this step, if I had have wanted to optimise over a number of different
 component reductions, then I could have defined the energy as 1,
 returned to the preprocessing menu, added another step, and then added
-extracted component subspaces and defined something like [0.2 0.4 0.6
-0.8] to see how the algorithm performs when I retain from 20 to 80% of
-the energy.</p>
-<p>Then I want to add some scaling because I’m going to use an SVM and the
+extracted component subspaces and defined something like \[0.2 0.4 0.6
+0.8\] to see how the algorithm performs when I retain from 20 to 80% of
+the energy.
+
+Then I want to add some scaling because I'm going to use an SVM and the
 data must be scaled for this and also because it makes the results more
-interpretable. So I’ll select “4: Scale data” and again just accept
-the defaults. Now the CV PREPROCESSING PIPELINE should include:</p>
-<p>[=========================<br />
-CV-PREPROCESSING PIPELINE<br />
-=========================]{style=”color: blue”}<br />
-<span class="math notranslate nohighlight">\(&gt;&gt;\)</span> Step 1: Correct for nuisance covariates [age,sex]<br />
-Step 2: Apply dimensionality reduction [ PCA ]<br />
-Step 3: Scale [ from 0 to 1 ], zero-out completely non-finite features</p>
-<p>And this will be applied within each of the CV1 folds.</p>
-<p>I’ll then go back to the main parameter template menu by pressing enter
-and will see this:</p>
-<p>1 : Cross-validation settings [ … ]<br />
-2 : Preprocessing pipeline [ … ]<br />
-3 : Classification algorithm [ … ]<br />
-4 : Learning algorithm parameters [ … ]<br />
-5 : Ensemble generation strategies [ … ]<br />
-6 : Visualization options [ … ]<br />
-7 : Model saving options [ ??? ]<br />
-8 : Save parameter template<br />
-9 : Load training template<br />
-10 : Define verbosity level [ Detailed output ]</p>
-<p>Then I want to define the classification algorithm by pressing “3:
-Classification algorithm” (see section
-<a class="reference external" href="#3.2.03_classification_algorithm">[3.2.03_classification_algorithm]</a>{reference-type=”ref”
-reference=”3.2.03_classification_algorithm”}). The default in NeuroMiner
+interpretable. So I'll select \"4: Scale data\" and again just accept
+the defaults. Now the CV PREPROCESSING PIPELINE should include:
+
+[=========================\
+CV-PREPROCESSING PIPELINE\
+=========================]{style="color: blue"}\
+$>>$ Step 1: Correct for nuisance covariates \[age,sex\]\
+Step 2: Apply dimensionality reduction \[ PCA \]\
+Step 3: Scale \[ from 0 to 1 \], zero-out completely non-finite features
+
+And this will be applied within each of the CV1 folds.
+
+I'll then go back to the main parameter template menu by pressing enter
+and will see this:
+
+1 : Cross-validation settings \[ \... \]\
+2 : Preprocessing pipeline \[ \... \]\
+3 : Classification algorithm \[ \... \]\
+4 : Learning algorithm parameters \[ \... \]\
+5 : Ensemble generation strategies \[ \... \]\
+6 : Visualization options \[ \... \]\
+7 : Model saving options \[ ??? \]\
+8 : Save parameter template\
+9 : Load training template\
+10 : Define verbosity level \[ Detailed output \]
+
+Then I want to define the classification algorithm by pressing \"3:
+Classification algorithm\" (see section
+[\[3.2.03_classification_algorithm\]](#3.2.03_classification_algorithm){reference-type="ref"
+reference="3.2.03_classification_algorithm"}). The default in NeuroMiner
 is to implement a SVM, and the only thing that I want to change is the
 performance measure to Balanced Accuracy instead of accuracy. I can do
-this by selecting the “performance criterion” and then selecting
-“Balanced accuracy: BAC…”. Then I’ll return to the parameter
-template menu by pressing enter again.</p>
-<p>Here I could change the learning algorithm parameters (see section
-<a class="reference external" href="#3.2.04_learning_algorithm_parameters">[3.2.04_learning_algorithm_parameters]</a>{reference-type=”ref”
-reference=”3.2.04_learning_algorithm_parameters”}), but I want to keep
-the defaults again. It’s important to note here that I’m keeping a range
+this by selecting the \"performance criterion\" and then selecting
+\"Balanced accuracy: BAC\...\". Then I'll return to the parameter
+template menu by pressing enter again.
+
+Here I could change the learning algorithm parameters (see section
+[\[3.2.04_learning_algorithm_parameters\]](#3.2.04_learning_algorithm_parameters){reference-type="ref"
+reference="3.2.04_learning_algorithm_parameters"}), but I want to keep
+the defaults again. It's important to note here that I'm keeping a range
 of C parameters that will be optimised during the nested
 cross-validation. I could also enable some filters and wrappers (see
 section
-<a class="reference external" href="#3.2.05_ensemble_generation_strategies">[3.2.05_ensemble_generation_strategies]</a>{reference-type=”ref”
-reference=”3.2.05_ensemble_generation_strategies”}), but these are more
+[\[3.2.05_ensemble_generation_strategies\]](#3.2.05_ensemble_generation_strategies){reference-type="ref"
+reference="3.2.05_ensemble_generation_strategies"}), but these are more
 advanced features that can be addressed in a further tutorial. I could
 also enable visualization options (such as the derivation of Z or
 p-values; see section
-<a class="reference external" href="#3.2.06_visualization_options">[3.2.06_visualization_options]</a>{reference-type=”ref”
-reference=”3.2.06_visualization_options”}), but because I have enabled
-PCA these will be overly conservative and so I won’t use them.</p>
-<p>The final thing to do is to specify “7: Model saving options”. For
-this, I’ll choose that I don’t want to save the models because it will
-take up a lot of space (i.e., more than 10 000 models). Then I’ll define
-a name anyway because this is required in NeuroMiner. Then I’ll return
+[\[3.2.06_visualization_options\]](#3.2.06_visualization_options){reference-type="ref"
+reference="3.2.06_visualization_options"}), but because I have enabled
+PCA these will be overly conservative and so I won't use them.
+
+The final thing to do is to specify \"7: Model saving options\". For
+this, I'll choose that I don't want to save the models because it will
+take up a lot of space (i.e., more than 10 000 models). Then I'll define
+a name anyway because this is required in NeuroMiner. Then I'll return
 to the MAIN INTERFACE menu of NeuroMiner by pressing the enter key until
-I get back here:</p>
-<p>1 : Inspect data used for model discovery and cross-validation<br />
-2 : Set up NM parameter workspace<br />
-3 : Initialize &amp; manage analyses<br />
-4 : Preprocess features<br />
-5 : Train supervised classifiers<br />
-6 : Load NeuroMiner structure<br />
-7 : Save NeuroMiner structure<br />
-8 : Clear NeuroMiner structure<br />
-9 : Change working directory<br />
-10 : Utilities</p>
-<p>From this menu, I’ll then need to “3: initialize &amp; manage analyses”
+I get back here:
+
+1 : Inspect data used for model discovery and cross-validation\
+2 : Set up NM parameter workspace\
+3 : Initialize & manage analyses\
+4 : Preprocess features\
+5 : Train supervised classifiers\
+6 : Load NeuroMiner structure\
+7 : Save NeuroMiner structure\
+8 : Clear NeuroMiner structure\
+9 : Change working directory\
+10 : Utilities
+
+From this menu, I'll then need to \"3: initialize & manage analyses\"
 (see section
-<a class="reference external" href="#3.3_initialize_delete_analyses">[3.3_initialize_delete_analyses]</a>{reference-type=”ref”
-reference=”3.3_initialize_delete_analyses”}) where I’ll see this:</p>
-<p>Define analysis identifier [ ? ]<br />
-Provide analysis description [ ? ]<br />
-Specify parent directory of the analysis [ ? ]<br />
-PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p>I’ll then define the identifier as “COBRE_SVM_analysis1”, provide a
-description of the analysis “This is a test analysis using the COBRE
-dataset”, and specify the parent directory of the analysis using the
-file selector box that pops up. Then I’ll “PROCEED” and a directory
+[\[3.3_initialize_delete_analyses\]](#3.3_initialize_delete_analyses){reference-type="ref"
+reference="3.3_initialize_delete_analyses"}) where I'll see this:
+
+Define analysis identifier \[ ? \]\
+Provide analysis description \[ ? \]\
+Specify parent directory of the analysis \[ ? \]\
+PROCEED $>>>$
+
+I'll then define the identifier as \"COBRE_SVM_analysis1\", provide a
+description of the analysis \"This is a test analysis using the COBRE
+dataset\", and specify the parent directory of the analysis using the
+file selector box that pops up. Then I'll \"PROCEED\" and a directory
 will be created in the directory. Within this directory you will find a
 log file that outlines the operating system and the settings that I have
-just defined. After assuring myself that these are ok, then I’ll go back
-to the main menu.</p>
-<p>Now I have the option to “4: preprocess features” (see section
-<a class="reference external" href="#3.4_preprocess_features">[3.4_preprocess_features]</a>{reference-type=”ref”
-reference=”3.4_preprocess_features”}) first, which will apply all the
+just defined. After assuring myself that these are ok, then I'll go back
+to the main menu.
+
+Now I have the option to \"4: preprocess features\" (see section
+[\[3.4_preprocess_features\]](#3.4_preprocess_features){reference-type="ref"
+reference="3.4_preprocess_features"}) first, which will apply all the
 preprocessing steps I defined to the CV1 folds. Or alternatively, I
-could simply “5: Train supervised classifiers” (see section
-<a class="reference external" href="#3.5_train_supervised_classifiers">[3.5_train_supervised_classifiers]</a>{reference-type=”ref”
-reference=”3.5_train_supervised_classifiers”} from scratch and
+could simply \"5: Train supervised classifiers\" (see section
+[\[3.5_train_supervised_classifiers\]](#3.5_train_supervised_classifiers){reference-type="ref"
+reference="3.5_train_supervised_classifiers"} from scratch and
 automatically preprocess the features as part of this. I want to
 preprocess first here because then I can run other parameters later with
-this preprocessed data, so I’ll select “4: Preprocess features”. Which
-will activate:</p>
-<p>1 : Overwrite existing preprocessed data files [ no ]<br />
-2 : Use existing preprocessing parameter files, if available [ no ]<br />
+this preprocessed data, so I'll select \"4: Preprocess features\". Which
+will activate:
+
+1 : Overwrite existing preprocessed data files \[ no \]\
+2 : Use existing preprocessing parameter files, if available \[ no \]\
 3 : Write out computed parameters to disk (may require A LOT of disk
-space) [ no ]<br />
-4 : Select CV2 partitions to operate on [ 100 selected ]<br />
-5 : PROCEED <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span></p>
-<p>I’ll keep all the defaults here, but I’ll select “4: Select CV2
-partitions to operate on”, then hit “4: Deselect all CV2 positions”,
-and then I’ll choose “3: Select single perm / fold range” and enter
-[1,1,1,10] to select the first permutation and folds 1-10. This is
+space) \[ no \]\
+4 : Select CV2 partitions to operate on \[ 100 selected \]\
+5 : PROCEED $>>>$
+
+I'll keep all the defaults here, but I'll select \"4: Select CV2
+partitions to operate on\", then hit \"4: Deselect all CV2 positions\",
+and then I'll choose \"3: Select single perm / fold range\" and enter
+\[1,1,1,10\] to select the first permutation and folds 1-10. This is
 because selecting all permutations will take a lot of time and is not
-required for this example. Then I’ll hit enter to go back to the main
-menu and then “5: PROCEED”. The analysis should run now, and I’ll go
-and get some lunch.</p>
-<p>When I get back, the analysis should have finished and NeuroMiner should
+required for this example. Then I'll hit enter to go back to the main
+menu and then \"5: PROCEED\". The analysis should run now, and I'll go
+and get some lunch.
+
+When I get back, the analysis should have finished and NeuroMiner should
 have returned to the main menu. All the preprocessed data files should
 be stored in the subdirectory for this analysis that I activated
-previously. Now all that’s left to do is to actually train the
-classifiers. This can be done by selecting “5: Train supervised
-classifiers” then “2: Operation mode of ML training module” and
-select “2: Compute using existing preprocdata-MATs” and when the file
-selector box appears, I’ll select the preprocessed datamats from the
-previous analysis. Then I’ll select “PROCEED”, check to get an initial
-impression of the accuracy , and then I’ll go and write that fellowship
-application.</p>
-<p>When I come back again, the analysis is finished and the training
+previously. Now all that's left to do is to actually train the
+classifiers. This can be done by selecting \"5: Train supervised
+classifiers\" then \"2: Operation mode of ML training module\" and
+select \"2: Compute using existing preprocdata-MATs\" and when the file
+selector box appears, I'll select the preprocessed datamats from the
+previous analysis. Then I'll select \"PROCEED\", check to get an initial
+impression of the accuracy , and then I'll go and write that fellowship
+application.
+
+When I come back again, the analysis is finished and the training
 datamats are stored in the directory as well. I can now see the results
-by going to “7: Display the training results” (see
-<a class="reference external" href="#3.7_display_training_results">[3.7_display_training_results]</a>{reference-type=”ref”
-reference=”3.7_display_training_results”}), including the accuracies
+by going to \"7: Display the training results\" (see
+[\[3.7_display_training_results\]](#3.7_display_training_results){reference-type="ref"
+reference="3.7_display_training_results"}), including the accuracies
 (see
-<a class="reference external" href="#fig:Display_ClassPlot">[fig:Display_ClassPlot]</a>{reference-type=”ref”
-reference=”fig:Display_ClassPlot”}). This is interesting and so now I
-want to visualise the weights on the brain. For this, I’ll go back to
-the main menu and select “Visualise Classifiers” (see section
-<a class="reference external" href="#3.6_visualize_classifiers">[3.6_visualize_classifiers]</a>{reference-type=”ref”
-reference=”3.6_visualize_classifiers”}) and select the data that I’ve
+[\[fig:Display_ClassPlot\]](#fig:Display_ClassPlot){reference-type="ref"
+reference="fig:Display_ClassPlot"}). This is interesting and so now I
+want to visualise the weights on the brain. For this, I'll go back to
+the main menu and select \"Visualise Classifiers\" (see section
+[\[3.6_visualize_classifiers\]](#3.6_visualize_classifiers){reference-type="ref"
+reference="3.6_visualize_classifiers"}) and select the data that I've
 processed and hit proceed. This will then create some images that I can
-view with a viewer such as MRICRON, FSL, SPM, MANGO, or others.</p>
-<p>If this is your own data, hopefully then you have found out about some
-problem and you can now go and publish.</p>
-</section>
+view with a viewer such as MRICRON, FSL, SPM, MANGO, or others.
+
+If this is your own data, hopefully then you have found out about some
+problem and you can now go and publish. -->
 </section>
 
     <script type="text/x-thebe-config">
@@ -786,6 +896,20 @@ problem and you can now go and publish.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="3.9_mainmenu_OOCV_analysis.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Out of Sample Cross-Validation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.10_mainmenu_investigate_sample_size.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Investigate sample size (simulation)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

@@ -1,9 +1,8 @@
-\[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2cm\]geometry
+(appendix)=
+# Appendix
 
-Appendix {#appendix .unnumbered}
-========
 
-Figures
+<!-- Figures
 =======
 
 This appendix describes how the actual page is build from its components
@@ -260,7 +259,7 @@ your TeX installation or where to install it. To use the `refart` class,
 simply call it with the command:
 
     \documentclass[11pt,a4paper]{refart}
-    \usepackage{german} % other packages you may want 
+    \usepackage{german} % other packages you may want
 
 Options
 -------
@@ -532,4 +531,4 @@ the `pagesize` option and is available for the user as well.
 
 The last four commands have been taken from KOMA-Script, thanks Markus.
 
-[^1]: Technical University
+[^1]: Technical University -->

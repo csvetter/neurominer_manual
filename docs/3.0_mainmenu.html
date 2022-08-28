@@ -171,6 +171,56 @@ const thebe_selector_output = ".output, .cell_output"
      Cross-validation settings
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.02_paramtemp_preprocessing_pipeline.html">
+     Preprocessing pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html">
+     Classification algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.04_paramtemp_learning_algorithm_parameters.html">
+     Learning algorithm parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.05_paramtemp_ensemble_generation_strategies.html">
+     Ensemble generation strategies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
+     Visualization options {#3.2.06_visualization_options}
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+     Model saving options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
+     Save parameter template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
+     Define verbosity level
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+     Stacking
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -179,8 +229,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="3.4_mainmenu_preprocess_features.html">
+   Preprocess features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.5_mainmenu_train_supervised_classifiers.html">
+   Train supervised classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html">
+   Visualize classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
+   Display training results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
+   Generate master files
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
-   Out of Sample Cross-Validation {#mainmenu_OOCV}
+   Out of Sample Cross-Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.0_Example.html">
+   Example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Functions in development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
   </a>
  </li>
 </ul>
@@ -552,11 +651,14 @@ to do so. Each of the menus share a similar format as described in the
 following example.</p>
 <p>After the neuroimaging paths have been established, the first time that
 NeuroMiner is run the user will see the <strong>MAIN INTERFACE</strong> (see
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:3.0_NM_start-screen</span></code>) that consists of 4 different options
+<a class="reference internal" href="#fig-3-0-nm-start-screen"><span class="std std-numref">Fig. 2</span></a>) that consists of 4 different options
 that are numbered 1-4 as well as the
 option to go <strong>Back/Quit (Q)</strong>. To select an option, simply enter the number associated with it. The number you’ve entered will appear next to “Menu choice (1-4/Q) (Default: Q)?”, if you made a mistake, you can simply delete it and type again. If you’ve entered the correct number, press “Enter”.</p>
-<figure class="align-default" id="fig-3-0-nm-start-screen">
+<figure class="align-left" id="fig-3-0-nm-start-screen">
 <img alt="neurominer start display" src="../_images/NM_start_window.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">NeuroMiner main interface</span><a class="headerlink" href="#fig-3-0-nm-start-screen" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <p>The user can now do one of three things:</p>
 <ol class="simple">
@@ -584,17 +686,17 @@ change to the following:</p>
 <figure class="margin-caption align-default" id="fig-3-0-nm-mainmenu-after-dataentry">
 <img alt="../_images/NM_mainmenu_after_dataentry.png" src="../_images/NM_mainmenu_after_dataentry.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">NeuroMiner main interface after data has been loaded and processed</span><a class="headerlink" href="#fig-3-0-nm-mainmenu-after-dataentry" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">NeuroMiner main interface after data has been loaded and processed</span><a class="headerlink" href="#fig-3-0-nm-mainmenu-after-dataentry" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>These options are major functional domains related to the methods and stages of machine learning analysis using NeuroMiner. The contents of each of these options are described throughout the manual, but it is important to understand the overall analytic workflow that the program uses (see <a class="reference internal" href="#fig-3-0-nm-workflow"><span class="std std-numref">Fig. 3</span></a>) by briefly describing each of the options above.</p>
+<p>These options are major functional domains related to the methods and stages of machine learning analysis using NeuroMiner. The contents of each of these options are described throughout the manual, but it is important to understand the overall analytic workflow that the program uses (see <a class="reference internal" href="#fig-3-0-nm-workflow"><span class="std std-numref">Fig. 4</span></a>) by briefly describing each of the options above.</p>
 </section>
 <section id="the-neurominer-workflow">
 <span id="workflow"></span><h2>The NeuroMiner workflow<a class="headerlink" href="#the-neurominer-workflow" title="Permalink to this headline">#</a></h2>
 <figure class="align-left" id="fig-3-0-nm-workflow">
 <img alt="neurominer flowchart" src="../_images/nm_flowchart.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text"><strong>A flow chart for NeuroMiner.</strong> The main processing steps involve entering data and then defining a parameter template with the settings that are required for an analysis. It is recommended that the data are preprocessed (i.e., that feature engineering takes place) before the models can be trained. After training, the user has the option to ’visualize’ the classifiers, where the model and other statistics on each individual feature are calculated. The user can display the performance of the models in a results screen.</span><a class="headerlink" href="#fig-3-0-nm-workflow" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><strong>A flow chart for NeuroMiner.</strong> The main processing steps involve entering data and then defining a parameter template with the settings that are required for an analysis. It is recommended that the data are preprocessed (i.e., that feature engineering takes place) before the models can be trained. After training, the user has the option to ’visualize’ the classifiers, where the model and other statistics on each individual feature are calculated. The user can display the performance of the models in a results screen.</span><a class="headerlink" href="#fig-3-0-nm-workflow" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="input-data-into-nm">

@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Classification algorithm" href="3.2.03_paramtemp_classification_algorithm.html" />
+    <link rel="prev" title="Cross-validation settings" href="3.2.01_paramtemp_cv_settings.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -140,7 +142,7 @@ const thebe_selector_output = ".output, .cell_output"
   NeuroMiner interface
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.0_mainmenu.html">
    Main interface overview
@@ -151,16 +153,16 @@ const thebe_selector_output = ".output, .cell_output"
    Data entry in NeuroMiner
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
    Define parameter template
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.00_paramtemp_data_fusion.html">
      Data Fusion
@@ -171,6 +173,56 @@ const thebe_selector_output = ".output, .cell_output"
      Cross-validation settings
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Preprocessing pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.03_paramtemp_classification_algorithm.html">
+     Classification algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.04_paramtemp_learning_algorithm_parameters.html">
+     Learning algorithm parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.05_paramtemp_ensemble_generation_strategies.html">
+     Ensemble generation strategies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
+     Visualization options {#3.2.06_visualization_options}
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+     Model saving options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
+     Save parameter template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
+     Define verbosity level
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+     Stacking
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -179,8 +231,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="3.4_mainmenu_preprocess_features.html">
+   Preprocess features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.5_mainmenu_train_supervised_classifiers.html">
+   Train supervised classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html">
+   Visualize classifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
+   Display training results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
+   Generate master files
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
-   Out of Sample Cross-Validation {#mainmenu_OOCV}
+   Out of Sample Cross-Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.0_Example.html">
+   Example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Functions in development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
   </a>
  </li>
 </ul>
@@ -361,79 +462,81 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#add-preprocessing-step-3-2-02-1-preprocessing-pipeline">
-   Add preprocessing step {#3.2.02.1_preprocessing_pipeline}
+  <a class="reference internal nav-link" href="#add-preprocessing-step">
+   Add preprocessing step
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#enable-spatial-operations-using-spatial-op-wizard-3-2-02-2-spatial-op">
-   Enable spatial operations using Spatial OP Wizard {#3.2.02.2_spatial_op}
+  <a class="reference internal nav-link" href="#enable-spatial-operations-using-spatial-op-wizard">
+   Enable spatial operations using Spatial OP Wizard
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regress-out-nuisance-covariates-3-2-02-2-preprocessing-pipeline">
-   Regress out nuisance covariates {#3.2.02.2_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#apply-dimensionality-reduction-method-to-data-3-2-02-3-preprocessing-pipeline">
-   Apply dimensionality reduction method to data {#3.2.02.3_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#standardize-data-3-2-02-4-preprocessing-pipeline">
-   Standardize data {#3.2.02.4_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scale-data-3-2-02-5-preprocessing-pipeline">
-   Scale data {#3.2.02.5_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normalize-to-group-mean-3-2-02-6-preprocessing-pipeline">
-   Normalize to group mean {#3.2.02.6_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normalize-to-unit-vector-3-2-02-7-preprocessing-pipeline">
-   Normalize to unit vector {#3.2.02.7_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#apply-binning-method-to-data-3-2-02-8-preprocessing-pipeline">
-   Apply binning method to data {#3.2.02.8_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#impute-missing-values">
-   Impute missing values
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prune-non-informative-columns-from-data-matrix-3-2-02-9-preprocessing-pipeline">
-   Prune non-informative columns from data matrix {#3.2.02.9_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#remove-group-level-differences-using-offset-correction-3-2-02-10-preprocessing-pipeline">
-   Remove Group-level differences using offset correction {#3.2.02.10_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rank-weight-features">
-   Rank / Weight features
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#extract-variance-components-from-data-3-2-02-12-preprocessing-pipeline">
-   Extract variance components from data {#3.2.02.12_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measure-deviation-from-normative-data-3-2-02-13-deviation-normative">
-   Measure deviation from normative data {#3.2.02.13_deviation_normative}
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regress-out-nuisance-covariates-3-2-02-2-preprocessing-pipeline">
+     Regress out nuisance covariates {#3.2.02.2_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-dimensionality-reduction-method-to-data">
+     Apply dimensionality reduction method to data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standardize-data-3-2-02-4-preprocessing-pipeline">
+     Standardize data {#3.2.02.4_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scale-data-3-2-02-5-preprocessing-pipeline">
+     Scale data {#3.2.02.5_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normalize-to-group-mean-3-2-02-6-preprocessing-pipeline">
+     Normalize to group mean {#3.2.02.6_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normalize-to-unit-vector-3-2-02-7-preprocessing-pipeline">
+     Normalize to unit vector {#3.2.02.7_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-binning-method-to-data-3-2-02-8-preprocessing-pipeline">
+     Apply binning method to data {#3.2.02.8_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impute-missing-values">
+     Impute missing values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-non-informative-columns-from-data-matrix-3-2-02-9-preprocessing-pipeline">
+     Prune non-informative columns from data matrix {#3.2.02.9_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-group-level-differences-using-offset-correction-3-2-02-10-preprocessing-pipeline">
+     Remove Group-level differences using offset correction {#3.2.02.10_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rank-weight-features">
+     Rank / Weight features
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extract-variance-components-from-data-3-2-02-12-preprocessing-pipeline">
+     Extract variance components from data {#3.2.02.12_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measure-deviation-from-normative-data-3-2-02-13-deviation-normative">
+     Measure deviation from normative data {#3.2.02.13_deviation_normative}
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -455,79 +558,81 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#add-preprocessing-step-3-2-02-1-preprocessing-pipeline">
-   Add preprocessing step {#3.2.02.1_preprocessing_pipeline}
+  <a class="reference internal nav-link" href="#add-preprocessing-step">
+   Add preprocessing step
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#enable-spatial-operations-using-spatial-op-wizard-3-2-02-2-spatial-op">
-   Enable spatial operations using Spatial OP Wizard {#3.2.02.2_spatial_op}
+  <a class="reference internal nav-link" href="#enable-spatial-operations-using-spatial-op-wizard">
+   Enable spatial operations using Spatial OP Wizard
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regress-out-nuisance-covariates-3-2-02-2-preprocessing-pipeline">
-   Regress out nuisance covariates {#3.2.02.2_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#apply-dimensionality-reduction-method-to-data-3-2-02-3-preprocessing-pipeline">
-   Apply dimensionality reduction method to data {#3.2.02.3_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#standardize-data-3-2-02-4-preprocessing-pipeline">
-   Standardize data {#3.2.02.4_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scale-data-3-2-02-5-preprocessing-pipeline">
-   Scale data {#3.2.02.5_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normalize-to-group-mean-3-2-02-6-preprocessing-pipeline">
-   Normalize to group mean {#3.2.02.6_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normalize-to-unit-vector-3-2-02-7-preprocessing-pipeline">
-   Normalize to unit vector {#3.2.02.7_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#apply-binning-method-to-data-3-2-02-8-preprocessing-pipeline">
-   Apply binning method to data {#3.2.02.8_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#impute-missing-values">
-   Impute missing values
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prune-non-informative-columns-from-data-matrix-3-2-02-9-preprocessing-pipeline">
-   Prune non-informative columns from data matrix {#3.2.02.9_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#remove-group-level-differences-using-offset-correction-3-2-02-10-preprocessing-pipeline">
-   Remove Group-level differences using offset correction {#3.2.02.10_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rank-weight-features">
-   Rank / Weight features
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#extract-variance-components-from-data-3-2-02-12-preprocessing-pipeline">
-   Extract variance components from data {#3.2.02.12_preprocessing_pipeline}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measure-deviation-from-normative-data-3-2-02-13-deviation-normative">
-   Measure deviation from normative data {#3.2.02.13_deviation_normative}
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regress-out-nuisance-covariates-3-2-02-2-preprocessing-pipeline">
+     Regress out nuisance covariates {#3.2.02.2_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-dimensionality-reduction-method-to-data">
+     Apply dimensionality reduction method to data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standardize-data-3-2-02-4-preprocessing-pipeline">
+     Standardize data {#3.2.02.4_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scale-data-3-2-02-5-preprocessing-pipeline">
+     Scale data {#3.2.02.5_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normalize-to-group-mean-3-2-02-6-preprocessing-pipeline">
+     Normalize to group mean {#3.2.02.6_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normalize-to-unit-vector-3-2-02-7-preprocessing-pipeline">
+     Normalize to unit vector {#3.2.02.7_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-binning-method-to-data-3-2-02-8-preprocessing-pipeline">
+     Apply binning method to data {#3.2.02.8_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impute-missing-values">
+     Impute missing values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-non-informative-columns-from-data-matrix-3-2-02-9-preprocessing-pipeline">
+     Prune non-informative columns from data matrix {#3.2.02.9_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-group-level-differences-using-offset-correction-3-2-02-10-preprocessing-pipeline">
+     Remove Group-level differences using offset correction {#3.2.02.10_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rank-weight-features">
+     Rank / Weight features
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extract-variance-components-from-data-3-2-02-12-preprocessing-pipeline">
+     Extract variance components from data {#3.2.02.12_preprocessing_pipeline}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measure-deviation-from-normative-data-3-2-02-13-deviation-normative">
+     Measure deviation from normative data {#3.2.02.13_deviation_normative}
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -541,126 +646,51 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="preprocessing-pipeline">
 <span id="paramtemp-preprocessing-pipeline"></span><h1>Preprocessing pipeline<a class="headerlink" href="#preprocessing-pipeline" title="Permalink to this headline">#</a></h1>
-<p>An important part of any machine learning analysis is how the data is
-prepared or ‘preprocessed’ prior to its analysis with a classification
-algorithm. This is also known as ‘feature extraction’ because the
-features are extracted from the existing data before analysis.
-NeuroMiner has a number of options to prepare data and can be tailored
-to a users specific data problem.</p>
-<p>It’s important to note that NeuroMiner performs preprocessing steps
-within the cross-validation framework. This means that when the option
-to preprocess the data is selected, it preprocesses the training data
-and applies the ‘learned’ preprocessing parameters to the CV1 and CV2
-test data partitions.</p>
+<p>An important part of any machine learning analysis is how the data is prepared or ’preprocessed’ prior to its analysis with a classification algorithm. This is also known as ’feature extraction’ because the features are extracted from the existing data before analysis. NeuroMiner has a number of options to prepare data and can be tailored to a users specific data problem.</p>
+<p>It’s important to note that NeuroMiner performs preprocessing steps within the cross-validation framework. This means that when the option to preprocess the data is selected, it preprocesses the training data and applies the ’learned’ preprocessing parameters to the CV1 and CV2 test data partitions.</p>
 <p>When the preprocessing module is loaded the user will see the following:</p>
-<p><strong>=========================<br />
-CV-PREPROCESSING SEQUENCE<br />
-=========================</strong><br />
-Step 1: Scale [ from 0 to 1 ], zero-out completely non-finite
-features<br />
-<strong>=<span class="math notranslate nohighlight">\(&gt;\)</span> Step 2: Prune non-informative columns from matrix [ Zero Var,
-Nan, Inf ]</strong></p>
-<p>[You are here: MAIN<br />
-<span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> Define parameter template <span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> ]{style=”color: blue”}</p>
-<p><span class="math notranslate nohighlight">\(-------------------------------------\)</span><br />
-[Preprocessing sequence generator: 2 / 2 steps.]{style=”color: blue”}<br />
-<span class="math notranslate nohighlight">\(-------------------------------------\)</span><br />
-1 : Add preprocessing step<br />
-2 : Remove preprocessing step<br />
-3 : Insert preprocessing step<br />
-4 : Replace current preprocessing step<br />
-5 : Modify current preprocessing step<br />
-6 : <span class="math notranslate nohighlight">\(&lt;&lt;\)</span> Previous step<br />
-7 : Change order of preprocessing steps<br />
-<strong><span class="math notranslate nohighlight">\(&lt;\)</span>==| Back/Quit [Q]</strong></p>
-<p>Importantly, the preprocessing steps that are selected will be outlined
-in <strong>in the order of analysis</strong> in under the heading <strong>CV-Preprocessing
-Sequence</strong>. The user can add steps using the add preprocessing step and
-can modify steps using the other straightforward options within this
-menu–e.g., the user can modify the settings of a preprocessing step or
-can change the order of the steps.</p>
-<section id="add-preprocessing-step-3-2-02-1-preprocessing-pipeline">
-<h2>Add preprocessing step {#3.2.02.1_preprocessing_pipeline}<a class="headerlink" href="#add-preprocessing-step-3-2-02-1-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
-<p>This option is to add a preprocessing step to the “Preprocessing
-sequence generator”. Once this is selected, the user can select the
-option that they would like from the following list:</p>
-<p>1 : Regress out nuisance covariates<br />
-2 : Apply dimensionality reduction method to data<br />
-3 : Standardize data<br />
-4 : Scale data<br />
-5 : Normalize to group mean<br />
-6 : Normalize data to unit vector<br />
-7 : Apply binning method to data<br />
-8 : Impute missing values (120 NaNs in 25.0% of cases)<br />
-9 : Prune non-informative columns from data matrix<br />
-10 : Remove group level differences using offset correction<br />
-11 : Rank / Weight features<br />
-12 : Extract variance components from data<br />
-13 : Measure deviation from normative data<br />
-14 : Apply sparsity threshold to connectivity matrix<br />
-15 : Compute network metrics from connectivity matrix<br />
-16 : Compute individual networks from input data</p>
-<p>If you are using volumetric neuroimaging data, then there will also be
-an option included at the top of the list to: 1 : Enable spatial
-operations using Spatial OP Wizard. This is a special module designed to
-optimise filtering and smoothing within the cross-validation process and
-is always performed before any other preprocessing steps across the
-entire dataset (i.e., on test and training data).</p>
-<p>Once the user has selected one of the steps, for example to perform a
-dimensionality reduction, they are then redirected to the main
-preprocessing menu that will add the processing step; for example:</p>
-<p><strong>=========================<br />
-CV-PREPROCESSING SEQUENCE<br />
-=========================</strong><br />
-Step 1: Scale [ from 0 to 1 ], zero-out completely non-finite
-features<br />
-Step 2: Prune non-informative columns from matrix [ Zero Var, Nan, Inf
-]<br />
-<strong><span class="math notranslate nohighlight">\(&gt;&gt;\)</span> Step 3: Reduce dimensionality (PCA) [ dimensions: 0.8 ]</strong></p>
-<p>You can see that now there is a line stating CV-PREPROCESSING SEQUENCE
-containing “Step 3: Dimensionality reduction”. The “Preprocessing
-sequence generator” indicates that the step is selected for further
-operations as indicated 3/3 (one out of a total of three) steps and this
-selection is also highlighted by the arrow symbols (<span class="math notranslate nohighlight">\(&gt;&gt;\)</span>). If an option
-requires a suboption (e.g., see section
-<a class="reference external" href="#3.2.02.3_preprocessing_pipeline">0.0.1.4</a>{reference-type=”ref”
-reference=”3.2.02.3_preprocessing_pipeline”}) then the suboption will be
-listed underneath the parent option and this can be selected using the
-arrows as well. As such, the user can now perform other operations
-within this menu, including removing the selected preprocessing step,
-inserting another preprocessing step at the same location, replacing the
-current preprocessing step with another one, or modifying the current
-preprocessing step.</p>
-<p>If you have added a spatial preprocessing step, then this will appear
-above this menu because it is conducted prior to the preprocessing
-sequence across the entire dataset.</p>
-<p>The preprocessing steps will be conducted in the order that they appear
-in the CV-PREPROCESSING SEQUENCE menu.</p>
+<figure class="align-default" id="fig-3-2-02-nm-preproc-menu">
+<img alt="neurominer preprocessing pipeline menu" src="docs/Images/NM_preproc_menu_imig.png" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Importantly, the preprocessing steps that are selected will be outlined <strong>in order of processing</strong> under the heading <strong>CV-Preprocessing Sequence</strong>. The user can add steps using the add preprocessing step and can modify steps using the other straightforward options within this menu–e.g., the user can modify the settings of a preprocessing step or can change the order of the steps.</p>
+</div>
+<section id="add-preprocessing-step">
+<span id="id1"></span><h2>Add preprocessing step<a class="headerlink" href="#add-preprocessing-step" title="Permalink to this headline">#</a></h2>
+<p>This option is to add a preprocessing step to the ”Preprocessing sequence generator”. Once this is selected, the user can select the option that they would like from the following list:</p>
+<figure class="align-default" id="fig-3-2-02-nm-preproc-add">
+<img alt="neurominer preprocessing options" src="../_images/NM_preproc_add.png" />
+</figure>
+<p>If you are using volumetric neuroimaging data, then there will also be an option included at the top of the list to: 1 : Enable spatial operations using Spatial OP Wizard. This is a special module designed to optimize filtering and smoothing within the cross-validation process and is always performed before any other preprocessing steps across the entire dataset (i.e., on test and training data). Once the user has selected one of the steps, for example to perform a dimensionality reduction, they are then redirected to the main preprocessing menu that will add the processing step; for example:</p>
+<figure class="align-default" id="fig-3-2-02-nm-preproc-pipe">
+<img alt="neurominer preprocessing pipeline" src="../_images/NM_preproc_pipe.png" />
+</figure>
+<p>You can see that now there is a line stating CV-PREPROCESSING SEQUENCE containing ”Step 3: Dimensionality reduction”. The ”Preprocessing sequence generator” indicates that the step is selected for further operations as indicated 3/3 (one out of a total of three) steps and this selection is also highlighted by the arrow symbols (&gt;&gt;). If an option requires a suboption (e.g., <a class="reference internal" href="#dim-red"><span class="std std-ref">dimensionality reduction</span></a>) then the suboption will be listed underneath the parent option and this can be selected using the arrows as well.</p>
+<p>As such, you can now perform other operations within this menu, including removing the selected preprocessing step, inserting another preprocessing step at the same location, replacing the current preprocessing step with another one, or modifying the current preprocessing step. If you have added a spatial preprocessing step, then this will appear above this menu because it is conducted prior to the preprocessing sequence across the entire dataset.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The preprocessing steps will be conducted in the order that they appear in the CV-PREPROCESSING SEQUENCE menu.</p>
+</div>
 </section>
-<section id="enable-spatial-operations-using-spatial-op-wizard-3-2-02-2-spatial-op">
-<h2>Enable spatial operations using Spatial OP Wizard {#3.2.02.2_spatial_op}<a class="headerlink" href="#enable-spatial-operations-using-spatial-op-wizard-3-2-02-2-spatial-op" title="Permalink to this headline">#</a></h2>
-<p>You should observe the following:</p>
-<p>1 | Select spatial operation [ No filtering ]</p>
+<section id="enable-spatial-operations-using-spatial-op-wizard">
+<span id="spatial-op"></span><h2>Enable spatial operations using Spatial OP Wizard<a class="headerlink" href="#enable-spatial-operations-using-spatial-op-wizard" title="Permalink to this headline">#</a></h2>
+<p>If your active data modality is neuroimaging data, you should see the following option (see also {numref}(fig:3.2.02_nm_preproc_menu)):</p>
+<p><strong>1 | Select spatial operation [ No filtering ]</strong></p>
 <p>On turning on this mode, you will see the following menu:</p>
-<p>1 : No filtering<br />
-2 : Absolute difference filtering (6 neighbors)<br />
-3 : Cube variance filtering (27 neighbors)<br />
-4 : Gaussian smoothing<br />
-Once an option is selected and the parameters have been defined, you
-will see a new field above the “CV-PREPROCESSING SEQUENCE” in [blue
-font]{style=”color: blue”} as follows:</p>
-<p>[==========================<br />
-NON-CV PREPROCESSING STEPS<br />
-==========================<br />
-* Resampling [ 3 Params: 3 (first) -<span class="math notranslate nohighlight">\(&gt;\)</span> 9 (last) ]
-]{style=”color: blue”}</p>
-<p>In NeuroMiner, it is designated as “NON-CV PREPROCESSING” because it
-occurs across the entire dataset before preprocessing. However, as
-described below, it’s important to note that for smoothing the user can
-select a range of parameters and then the optimal combination of
-smoothing parameters, preprocessing settings, and training settings is
-found.</p>
-<p><strong>2: Absolute difference filtering (6 neighbors)</strong></p>
+<figure class="align-default" id="fig-3-2-02-nm-preproc-filter-options">
+<img alt="neurominer preprocessing spatial smoothing" src="../_images/NM_preproc_smoothing.png" />
+</figure>
+<p>Once an option is selected and the parameters have been defined, you will see a new field above the ”CV-PREPROCESSING SEQUENCE”  as follows:</p>
+<figure class="align-default" id="fig-3-2-02-nm-preproc-pipe2">
+<img alt="neurominer preprocessing pipeline2" src="../_images/NM_preproc_pipe2.png" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In NeuroMiner, it is designated as ”NON-CV PREPROCESSING” because it occurs across the entire dataset before preprocessing. However, as described below, it’s important to note that for smoothing the user can select a range of parameters and then the optimal combination of smoothing parameters, preprocessing settings, and training settings is found.</p>
+</div>
+<p>TILL HERE
+<strong>2: Absolute difference filtering (6 neighbors)</strong></p>
 <p>Absolute difference filtering is when the difference is computed between
 the voxel and each of the 6 nearest neighbors surrounding it. Then the
 value of the voxel is divided by the summed differences of the
@@ -688,9 +718,8 @@ is essential for the user to use smooth data first. Applying a scaling
 model to unsmoothed imaging data will likely result in extremely
 high/low values in the test data due to non-overlap of tissue borders
 between training and test cases.</p>
-</section>
 <section id="regress-out-nuisance-covariates-3-2-02-2-preprocessing-pipeline">
-<h2>Regress out nuisance covariates {#3.2.02.2_preprocessing_pipeline}<a class="headerlink" href="#regress-out-nuisance-covariates-3-2-02-2-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Regress out nuisance covariates {#3.2.02.2_preprocessing_pipeline}<a class="headerlink" href="#regress-out-nuisance-covariates-3-2-02-2-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>If covariates have been entered when the data was entered into
 NeuroMiner (see
 <a class="reference external" href="#3.1.02_add_modality">[3.1.02_add_modality]</a>{reference-type=”ref”
@@ -768,8 +797,8 @@ indicates that they will be used in the calculation of the betas.
 Logical vectors can be created from normal double vectors by simply
 typing “logical(yourvector)” on the command line.</p>
 </section>
-<section id="apply-dimensionality-reduction-method-to-data-3-2-02-3-preprocessing-pipeline">
-<h2>Apply dimensionality reduction method to data {#3.2.02.3_preprocessing_pipeline}<a class="headerlink" href="#apply-dimensionality-reduction-method-to-data-3-2-02-3-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<section id="apply-dimensionality-reduction-method-to-data">
+<h3>Apply dimensionality reduction method to data<a class="headerlink" href="#apply-dimensionality-reduction-method-to-data" title="Permalink to this headline">#</a></h3>
 <p>A common need in machine learning analysis is to reduce the
 dimensionality of the data within the cross-validation framework (e.g.,
 with structural neuroimages containing about 50,000 voxels). NeuroMiner
@@ -917,7 +946,7 @@ Low dimensional data only.</p></li>
 files in the preproc directory.</p>
 </section>
 <section id="standardize-data-3-2-02-4-preprocessing-pipeline">
-<h2>Standardize data {#3.2.02.4_preprocessing_pipeline}<a class="headerlink" href="#standardize-data-3-2-02-4-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Standardize data {#3.2.02.4_preprocessing_pipeline}<a class="headerlink" href="#standardize-data-3-2-02-4-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>The standardization, scaling, and/or normalisation of data is an
 important part of most machine learning. NeuroMiner allows contains
 different methods to perform these functions within the preprocessing
@@ -975,7 +1004,7 @@ select ‘no’ to this option and then impute the data using the
 preprocessing imputation option.</p>
 </section>
 <section id="scale-data-3-2-02-5-preprocessing-pipeline">
-<h2>Scale data {#3.2.02.5_preprocessing_pipeline}<a class="headerlink" href="#scale-data-3-2-02-5-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Scale data {#3.2.02.5_preprocessing_pipeline}<a class="headerlink" href="#scale-data-3-2-02-5-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>Another option to put the data into the same space is to scale it
 between two values. The user will see the following menu when they
 select this option:</p>
@@ -1008,7 +1037,7 @@ recommended that NaN values are excluded by using a brainmask during
 data input.</p>
 </section>
 <section id="normalize-to-group-mean-3-2-02-6-preprocessing-pipeline">
-<h2>Normalize to group mean {#3.2.02.6_preprocessing_pipeline}<a class="headerlink" href="#normalize-to-group-mean-3-2-02-6-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Normalize to group mean {#3.2.02.6_preprocessing_pipeline}<a class="headerlink" href="#normalize-to-group-mean-3-2-02-6-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>This option is only available when a group has been entered as a
 covariate at the start of the analysis (i.e., dummy coded vector
 containing ones for the group and zeros for the other participants). The
@@ -1016,14 +1045,14 @@ option will then normalise all subjects to the mean of the specified
 group.</p>
 </section>
 <section id="normalize-to-unit-vector-3-2-02-7-preprocessing-pipeline">
-<h2>Normalize to unit vector {#3.2.02.7_preprocessing_pipeline}<a class="headerlink" href="#normalize-to-unit-vector-3-2-02-7-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Normalize to unit vector {#3.2.02.7_preprocessing_pipeline}<a class="headerlink" href="#normalize-to-unit-vector-3-2-02-7-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>This option takes the mean of the data, then subtracts this from each of
 the scores within the data. It then calculates the norm (L1 or L2) of
 this result. It then mean-centers the original data and divides each
 score by the normalised scores.</p>
 </section>
 <section id="apply-binning-method-to-data-3-2-02-8-preprocessing-pipeline">
-<h2>Apply binning method to data {#3.2.02.8_preprocessing_pipeline}<a class="headerlink" href="#apply-binning-method-to-data-3-2-02-8-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Apply binning method to data {#3.2.02.8_preprocessing_pipeline}<a class="headerlink" href="#apply-binning-method-to-data-3-2-02-8-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>Binning is a technique that can be used to control for variance in data
 (<a class="reference external" href="https://en.wikipedia.org/wiki/Data_binning">wiki</a>). For example, a
 histogram is an example of data binning. A form of it is discretization
@@ -1065,7 +1094,7 @@ range that you specify in the following settings:</p>
 5 : Define width of data range in number of STDs from mean [ 3 ]</p>
 </section>
 <section id="impute-missing-values">
-<h2>Impute missing values<a class="headerlink" href="#impute-missing-values" title="Permalink to this headline">#</a></h2>
+<h3>Impute missing values<a class="headerlink" href="#impute-missing-values" title="Permalink to this headline">#</a></h3>
 <p>The machine learning algorithms included in NeuroMiner are not able to
 process missing values (represented in MATLAB as “Not a Number” (NaN)
 entries). This means that they have to be either removed using the
@@ -1174,7 +1203,7 @@ must define the number of nearest neighbors (e.g., subjects) to use for
 the calculation of the median value. The default is 7.</p>
 </section>
 <section id="prune-non-informative-columns-from-data-matrix-3-2-02-9-preprocessing-pipeline">
-<h2>Prune non-informative columns from data matrix {#3.2.02.9_preprocessing_pipeline}<a class="headerlink" href="#prune-non-informative-columns-from-data-matrix-3-2-02-9-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Prune non-informative columns from data matrix {#3.2.02.9_preprocessing_pipeline}<a class="headerlink" href="#prune-non-informative-columns-from-data-matrix-3-2-02-9-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>Data pruning is the removal of examples or features that will not work
 with machine learning algorithms or are redundant. In NeuroMiner, the
 machine learning algorithms that are used cannot work with missing
@@ -1212,7 +1241,7 @@ individuals have a zero value). You can specify a percentage here to do
 this.</p>
 </section>
 <section id="remove-group-level-differences-using-offset-correction-3-2-02-10-preprocessing-pipeline">
-<h2>Remove Group-level differences using offset correction {#3.2.02.10_preprocessing_pipeline}<a class="headerlink" href="#remove-group-level-differences-using-offset-correction-3-2-02-10-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Remove Group-level differences using offset correction {#3.2.02.10_preprocessing_pipeline}<a class="headerlink" href="#remove-group-level-differences-using-offset-correction-3-2-02-10-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>This function was introduced primarily to control for scanner
 differences in structural neuroimaging data. In the case of two centers,
 for each feature, the mean of both center A and center B is calculated.
@@ -1222,7 +1251,7 @@ is stored for further analysis. Internal empirical tests indicate that
 this basic method can control for major site differences.</p>
 </section>
 <section id="rank-weight-features">
-<h2>Rank / Weight features<a class="headerlink" href="#rank-weight-features" title="Permalink to this headline">#</a></h2>
+<h3>Rank / Weight features<a class="headerlink" href="#rank-weight-features" title="Permalink to this headline">#</a></h3>
 <p>Selecting or ranking features is an important part of machine learning
 and can be achieved with <strong>filters</strong> and <strong>wrappers</strong>. For a discussion
 of why these methods are important and for all definitions see <a class="reference external" href="http://www.jmlr.org/papers/volume3/guyon03a/guyon03a.pdf">Guyon et
@@ -1329,7 +1358,7 @@ For more information about why you would want to do this see references
 above.</p>
 </section>
 <section id="extract-variance-components-from-data-3-2-02-12-preprocessing-pipeline">
-<h2>Extract variance components from data {#3.2.02.12_preprocessing_pipeline}<a class="headerlink" href="#extract-variance-components-from-data-3-2-02-12-preprocessing-pipeline" title="Permalink to this headline">#</a></h2>
+<h3>Extract variance components from data {#3.2.02.12_preprocessing_pipeline}<a class="headerlink" href="#extract-variance-components-from-data-3-2-02-12-preprocessing-pipeline" title="Permalink to this headline">#</a></h3>
 <p>This function takes a source matrix and performs a PCA. It then
 determines correlations between the eigenvariates from the PCA
 reduction, and those above or below a specified threshold are
@@ -1339,7 +1368,7 @@ without the identified PCA components (i.e., it removes the variance
 associated with those components).</p>
 </section>
 <section id="measure-deviation-from-normative-data-3-2-02-13-deviation-normative">
-<h2>Measure deviation from normative data {#3.2.02.13_deviation_normative}<a class="headerlink" href="#measure-deviation-from-normative-data-3-2-02-13-deviation-normative" title="Permalink to this headline">#</a></h2>
+<h3>Measure deviation from normative data {#3.2.02.13_deviation_normative}<a class="headerlink" href="#measure-deviation-from-normative-data-3-2-02-13-deviation-normative" title="Permalink to this headline">#</a></h3>
 <p>This function calculates a PLS and then determines how much the data
 deviates from the model that is produced. The hypothesis here is that
 the PLS model will represent a normative variation between the primary
@@ -1347,6 +1376,7 @@ features (e.g., the brain) and the second feature matrix (e.g., the
 labels or another variable set). By calculating the deviation from this
 model, it is hypothesised that normative deviation will be modeled and
 then included in further processing steps.</p>
+</section>
 </section>
 </section>
 
@@ -1377,6 +1407,20 @@ then included in further processing steps.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="3.2.01_paramtemp_cv_settings.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Cross-validation settings</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.2.03_paramtemp_classification_algorithm.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Classification algorithm</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
