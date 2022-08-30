@@ -193,7 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html">
-     Visualization options {#3.2.06_visualization_options}
+     Visualization options
     </a>
    </li>
    <li class="toctree-l2">
@@ -460,70 +460,52 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neurominer-cross-validation-framework-setup">
+   NeuroMiner cross-validation framework setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#select-cross-validation-framework">
    Select cross-validation framework
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pooled">
-     1 | Pooled
+    <a class="reference internal nav-link" href="#nested-cross-validation-in-neurominer">
+     Nested cross-validation in NeuroMiner
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outer-leave-group-out-inner-pooled">
-     2 | Outer Leave-Group Out/Inner pooled
+    <a class="reference internal nav-link" href="#repeated-cross-valiation">
+     Repeated cross-valiation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nested-leave-group-out">
-     3 | Nested Leave-Group-Out
+    <a class="reference internal nav-link" href="#define-the-number-pf-folds-permutations-in-cv1-cv2">
+     Define the number pf folds &amp; permutations in CV1 &amp; CV2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choosing-the-number-of-permutations">
+       Choosing the number of permutations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#choosing-the-number-of-folds">
+     Choosing the number of folds
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outer-leave-group-out-inner-leave-group-in">
-     4 | Outer Leave-Group-Out/Inner Leave-Group-In
+    <a class="reference internal nav-link" href="#equalize-class-sizes-at-the-cv1-cycle-by-undersampling">
+     Equalize class sizes at the CV1 cycle by undersampling
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv2-permutations">
-   Define number of CV2 permutations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv2-folds">
-   Define number of CV2 folds
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv1-permutations">
-   Define number of CV1 permutations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv1-folds">
-   Define number of CV1 folds
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equalize-class-sizes-at-the-cv1-cycle-by-undersampling">
-   Equalize class sizes at the CV1 cycle by undersampling
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build-cv2-cv1-structure">
-   Build CV2/CV1 structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-cv-structure">
-   Load CV structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#save-cv-structure">
-   Save CV structure
+  <a class="reference internal nav-link" href="#build-load-save-the-cross-validation-structure">
+   Build, load &amp; save the cross-validation structure
   </a>
  </li>
 </ul>
@@ -546,70 +528,52 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neurominer-cross-validation-framework-setup">
+   NeuroMiner cross-validation framework setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#select-cross-validation-framework">
    Select cross-validation framework
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pooled">
-     1 | Pooled
+    <a class="reference internal nav-link" href="#nested-cross-validation-in-neurominer">
+     Nested cross-validation in NeuroMiner
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outer-leave-group-out-inner-pooled">
-     2 | Outer Leave-Group Out/Inner pooled
+    <a class="reference internal nav-link" href="#repeated-cross-valiation">
+     Repeated cross-valiation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nested-leave-group-out">
-     3 | Nested Leave-Group-Out
+    <a class="reference internal nav-link" href="#define-the-number-pf-folds-permutations-in-cv1-cv2">
+     Define the number pf folds &amp; permutations in CV1 &amp; CV2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choosing-the-number-of-permutations">
+       Choosing the number of permutations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#choosing-the-number-of-folds">
+     Choosing the number of folds
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outer-leave-group-out-inner-leave-group-in">
-     4 | Outer Leave-Group-Out/Inner Leave-Group-In
+    <a class="reference internal nav-link" href="#equalize-class-sizes-at-the-cv1-cycle-by-undersampling">
+     Equalize class sizes at the CV1 cycle by undersampling
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv2-permutations">
-   Define number of CV2 permutations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv2-folds">
-   Define number of CV2 folds
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv1-permutations">
-   Define number of CV1 permutations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-number-of-cv1-folds">
-   Define number of CV1 folds
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equalize-class-sizes-at-the-cv1-cycle-by-undersampling">
-   Equalize class sizes at the CV1 cycle by undersampling
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build-cv2-cv1-structure">
-   Build CV2/CV1 structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-cv-structure">
-   Load CV structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#save-cv-structure">
-   Save CV structure
+  <a class="reference internal nav-link" href="#build-load-save-the-cross-validation-structure">
+   Build, load &amp; save the cross-validation structure
   </a>
  </li>
 </ul>
@@ -632,98 +596,109 @@ schemes depending on your data problem. NeuroMiner has been built around
 performing repeated, nested, cross-validation, which is a very robust
 method that increases the likelihood of generalization.</p>
 <p>The cross-validation works by first defining the following settings:</p>
-<figure class="align-center" id="fig-3-2-01-cv-menu">
+<figure class="align-default" id="fig-3-2-01-cv-menu">
 <img alt="neurominer_cv_settings" src="../_images/NM_paramtemp_cv_init.png" />
 </figure>
+<section id="neurominer-cross-validation-framework-setup">
+<h2>NeuroMiner cross-validation framework setup<a class="headerlink" href="#neurominer-cross-validation-framework-setup" title="Permalink to this headline">#</a></h2>
+</section>
 <section id="select-cross-validation-framework">
-<h2>Select cross-validation framework<a class="headerlink" href="#select-cross-validation-framework" title="Permalink to this headline">#</a></h2>
+<span id="cv-framework"></span><h2>Select cross-validation framework<a class="headerlink" href="#select-cross-validation-framework" title="Permalink to this headline">#</a></h2>
 <p>This option allows the user to select either k-fold cross-validation
 scheme (including leave-one-out) or a leave-group-out analysis with the
 following options:</p>
-<figure class="align-center" id="fig-3-2-01-cv-types">
+<figure class="align-default" id="fig-3-2-01-cv-types">
 <img alt="neurominer_cv_types" src="../_images/NM_paramtemp_cvtypes.png" />
 </figure>
 <p>NeuroMiner has been built around the gold standard of repeated, nested cross-validation <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">(Filzmoser et al.,
 2009)</a> and therefore the default options are reflective of this. For a description of cross-validation, you could check-out the supplementary material of this publication: <a class="reference external" href="http://thelancet.com/journals/lanpsy/article/PIIS2215-0366(16)30171-7/fulltext">Koutsouleris et al.,
 2016</a>.
-In brief, leave-one-out cross-validation and k-fold cross-validation risk overfitting (i.e., your models not generalizing past your sample) in the context of (hy per)parameter optimisation (e.g., optimizing C parameters) or the optimization of feature selection based on the predictive accuracy on the held-out dataset (e.g., using wrappers discussed in the ”ensemble” section of this manual). Nested cross-validation mitigates against overfitting and provides models that are more likely to generalize–which is the central aim of machine learning and science generally.</p>
-<figure class="align-left" id="fig-3-2-01-nested-cv">
-<img alt="neurominer_cv_settings" src="../_images/nested_cv.png" />
+In brief, leave-one-out cross-validation and k-fold cross-validation risk overfitting (i.e., your models not generalizing past your sample) in the context of (hyper)parameter optimisation (e.g., optimizing C parameters) or the optimization of feature selection based on the predictive accuracy on the held-out dataset (e.g., using wrappers discussed in [ensemble learning]{3.2.05_paramtemp_ensemble_generation_strategies}). Nested cross-validation mitigates against overfitting and provides models that are more likely to generalize – which is the central aim of machine learning and science generally.</p>
+<section id="nested-cross-validation-in-neurominer">
+<h3>Nested cross-validation in NeuroMiner<a class="headerlink" href="#nested-cross-validation-in-neurominer" title="Permalink to this headline">#</a></h3>
+<figure class="align-default" id="fig-3-2-01-nested-cv">
+<img alt="neurominer nested cross validation" src="../_images/nested_cv.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Nested cross-validation in NeuroMiner. A: The data is split into k number of folds in the outer CV2 set and a CV2 test set is held-out. The rest of the data goes into the ’nest’ where it is again subdivided into k-folds, a test fold is held-out, and the rest of the data is used for training. Models associated with each parameter combination (e.g., C or epsilon) are created in the CV1 training data and applied to the CV1 test data. B: accuracy is assessed across all parameter combinations for all CV1 models. The optimal parameter combination is chosen based on a criteria set by the user. For each CV1 fold, the training and test data, which has been preprocessed, is retrained with the winning parameter or parameter combination. The models are then applied to the held-out CV2 test data. In cases there are many (hyper)parameter combinations or when there is variable selection procedure then the user can specify to keep a percentage of top performing models for each fold (this is discussed in the section of the manual on the learning algorithm parameters).</span><a class="headerlink" href="#fig-3-2-01-nested-cv" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Nested cross validation</span><a class="headerlink" href="#fig-3-2-01-nested-cv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A depiction of nested cross-validation is represented in <a class="reference internal" href="#fig-3-2-01-nested-cv"><span class="std std-numref">Fig. 8</span></a>. In NeuroMiner the outer cross-validation cycle of a nested cross-validation scheme is designated as <strong>CV2</strong> and the inner cross-validation folds are designated as <strong>CV1</strong>.Models are trained in the CV1 cycle and then the best performing models are applied to the CV2 data. This separation of CV2 and CV1 data avoids overfitting. Let’s look at the cross-validation frameworks included in NeuroMiner:</p>
-<section id="pooled">
-<h3>1 | Pooled<a class="headerlink" href="#pooled" title="Permalink to this headline">#</a></h3>
-<p>Outer and inner cross-validation folds will be automatically and randomly defined.</p>
+<p>A depiction of nested cross-validation is represented in <a class="reference internal" href="#fig-3-2-01-nested-cv"><span class="std std-numref">Fig. 8</span></a>. In NeuroMiner the outer cross-validation cycle of a nested cross-validation scheme is designated as <strong>CV2</strong> and the inner cross-validation folds are designated as <strong>CV1</strong>. Models are trained in the CV1 cycle and then the best performing models are applied to the CV2 data. This separation of CV2 and CV1 data avoids overfitting.</p>
+<p>First the data is split into k number of folds in the outer CV2 set and a CV2 test set is held-out. The rest of the data goes into the ’nest’ where it is again subdivided into k-folds, a test fold is held-out, and the rest of the data is used for training. Models associated with each parameter combination (e.g., C or epsilon) are created in the CV1 training data and applied to the CV1 test data (as shown in <a class="reference internal" href="#fig-3-2-01-nested-cv"><span class="std std-numref">Fig. 8</span></a>, <strong>A</strong>). The accuracy is assessed across all parameter combinations for all CV1 models. The optimal parameter combination is chosen based on a criteria set by the user. For each CV1 fold, the training and test data, which has been preprocessed, is retrained with the winning parameter or parameter combination. The models are then applied to the held-out CV2 test data (as shown in <a class="reference internal" href="#fig-3-2-01-nested-cv"><span class="std std-numref">Fig. 8</span></a>, <strong>B</strong>).</p>
+<p>In cases where there are many (hyper)parameter combinations or when a variable selection procedure is employed, then the user can choose to keep a percentage of top performing models for each fold, instead of only the single optimum model. This is further discussed in [learning algorithm parameters]{3.2.04_paramtemp_learning_algorithm_parameters}.</p>
+<p>Let’s look at the other cross-validation frameworks included in NeuroMiner:</p>
+<div class="admonition-cross-validation-frameworks-in-neurominer admonition">
+<p class="admonition-title">Cross-validation frameworks in NeuroMiner</p>
+<p><strong>1 | Pooled</strong>
+Outer and inner cross-validation folds will be automatically and randomly defined.</p>
+<p><strong>2 | Outer Leave-Group Out/Inner pooled</strong>
+The outer CV2 folds will be defined by the user using a vector defining groups (e.g., if there are different sites then this will test the ability of the classifiers that are trained with pooled site data to generalise to new sites).</p>
+<p><strong>3 | Nested Leave-Group-Out</strong>
+Both the outer and inner cycles will be separated based on the grouping vector that the user enters (e.g., in the site example, this will mean that the models will be optimised to generalise across sites in the CV1 cycle and then applied to different sites in the CV2 cycle).</p>
+<p><strong>4 | Outer Leave-Group-Out/Inner Leave-Group-In</strong>
+The models in the inner CV1 cycle will only be trained in one group prior to being applied to all other groups (e.g., this will test the robustness of models from single sites). See <a class="reference internal" href="#fig-3-2-01-nested-cv"><span class="std std-numref">Fig. 8</span></a> for more details and imagine that the folds are sites or diagnoses or any other grouping variable.</p>
+</div>
 </section>
-<section id="outer-leave-group-out-inner-pooled">
-<h3>2 | Outer Leave-Group Out/Inner pooled<a class="headerlink" href="#outer-leave-group-out-inner-pooled" title="Permalink to this headline">#</a></h3>
-<p>The outer CV2 folds will be defined by the user using a vector defining groups (e.g., if there are different sites then this will test the ability of the classifiers that are trained with pooled site data to generalise to new sites).</p>
-</section>
-<section id="nested-leave-group-out">
-<h3>3 | Nested Leave-Group-Out<a class="headerlink" href="#nested-leave-group-out" title="Permalink to this headline">#</a></h3>
-<p>Both the outer and inner cycles will be separated based on the grouping vector that the user enters (e.g., in the site example, this will mean that the models will be optimised to generalise across sites in the CV1 cycle and then applied to different sites in the CV2 cycle).</p>
-</section>
-<section id="outer-leave-group-out-inner-leave-group-in">
-<h3>4 | Outer Leave-Group-Out/Inner Leave-Group-In<a class="headerlink" href="#outer-leave-group-out-inner-leave-group-in" title="Permalink to this headline">#</a></h3>
-<p>The models in the inner CV1 cycle will only be trained in one group prior to being applied to all other groups (e.g., this will test the robustness of models from single sites). See {numref}(fig:3.2.01_nested_cv) for more details and imagine that the folds are sites or diagnoses or any other grouping variable.</p>
+<section id="repeated-cross-valiation">
+<h3>Repeated cross-valiation<a class="headerlink" href="#repeated-cross-valiation" title="Permalink to this headline">#</a></h3>
 <p>To further avoid overfitting and increase the generalizability of the model predictions, NeuroMiner also allows the user to implement ’repeated’ cross-validation for each of the CV cycles. This involves shuffling the subjects prior to the definition of the folds so that there are different subjects in the test/training folds. This is usually done for both the CV2 and CV1 cycles.</p>
 <p>A clear depiction of how repeated cross-validation works is difficult, but it is important to keep in-mind that there will be a lot of models produced under these schemes; e.g., if you have a standard 10x10 CV1/CV2 framework and you’re choosing the optimal model for each fold, then you’ll have 10,000 models. A way to understand how these are applied to an individual subject is to consider that all models in which that subject is not included in the CV1 training/testing are applied to them–because if they were included then this would be information leakage. On the surface, having 10,000 models is not so great for the interpretation or understanding of a phenomena under investigation. However, doing this can be really good for generalization when it’s unlikely that there is a singular model that can be found and we need something that practically works–e.g., for many complex problems in psychiatry. For an interesting discussion on this topic, see <a class="reference external" href="http://www.stat.uchicago.edu/~lekheng/courses/191f09/breiman.pdf">Breiman et al., 2001</a>.</p>
+</section>
 <hr class="docutils" />
+<section id="define-the-number-pf-folds-permutations-in-cv1-cv2">
+<h3>Define the number pf folds &amp; permutations in CV1 &amp; CV2<a class="headerlink" href="#define-the-number-pf-folds-permutations-in-cv1-cv2" title="Permalink to this headline">#</a></h3>
+<p>In the cross-validation menu (<code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:3.2.01_cv_menu</span></code>) you can define the number of permutations (“repeats”) and folds for CV1 and CV2 respectively using the options 2 to 5 (note that these might change depending on the cross-validation framework you choose!).</p>
+<section id="choosing-the-number-of-permutations">
+<h4>Choosing the number of permutations<a class="headerlink" href="#choosing-the-number-of-permutations" title="Permalink to this headline">#</a></h4>
+<p>If you choose to use repeated cross-validation, the subjects are shuffled and new folds are created. To choose the number of permutations, try to find a balance between the computational time that your analysis is taking and the stability of the predictions from your modeling.</p>
 </section>
 </section>
-<section id="define-number-of-cv2-permutations">
-<h2>Define number of CV2 permutations<a class="headerlink" href="#define-number-of-cv2-permutations" title="Permalink to this headline">#</a></h2>
-<p>Define the number of repeats that you want to happen to the outer CV2 data. As stated above, the subjects are shuffled and new folds are created. The number of permutations is based on a balance between the computational time that your analysis is taking and the stability of the predictions from your modeling.</p>
+<section id="choosing-the-number-of-folds">
+<h3>Choosing the number of folds<a class="headerlink" href="#choosing-the-number-of-folds" title="Permalink to this headline">#</a></h3>
+<p>The number of folds is usually based on the number of subjects you have and what kind of analyses you want to compute.</p>
+<p>For an analytic example of when the number of CV1 folds is crucial for the outcome see the section on [ensemble generation strategies]{3.2.05_paramtemp_ensemble_generation_strategies} – e.g., when using wrappers that are optimizing features based on the subjects in the CV1 test folds.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you enter “-1” as the number of CV1 or CV2 folds, then NeuroMiner implements a <strong>leave-one-out cross-validation</strong> and the permutations option is not possible (because it doesn’t matter if you shuffle the data if every single subject is left out). The number of CV folds is usually based on the number of subjects that you have.</p>
+</div>
+</section>
 <hr class="docutils" />
-</section>
-<section id="define-number-of-cv2-folds">
-<h2>Define number of CV2 folds<a class="headerlink" href="#define-number-of-cv2-folds" title="Permalink to this headline">#</a></h2>
-<p>Define the number of folds that you want the outer data to be split into. If -1 is entered then a leave-one-out cross-validation is implemented and the permutations option is not possible (because it doesn’t matter if you shuffle the data if every single subject is left out). The number of folds is usually based on the number of subjects that you have.</p>
-<hr class="docutils" />
-</section>
-<section id="define-number-of-cv1-permutations">
-<h2>Define number of CV1 permutations<a class="headerlink" href="#define-number-of-cv1-permutations" title="Permalink to this headline">#</a></h2>
-<p>Define the number of inner, CV1 permutations in the inner folds. This is based on the computational time and also the model stability.</p>
-<hr class="docutils" />
-</section>
-<section id="define-number-of-cv1-folds">
-<h2>Define number of CV1 folds<a class="headerlink" href="#define-number-of-cv1-folds" title="Permalink to this headline">#</a></h2>
-<p>Define the number of inner, CV1 folds. The number of folds is usually based on the number of subjects you have and what kind of analyses that you are conducting. For an analytic example of where this is important see the section on ensemble generation strategies– e.g., using wrappers that are optimizing features based on the subjects in the CV1 test folds.</p>
-<hr class="docutils" />
-</section>
 <section id="equalize-class-sizes-at-the-cv1-cycle-by-undersampling">
-<h2>Equalize class sizes at the CV1 cycle by undersampling<a class="headerlink" href="#equalize-class-sizes-at-the-cv1-cycle-by-undersampling" title="Permalink to this headline">#</a></h2>
-<p>Situations where there are unbalanced groups (e.g., less people transitioning to illness than people who do not) pose a problem for support vector machines and other analysis techniques. Usually, a model is learned that preferences the majority group and then you’ll get unbalanced predictions (e.g., your specificity will be high, but sensitivity low). In NeuroMiner there are three ways to deal with this: 1) undersampling the majority group during training; 2) weighting the SVM hyperplane; 3) Oversampling using Adaptive synthetic sampling approach. This option allows the user to undersample the majority group so that the groups are balanced when the models are created in the CV1 folds.</p>
-<p>After selecting the option, the user will be prompted with this: ”Enable class size balancing at the CV1 level”, and enabling this option will lead to a prompt: ”Perform histogram equalization using the target label or some other covariate”, you can choose depending on which parameter you want to undersampling your algorithm. Target label will ask: ”Target ratio bigger / smaller class (1 - classes have sample size after balancing) (Default: 1.5 )” This is the ratio of the bigger to smaller class sample sizes. Equal class sizes can be selected by entering in ”1”. The default is 1.5 because otherwise the models may not generalize well. If the dataset has any covariates, selecting ”Covariate” option will require you to select the covariates (integers or range).</p>
-<p>The next option gives the user the option to add the excluded CV1 subjects in the training folds to the CV1 test folds. This option is potentially important for potential generalizability of the models to the CV2 folds (and ultimately to real-life).</p>
+<h3>Equalize class sizes at the CV1 cycle by undersampling<a class="headerlink" href="#equalize-class-sizes-at-the-cv1-cycle-by-undersampling" title="Permalink to this headline">#</a></h3>
+<p>Unbalanced group sizes (e.g., less people transitioning to illness than people who do not) pose a problem for support vector machines and other analysis techniques. Usually, the trained model shows a bias towards the majority group and you’ll get unbalanced predictions (e.g., your specificity will be high, but sensitivity low).</p>
+<p>In NeuroMiner there are three ways to deal with this:</p>
+<ol class="simple">
+<li><p>undersampling the majority group during training</p></li>
+<li><p>weighting the SVM hyperplane</p></li>
+<li><p>Oversampling using “Adaptive synthetic sampling”</p></li>
+</ol>
+<p>If you enable udnersampling by choosing one of these approaches, the majority group will be undersampled to balance the groups in the CV1 folds.</p>
+<p>After selecting the undersampling option (by entering “6” if your menu looks like in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:3.2.01_cv_menu</span></code>, the corresponding number can change though depending on chosen settings), two new lines will be added to your menu:</p>
+<figure class="align-default" id="fig-nm-cv-menu-equalize">
+<img alt="Neurominer cross-validation equalize classes screenshot" src="../_images/NM_cv_menu_equalize.png" />
+</figure>
+<!-- you will be prompted with will be prompted with this: ”Enable class size balancing at the CV1 level”, and enabling this option will lead to a prompt: ”Perform histogram equalization using the target label or some other covariate”, you can choose depending on which parameter you want to undersampling your algorithm.  -->
+<p><strong>7 | Define positive/negative ratio after equalization (1=&gt;same amount of positive/negative cases)</strong>: This is the ratio of the bigger to smaller class sample sizes. Equal class sizes can be selected by entering in ”1”. The default is “1.5” because otherwise the models may not generalize well.</p>
+<!-- If the dataset has any covariates, selecting ”Covariate” option will require you to select the covariates (integers or range). -->
+<p><strong>8 | Shuffle removed observations to CV1 test data</strong>: The next option gives the user the option to add the excluded CV1 subjects in the training folds to the CV1 test folds. This option is potentially important for potential generalizability of the models to the CV2 folds (and ultimately to real-life).</p>
+</section>
+</section>
 <hr class="docutils" />
-</section>
-<section id="build-cv2-cv1-structure">
-<h2>Build CV2/CV1 structure<a class="headerlink" href="#build-cv2-cv1-structure" title="Permalink to this headline">#</a></h2>
-<p>Once the options have been selected above, then the user needs to build the CV2/CV1 structure. This literally creates all the folds and indexes the subjects that are to be included in the folds. These can be found in the NM structure (i.e., in “<a class="reference external" href="http://NM.cv">NM.cv</a>”).</p>
-<hr class="docutils" />
-</section>
-<section id="load-cv-structure">
-<h2>Load CV structure<a class="headerlink" href="#load-cv-structure" title="Permalink to this headline">#</a></h2>
-<p>If you have saved the CV structure for your data with the subjects indexed into each fold/permutation, you can load it using this function. This can be useful if you establish a new analysis with new settings, but you want to load the CV structure that you made before.</p>
-<hr class="docutils" />
-</section>
-<section id="save-cv-structure">
-<h2>Save CV structure<a class="headerlink" href="#save-cv-structure" title="Permalink to this headline">#</a></h2>
-<p>This gives the user the option to save the indexed CV structure
-containing the folds and permutations for later use. It is saved in a .mat file.</p>
-</section>
+<section id="build-load-save-the-cross-validation-structure">
+<h2>Build, load &amp; save the cross-validation structure<a class="headerlink" href="#build-load-save-the-cross-validation-structure" title="Permalink to this headline">#</a></h2>
+<p><strong>Build CV2/CV1 structure</strong>
+Once the options have been selected above, then the user needs to build the CV2/CV1 structure. This literally creates all the folds and indexes the subjects that are to be included in the folds. These can be found in the NM structure (i.e., in “<a class="reference external" href="http://NM.cv">NM.cv</a>”).</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The user must select “7” to <strong>build the cross-validation structure</strong> before
+<p>The user must select <strong>Build the cross-validation structure</strong> before
 exiting the cross-validation menu. Otherwise, the cross-validation framework will not be saved
-within the NM structure.
-::</p>
-<hr class="docutils" />
+within the NM structure.</p>
 </div>
+<p><strong>Load CV structure</strong>
+If you have saved the CV structure for your data with the subjects indexed into each fold/permutation, you can load it using this function. This can be useful if you establish a new analysis with new settings, but you want to load the CV structure that you made before.</p>
+<p><strong>Save CV structure</strong>
+This gives the user the option to save the indexed CV structure
+containing the folds and permutations for later use. It is saved in a .mat file.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
