@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    <no title>
+                    Neurominer
                 </a>
             </li>
         </ul>
@@ -197,27 +197,27 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+    <a class="reference internal" href="3.2.08_paramtemp_model_saving_options.html">
      Model saving options
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
-     Save parameter template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+    <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
      Load training template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
-     Define verbosity level
+    <a class="reference internal" href="3.2.12_paramtemp_save_parameter_template.html">
+     Save parameter template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+    <a class="reference internal" href="3.2.13_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.15_paramtemp_stacking.html">
      Stacking
     </a>
    </li>
@@ -258,6 +258,11 @@ const thebe_selector_output = ".output, .cell_output"
    Out of Sample Cross-Validation
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -267,19 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4.0_Example.html">
-   Example
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Functions in development
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
-   Investigate sample size (simulation)
+   Basic usage
   </a>
  </li>
 </ul>
@@ -505,13 +498,13 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optimize-decision-threshold-based-on-roc">
-     Optimize decision threshold based on ROC
+    <a class="reference internal nav-link" href="#optimize-decision-threshold-based-on-roc-expert-mode">
+     Optimize decision threshold based on ROC (expert mode)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-adasyn-to-adjust-for-unbalanced-class-settings">
-     Use ADASYN to adjust for unbalanced class settings
+    <a class="reference internal nav-link" href="#use-adasyn-to-adjust-for-unbalanced-class-settings-expert-mode">
+     Use ADASYN to adjust for unbalanced class settings (expert mode)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -613,13 +606,13 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optimize-decision-threshold-based-on-roc">
-     Optimize decision threshold based on ROC
+    <a class="reference internal nav-link" href="#optimize-decision-threshold-based-on-roc-expert-mode">
+     Optimize decision threshold based on ROC (expert mode)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-adasyn-to-adjust-for-unbalanced-class-settings">
-     Use ADASYN to adjust for unbalanced class settings
+    <a class="reference internal nav-link" href="#use-adasyn-to-adjust-for-unbalanced-class-settings-expert-mode">
+     Use ADASYN to adjust for unbalanced class settings (expert mode)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -834,18 +827,20 @@ label prediction)</p></li>
 </ol>
 </div></blockquote>
 </section>
-<section id="optimize-decision-threshold-based-on-roc">
-<h3>Optimize decision threshold based on ROC<a class="headerlink" href="#optimize-decision-threshold-based-on-roc" title="Permalink to this headline">#</a></h3>
-<p>This option allows optimizing the decision scores according to the Receiver Operator Function. The default setting enables the post-hoc optimization using ROC analysis of C1 test data.</p>
+<section id="optimize-decision-threshold-based-on-roc-expert-mode">
+<h3>Optimize decision threshold based on ROC (expert mode)<a class="headerlink" href="#optimize-decision-threshold-based-on-roc-expert-mode" title="Permalink to this headline">#</a></h3>
+<p>If you’ve opened NM in expert mode (by calling “nm expert” instead of “nm”), you will have this option in your model setup menu. This option allows optimizing the decision scores according to the Receiver Operator Function. The default setting enables the post-hoc optimization using ROC analysis of C1 test data.</p>
 </section>
-<section id="use-adasyn-to-adjust-for-unbalanced-class-settings">
-<h3>Use ADASYN to adjust for unbalanced class settings<a class="headerlink" href="#use-adasyn-to-adjust-for-unbalanced-class-settings" title="Permalink to this headline">#</a></h3>
-<p>Adaptive Synthetic (ADASYN) is primarily used to tackle the ’Imbalanced Classification Problem’ prominent in Machine Learning which arises due to imbalanced class size. The key hindrance with an imbalanced dataset is that one class dominates another class resulting in a model that is highly underfitted as it is not able to classify the minority class successfully. ADASYN is an algorithm that generates synthetic data by generating more data for the class with lesser data.</p>
-<p>Enabling ADASYN mode opens up extra options:
-7 | Define beta value (defines how much balancing will be applied, 0,1) 	[k=1]
-8 | Define k value of density algorithm (kNN looking at both classes)		[k=5]
-9 | Define k value of SMOTE algorithm (kNN looking only at the minority class) [k=5]
-10 | Data is already normalized for kNN search 					[no]</p>
+<section id="use-adasyn-to-adjust-for-unbalanced-class-settings-expert-mode">
+<h3>Use ADASYN to adjust for unbalanced class settings (expert mode)<a class="headerlink" href="#use-adasyn-to-adjust-for-unbalanced-class-settings-expert-mode" title="Permalink to this headline">#</a></h3>
+<p>If you’ve opened NM in expert mode (by calling “nm expert” instead of “nm”), you will have this option in your model setup menu. Adaptive Synthetic (ADASYN) is primarily used to tackle the ’Imbalanced Classification Problem’ prominent in Machine Learning which arises due to imbalanced class size. The key hindrance with an imbalanced dataset is that one class dominates another class resulting in a model that is highly underfitted as it is not able to classify the minority class successfully. ADASYN is an algorithm that generates synthetic data by generating more data for the class with lesser data.</p>
+<p>Enabling ADASYN mode opens up extra options:</p>
+<blockquote>
+<div><p>7 | Define beta value (defines how much balancing will be applied, 0,1) 	[k=1]</p>
+<p>8 | Define k value of density algorithm (kNN looking at both classes)		[k=5]</p>
+<p>n9 | Define k value of SMOTE algorithm (kNN looking only at the minority class) [k=5]</p>
+<p>10 | Data is already normalized for kNN search 					[no]</p>
+</div></blockquote>
 </section>
 <section id="sequence-optimization">
 <h3>Sequence Optimization<a class="headerlink" href="#sequence-optimization" title="Permalink to this headline">#</a></h3>
@@ -900,7 +895,7 @@ label prediction)</p></li>
 </div></blockquote>
 <p>Here the user can define what sequences are to be evaluated. This step is dependent on the identification of models to be included in the ”1: Define meta learning/stacking options”. The idea is that rather than testing all combinations of the models (e.g., model 1 - model 2 - model 3 and then all other combinations of these), the user can specify the models that they want to test. This is because usually there is a rationale for testing model sequences based on clinical experience and also cost (e.g., clinical assessment, then cognitive assessment, then imaging if necessary).</p>
 <p>Sequences of assessments need to be specified here either directly or using a MATLAB variable. For example, if you wanted to specify a sequence of model 1 - model 2 - model 3 then you would enter [1 2 3]. If you wanted to specify this and also models 2 1 3 then you would enter [1 2 3; 2 1 3]. If you want to specify more, you can create a MATLAB variable with more sequences in rows and you can enter the variable name into this section.</p>
-<p>Afterwards you can return to the main menu, initialize your analyses and train as indicated in <a class="reference internal" href="3.2.11_paramtemp_stacking.html#paramtemp-stacking"><span class="std std-ref">stacking</span></a>.</p>
+<p>Afterwards you can return to the main menu, initialize your analyses and train as indicated in <a class="reference internal" href="3.2.15_paramtemp_stacking.html#paramtemp-stacking"><span class="std std-ref">stacking</span></a>.</p>
 </section>
 </section>
 </section>

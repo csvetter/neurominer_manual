@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    <no title>
+                    Neurominer
                 </a>
             </li>
         </ul>
@@ -199,27 +199,27 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+    <a class="reference internal" href="3.2.08_paramtemp_model_saving_options.html">
      Model saving options
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
-     Save parameter template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+    <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
      Load training template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
-     Define verbosity level
+    <a class="reference internal" href="3.2.12_paramtemp_save_parameter_template.html">
+     Save parameter template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+    <a class="reference internal" href="3.2.13_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.15_paramtemp_stacking.html">
      Stacking
     </a>
    </li>
@@ -260,6 +260,11 @@ const thebe_selector_output = ".output, .cell_output"
    Out of Sample Cross-Validation
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -269,19 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4.0_Example.html">
-   Example
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Functions in development
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
-   Investigate sample size (simulation)
+   Basic usage
   </a>
  </li>
 </ul>
@@ -1087,10 +1080,10 @@ the calculation of the median value. The default is 7.</p>
 <section id="remove-group-level-differences-using-offset-correction">
 <h2>Remove Group-level differences using offset correction<a class="headerlink" href="#remove-group-level-differences-using-offset-correction" title="Permalink to this headline">#</a></h2>
 <p>This function was introduced primarily to control for scanner differences in structural neuroimaging data. In the case of two centers, for each feature, the mean of both center A and center B is calculated. The mean difference between these is then calculated (A-B=Y) and then subtracted from each of the data points in A (i.e., Ai - Y). This value is stored for further analysis. Internal empirical tests indicate that this basic method can control for major site differences.</p>
-</section>
 <hr class="docutils" />
+</section>
 <section id="rank-weight-features">
-<h2>Rank / Weight features<a class="headerlink" href="#rank-weight-features" title="Permalink to this headline">#</a></h2>
+<span id="preproc-rank"></span><h2>Rank / Weight features<a class="headerlink" href="#rank-weight-features" title="Permalink to this headline">#</a></h2>
 <p>Selecting or ranking features is an important part of machine learning and can be achieved with filters and wrappers. For a discussion of why these methods are important and for all definitions see <a class="reference external" href="http://www.jmlr.org/papers/volume3/guyon03a/guyon03a.pdf">Guyon et
 al., 2003</a>.</p>
 <div class="admonition note">

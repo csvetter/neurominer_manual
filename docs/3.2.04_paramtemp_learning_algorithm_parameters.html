@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    <no title>
+                    Neurominer
                 </a>
             </li>
         </ul>
@@ -197,27 +197,27 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.07_paramtemp_model_saving_options.html">
+    <a class="reference internal" href="3.2.08_paramtemp_model_saving_options.html">
      Model saving options
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.08_paramtemp_save_parameter_template.html">
-     Save parameter template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.2.09_paramtemp_load_training_template.html">
+    <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
      Load training template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.10_paramtemp_define_verbosity_level.html">
-     Define verbosity level
+    <a class="reference internal" href="3.2.12_paramtemp_save_parameter_template.html">
+     Save parameter template
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2.11_paramtemp_stacking.html">
+    <a class="reference internal" href="3.2.13_paramtemp_load_training_template.html">
+     Load training template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.15_paramtemp_stacking.html">
      Stacking
     </a>
    </li>
@@ -258,6 +258,11 @@ const thebe_selector_output = ".output, .cell_output"
    Out of Sample Cross-Validation
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+   Investigate sample size (simulation)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -267,19 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4.0_Example.html">
-   Example
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Functions in development
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
-   Investigate sample size (simulation)
+   Basic usage
   </a>
  </li>
 </ul>
@@ -468,10 +461,20 @@ title="Print to PDF"
 <p>As previously stated, NeuroMiner uses a dynamic menu configuration that changes based on previous input. This is also true for the learning algorithm parameters, whereby the menu options will change based on what you have selected in the ”Classification algorithm” section.</p>
 <p>Here we show an example for a RBF-Gaussian kernel Support Vector Machine classifier.</p>
 <blockquote>
-<div><p>1 | Define Slack/Regularization parameter(s)<br />
-2 | <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define Kernel parameter(s)</a><br />
-3 | <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define Weighting exponents</a></p>
+<div><p>1 | Define Slack/Regularization parameter(s)</p>
+<p>2 | <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define Kernel parameter(s)</a></p>
+<p>3 | <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define Weighting exponents</a></p>
 </div></blockquote>
+<p>Model selection regularization option controls the optimization module in NeuroMiner. When a selection of parameter(s) is necessary regularization might be advisable. If you answer yes to this question the following options will be available.</p>
+<blockquote>
+<div><p>1 | Criterion for cross-parameter model selection</p>
+<p>2 | Suboption 1 dependent on (a)</p>
+<p>3 | Suboption 2 dependent on (a)</p>
+<p>4 | Specify cross-parameter model selection process.</p>
+</div></blockquote>
+<p><strong>4 | Specify cross-parameter model selection process</strong></p>
+<p>This option controls the number of models (parameters combination) selected. One optimal model based on the criteria and regularization defined previously or an ensemble of the top performing models
+You are given the possibility to select between: (1) select a single optimum parameter node which returns one optimal model based on the criteria, (2) generate cross-node ensemble by aggregating base learners above a predefined percentile which results in an ensemble of the top performing models or (3) automatically determine optimal percentile for optimum cross-node ensemble performance which depends on the regularization that is explained above.</p>
 <!--
 
 As previously stated, NeuroMiner uses a dynamic menu configuration that

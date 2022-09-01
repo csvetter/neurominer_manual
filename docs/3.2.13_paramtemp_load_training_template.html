@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Preprocess features &#8212; NeuroMiner Manual</title>
+    <title>Load training template &#8212; NeuroMiner Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Train supervised classifiers" href="3.5_mainmenu_train_supervised_classifiers.html" />
-    <link rel="prev" title="Initialize analyses" href="3.3_mainmenu_initialize_delete_analyses.html" />
+    <link rel="next" title="Stacking" href="3.2.15_paramtemp_stacking.html" />
+    <link rel="prev" title="Save parameter template" href="3.2.12_paramtemp_save_parameter_template.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,16 +151,16 @@ const thebe_selector_output = ".output, .cell_output"
    Data entry in NeuroMiner
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="3.2_mainmenu_define_parameter_template.html">
    Define parameter template
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.00_paramtemp_data_fusion.html">
      Data Fusion
@@ -211,8 +211,8 @@ const thebe_selector_output = ".output, .cell_output"
      Save parameter template
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.2.13_paramtemp_load_training_template.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Load training template
     </a>
    </li>
@@ -228,8 +228,8 @@ const thebe_selector_output = ".output, .cell_output"
    Initialize analyses
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.4_mainmenu_preprocess_features.html">
    Preprocess features
   </a>
  </li>
@@ -365,7 +365,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.4_mainmenu_preprocess_features.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/3.2.13_paramtemp_load_training_template.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -393,7 +393,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/3.4_mainmenu_preprocess_features.md"
+        <a href="../_sources/docs/3.2.13_paramtemp_load_training_template.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -442,7 +442,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Preprocess features</h1>
+                <h1>Load training template</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -454,40 +454,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="preprocess-features">
-<span id="mainmenu-preprocess-features"></span><h1>Preprocess features<a class="headerlink" href="#preprocess-features" title="Permalink to this headline">#</a></h1>
-<!-- Once the data has been initialized, the user has the option to
-preprocess the features. In NeuroMiner nomenclature, this refers to any
-steps that are conducted within the cross-validation folds prior to
-training a model. For example, the data within each fold could be scaled
-and then imputed, or a principal components analysis could be conducted.
+  <section class="tex2jax_ignore mathjax_ignore" id="load-training-template">
+<span id="paramtemp-load-training-template"></span><h1>Load training template<a class="headerlink" href="#load-training-template" title="Permalink to this headline">#</a></h1>
+<!-- When a parameter template has been saved in the previous menu item, it
+can be loaded with this feature. This will parametise all settings
+within the template of the new NM structure, and thus will allow it to
+be initialised in the next step.
 
-When this option is selected, the user will be presented with the
-following:
-
-1 : Select analysis to operate on \[Analysis 1\]\
-2 : Overwrite existing preprocessed data files \[ no \]\
-3 : Use existing preprocessing parameter files, if available \[ no \]\
-4 : Write out computed parameters to disk (may require A LOT of disk
-space) \[ no \]\
-5 : Select CV2 partitions to operate on \[ 0 selected \]
-
-**2: Overwrite existing preprocessed data files**. NeuroMiner will save
-preprocessed data files and selecting this option will overwrite them.
-
-**3: Use existing preprocessing parameter files, if available**. The
-user has the option to save parameter files (e.g., betas from regression
-of age from a feature) and this option will allow them to use the
-existing files.
-
-**4: Write out computer parameters to disk**. This option will write the
-parameters (e.g., beta coefficients) to disk. This is not recommended
-due to space limitations.
-
-**5: Select CV2 partition to operate on**. This option will only appear
-if an analysis has been selected in step 1. It allows the user to select
-the folds that the preprocessing analysis will be applied to (see Box:
-Selecting CV folds in NeuroMiner). -->
+Please note that you will see a menu item warning about the
+cross-validation set-up. This warning is to highlight the fact that if
+you have different data then you need to re-create the cross-validation
+structure. -->
 </section>
 
     <script type="text/x-thebe-config">
@@ -517,17 +494,17 @@ Selecting CV folds in NeuroMiner). -->
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="3.3_mainmenu_initialize_delete_analyses.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="3.2.12_paramtemp_save_parameter_template.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Initialize analyses</p>
+            <p class="prev-next-title">Save parameter template</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3.5_mainmenu_train_supervised_classifiers.html" title="next page">
+    <a class='right-next' id="next-link" href="3.2.15_paramtemp_stacking.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Train supervised classifiers</p>
+        <p class="prev-next-title">Stacking</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
