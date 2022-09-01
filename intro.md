@@ -23,6 +23,11 @@ available to clinical researchers from different fields, aiming at
 collaboratively developing diagnostic, predictive, and prognostic tools
 for precision medicine approaches.
 
+Check out the manual and tutorials to get started!
+
+```{tableofcontents}
+```
+
 ---
 
 (license)=
@@ -722,9 +727,3 @@ library, you may consider it more useful to permit linking proprietary
 applications with the library. If this is what you want to do, use the
 GNU Lesser General Public License instead of this License. But first,
 please read <https://www.gnu.org/licenses/why-not-lgpl.html>.
-
-
-Check out the manual and tutorials to get started!
-
-```{tableofcontents}
-```
