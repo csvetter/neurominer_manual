@@ -1,8 +1,8 @@
 # Neurominer
 
-```{figure} nm_logo.png
+```{figure} nm_hero_right.png
 ---
-name: fig:nm_logo
+name: fig:nm_hero_right
 alt: neurominer logo
 ---
 ```
