@@ -41,8 +41,8 @@ parts:
   - caption: Examples
     chapters:
       - file: docs/4.0_Example
-  - caption: Functions in development
-    chapters:
+  #- caption: Functions in development
+  #  chapters:
       #- file: docs/DEV_brain_network_analysis
 
 
