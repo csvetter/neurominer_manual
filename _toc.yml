@@ -22,11 +22,14 @@ parts:
           - file: docs/3.2.04_paramtemp_learning_algorithm_parameters
           - file: docs/3.2.05_paramtemp_ensemble_generation_strategies
           - file: docs/3.2.06_paramtemp_visualization_options
-          - file: docs/3.2.07_paramtemp_model_saving_options
-          - file: docs/3.2.08_paramtemp_save_parameter_template
-          - file: docs/3.2.09_paramtemp_load_training_template
-          - file: docs/3.2.10_paramtemp_define_verbosity_level
-          - file: docs/3.2.11_paramtemp_stacking
+          - file: docs/3.2.07_paramtemp_interpretation_options
+          - file: docs/3.2.08_paramtemp_model_saving_options
+          - file: docs/3.2.09_paramtemp_define_verbosity
+          - file: docs/3.2.11_paramtemp_inspect_workspace
+          - file: docs/3.2.12_paramtemp_save_parameter_template
+          - file: docs/3.2.13_paramtemp_load_training_template
+          - file: docs/3.2.14_paramtemp_define_verbosity_level
+          - file: docs/3.2.15_paramtemp_stacking
       - file: docs/3.3_mainmenu_initialize_delete_analyses
       - file: docs/3.4_mainmenu_preprocess_features
       - file: docs/3.5_mainmenu_train_supervised_classifiers
