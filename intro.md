@@ -7,7 +7,7 @@ alt: neurominer logo
 ---
 ```
 
-## Machine learining for precision psychiatry
+## Machine learning for precision psychiatry
 
 Machine learning techniques are poised to become clinically useful
 methods that may be used for diagnosis, prognosis, and treatment
