@@ -1,6 +1,10 @@
 (knownissues)=
 # Known Issues
 
+- App Designer doesn't work with MATlAB older than R2021b
+
+- Python connection only works with more recent Matlab
+
 
 <!-- NeuroMiner is currently undergoing testing and there are a number of
 known issues that require further work. These are the following.

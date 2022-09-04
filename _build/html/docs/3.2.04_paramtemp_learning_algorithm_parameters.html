@@ -245,22 +245,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
-   Display training results
+   Result Viewer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
-   Generate master files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+  <a class="reference internal" href="3.8_mainmenu_OOCV_analysis.html">
    Out of Sample Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+   Change working directory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+   Utilities
   </a>
  </li>
 </ul>
@@ -475,42 +480,6 @@ title="Print to PDF"
 <p><strong>4 | Specify cross-parameter model selection process</strong></p>
 <p>This option controls the number of models (parameters combination) selected. One optimal model based on the criteria and regularization defined previously or an ensemble of the top performing models
 You are given the possibility to select between: (1) select a single optimum parameter node which returns one optimal model based on the criteria, (2) generate cross-node ensemble by aggregating base learners above a predefined percentile which results in an ensemble of the top performing models or (3) automatically determine optimal percentile for optimum cross-node ensemble performance which depends on the regularization that is explained above.</p>
-<!--
-
-As previously stated, NeuroMiner uses a dynamic menu configuration that
-changes based on previous input. This is no different for the learning
-algorithm parameters, whereby the menu options will change based on what
-you have selected in the \"Classification algorithm\" section.
-
-Here we show an example for a RBF-Gaussian kernel Support Vector Machine
-**classifier**.
-
-1.  [Define Slack/Regularization
-    parameter(s)](https://en.wikipedia.org/wiki/Support_vector_machine#Parameter_selection)
-
-2.  [Define Kernel
-    parameter(s))](https://en.wikipedia.org/wiki/Support_vector_machine#Parameter_selection)
-
-3.  [Define Weighting
-    exponents](https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410)
-
-4.  Enable regularization of model selection
-
-Model selection regularization option controls the optimization module
-in Neurominer. When parameter(s) selection is necessary regularization
-might be advisable. If you answer yes to this question the following
-options will be available.
-
-1.  Criterion for cross-parameter model selection
-
-2.  Suboption 1 dependent on (a)
-
-3.  Suboption 2 dependent on (a)
-
-4.  Specify cross-parameter model selection process. This option
-    controls the number of models (parameters combination) selected. One
-    optimal model based on the criteria and regularization defined
-    previously or an ensemble of the top performing models -->
 </section>
 
     <script type="text/x-thebe-config">

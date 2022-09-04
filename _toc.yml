@@ -35,9 +35,10 @@ parts:
       - file: docs/3.5_mainmenu_train_supervised_classifiers
       - file: docs/3.6_mainmenu_visualize_classifiers
       - file: docs/3.7_mainmenu_display_training_results
-      - file: docs/3.8_mainmenu_generate_master_files
-      - file: docs/3.9_mainmenu_OOCV_analysis
+      - file: docs/3.8_mainmenu_OOCV_analysis
+      - file: docs/3.9_mainmenu_change_wd
       - file: docs/3.10_mainmenu_investigate_sample_size
+      - file: docs/3.11_mainmenu_utilities
   - caption: Examples
     chapters:
       - file: docs/4.0_Example

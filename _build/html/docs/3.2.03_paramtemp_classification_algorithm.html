@@ -245,22 +245,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
-   Display training results
+   Result Viewer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
-   Generate master files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+  <a class="reference internal" href="3.8_mainmenu_OOCV_analysis.html">
    Out of Sample Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+   Change working directory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+   Utilities
   </a>
  </li>
 </ul>
@@ -661,7 +666,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="classification-algorithm">
 <span id="paramtemp-classification-algorithm"></span><h1>Classification algorithm<a class="headerlink" href="#classification-algorithm" title="Permalink to this headline">#</a></h1>
-<p>Support Vector Machine algorithms are the base of the evaluation core of NeuroMiner. However, a variety of other methods such as k-Nearest Neighbors and Random Forests are also available. In this distribution we rely on the LIBSVM /LIBLINEAR toolboxes for the implementation of support vector based classifiers and regressors. matLearn is also now introduced and requires the Statistics and Optimization Toolbox.</p>
+<p>Support Vector Machine algorithms are the base of the evaluation core of NeuroMiner. However, a variety of other methods such as k-Nearest Neighbors and Random Forests are also available. In this distribution we rely on the <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/">LIBSVM</a> / <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/liblinear/">LIBLINEAR</a> toolboxes for the implementation of support vector based classifiers and regressors. matLearn is also now introduced and requires the Statistics and Optimization Toolbox.</p>
 <p>The NeuroMiner interface will change according to the evaluation type selected during data import. Two operation modes are implemented: Classification and Regression. The following will refer to each of these separately.</p>
 <section id="classification-mode">
 <h2>Classification mode<a class="headerlink" href="#classification-mode" title="Permalink to this headline">#</a></h2>
@@ -829,7 +834,11 @@ label prediction)</p></li>
 </section>
 <section id="optimize-decision-threshold-based-on-roc-expert-mode">
 <h3>Optimize decision threshold based on ROC (expert mode)<a class="headerlink" href="#optimize-decision-threshold-based-on-roc-expert-mode" title="Permalink to this headline">#</a></h3>
-<p>If you’ve opened NM in expert mode (by calling “nm expert” instead of “nm”), you will have this option in your model setup menu. This option allows optimizing the decision scores according to the Receiver Operator Function. The default setting enables the post-hoc optimization using ROC analysis of C1 test data.</p>
+<p>If you’ve opened NM in expert mode (by calling “nm expert” instead of “nm”), you will have this option (5) in your model setup menu:</p>
+<figure class="align-default" id="fig-3-2-03-nm-classific-menu-expert">
+<img alt="neurominer classifier menu in expert mode" src="../_images/NM_model_menu_expert.png" />
+</figure>
+<p>It allows optimizing the decision scores according to the Receiver Operator Function. The default setting enables the post-hoc optimization using ROC analysis of C1 test data.</p>
 </section>
 <section id="use-adasyn-to-adjust-for-unbalanced-class-settings-expert-mode">
 <h3>Use ADASYN to adjust for unbalanced class settings (expert mode)<a class="headerlink" href="#use-adasyn-to-adjust-for-unbalanced-class-settings-expert-mode" title="Permalink to this headline">#</a></h3>
@@ -841,6 +850,10 @@ label prediction)</p></li>
 <p>n9 | Define k value of SMOTE algorithm (kNN looking only at the minority class) [k=5]</p>
 <p>10 | Data is already normalized for kNN search 					[no]</p>
 </div></blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>To have access to more preprocessing and model settings, you have to open NeuroMiner in expert mode. To do so, start NeroMiner by typing <strong>nm expert</strong> instead of <strong>nm</strong> in your MATLAB console.</p>
+</div>
 </section>
 <section id="sequence-optimization">
 <h3>Sequence Optimization<a class="headerlink" href="#sequence-optimization" title="Permalink to this headline">#</a></h3>
