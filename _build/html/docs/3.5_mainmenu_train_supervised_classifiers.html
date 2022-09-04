@@ -203,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
-     Load training template
+     Inspect workspace
     </a>
    </li>
    <li class="toctree-l2">
@@ -245,22 +245,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
-   Display training results
+   Result Viewer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
-   Generate master files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+  <a class="reference internal" href="3.8_mainmenu_OOCV_analysis.html">
    Out of Sample Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+   Change working directory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+   Utilities
   </a>
  </li>
 </ul>
@@ -430,12 +435,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-from-scratch">
+   1 | Create analysis from scratch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-using-precomputer-preprocdata-mats">
+   2 | Create analysis using precomputer preprocdata-MATs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-using-precomputed-cvdatamats">
+   3 | Create analysis using precomputed CVdatamats
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-using-precomputed-cvresult-mats">
+   4 | Create analysis using precomputed CVresult-MATs
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -447,6 +491,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-from-scratch">
+   1 | Create analysis from scratch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-using-precomputer-preprocdata-mats">
+   2 | Create analysis using precomputer preprocdata-MATs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-using-precomputed-cvdatamats">
+   3 | Create analysis using precomputed CVdatamats
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-analysis-using-precomputed-cvresult-mats">
+   4 | Create analysis using precomputed CVresult-MATs
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -456,48 +528,32 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="train-supervised-classifiers">
 <span id="mainmenu-train-supervised-classifiers"></span><h1>Train supervised classifiers<a class="headerlink" href="#train-supervised-classifiers" title="Permalink to this headline">#</a></h1>
-<!-- As depicted in Figure
-[\[fig:nm_flowchart\]](#fig:nm_flowchart){reference-type="ref"
-reference="fig:nm_flowchart"}, once the parameter template has been
-completed and initialized there is the option to train the models. This
-implies the use of a statistical technique, such as an SVM, along with
-the hyperparameter optimisation (e.g., optimising the C parameter) and
-any wrappers that might have been activated. The following menu will be
-displayed:
-
-1: Create analysis from scratch\
-2: Create analysis using precomputer preprocdata-MATs\
-3: Create analysis using precomputed CVdatamats\
-4: Create analysis using precomputed CVresult-MATs
-
-**1: Create analysis from scratch**\
-This is where the analysis has only been initialized and no data
-matrices have been stored. This will preprocess and then train
-classifiers. Please note, that if your matrices are large (e.g., with
-neuroimaging data) then this will take up a lot of RAM and as such it is
-recommended to preprocess the data first.
-
-**2: Create analysis using precomputer preprocdata-MATs**\
-This is when the user has preprocessed their data and stored the
-preprocessed files in a folder; i.e., they have TRAIN files.
-
-**3: Create analysis using precomputed CVdatamats**\
-This is when the user has completed an analysis (preprocessing and
-training) and they have the data matrix files stored in a folder; i.e.,
-\"\...CVdatamat_oCV\...\" files. When this option is selected, the
-analysis results from the CVdatamat files are then collated into a
-result file. It is useful especially when the program has crashed,
-and/or the NM structure has not been saved, and the user wants to get
-the results without re-running all the training again.
-
-**4: Create analysis using precomputed CVresult-MATs**\
-This is when the user already has the results file and they want to
-integrate the results into the NM structure. This is useful if there has
-been a crash and the data has been lost from the NM structure.
-
-![Monitor progress during an
-analysis.](Images/analysis_processing){#fig:analysis_processing
-width="1.1\\linewidth"} -->
+<p>As depicted in <a class="reference internal" href="3.0_mainmenu.html#fig-3-0-nm-workflow"><span class="std std-numref">Fig. 4</span></a>, once the parameter template has been completed and initialized there is the option to train the models. This implies the use of a statistical technique, such as an SVM, along with the hyperparameter optimization (e.g., optimizing the C parameter) and any wrappers that might have been activated. The following menu will be displayed:</p>
+<blockquote>
+<div><p>1 | Create analysis from scratch</p>
+<p>2 | Create analysis using precomputer preprocdata-MATs</p>
+<p>3 | Create analysis using precomputed CVdatamats</p>
+<p>4 | Create analysis using precomputed CVresult-MATs</p>
+</div></blockquote>
+<section id="create-analysis-from-scratch">
+<h2>1 | Create analysis from scratch<a class="headerlink" href="#create-analysis-from-scratch" title="Permalink to this headline">#</a></h2>
+<p>This is where the analysis has only been initialized and no data matrices have been stored. This will preprocess and then train classifiers. Please note, that if your matrices are large (e.g., with neuroimaging data) then this will take up a lot of RAM and as such it is recommended to preprocess the data first.</p>
+</section>
+<section id="create-analysis-using-precomputer-preprocdata-mats">
+<h2>2 | Create analysis using precomputer preprocdata-MATs<a class="headerlink" href="#create-analysis-using-precomputer-preprocdata-mats" title="Permalink to this headline">#</a></h2>
+<p>This is when the user has preprocessed their data and stored the preprocessed files in a folder; i.e., they have TRAIN files.</p>
+</section>
+<section id="create-analysis-using-precomputed-cvdatamats">
+<h2>3 | Create analysis using precomputed CVdatamats<a class="headerlink" href="#create-analysis-using-precomputed-cvdatamats" title="Permalink to this headline">#</a></h2>
+<p>This is when the user has completed an analysis (preprocessing and training) and they have the data matrix files stored in a folder; i.e., ”…CVdatamat oCV…” files. When this option is selected, the analysis results from the CVdatamat files are then collated into a result file. It is useful especially when the program has crashed, and/or the NM structure has not been saved, and the user wants to get the results without re-running all the training again.</p>
+</section>
+<section id="create-analysis-using-precomputed-cvresult-mats">
+<h2>4 | Create analysis using precomputed CVresult-MATs<a class="headerlink" href="#create-analysis-using-precomputed-cvresult-mats" title="Permalink to this headline">#</a></h2>
+<p>This is when the user already has the results file and they want to integrate the results into the NM structure. This is useful if there has been a crash and the data has been lost from the NM structure.</p>
+<figure class="align-default" id="fig-nm-analysis-processing-png">
+<img alt="neurominer analysis processing" src="../_images/NM_analysis_processing.png" />
+</figure>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
