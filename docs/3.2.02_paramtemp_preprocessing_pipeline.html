@@ -205,7 +205,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
-     Load training template
+     Inspect workspace
     </a>
    </li>
    <li class="toctree-l2">
@@ -247,22 +247,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
-   Display training results
+   Result Viewer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
-   Generate master files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+  <a class="reference internal" href="3.8_mainmenu_OOCV_analysis.html">
    Out of Sample Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+   Change working directory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+   Utilities
   </a>
  </li>
 </ul>
@@ -518,7 +523,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#select-features-for-imputation">
-     2: Select features for imputation
+     2 | Select features for imputation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -636,7 +641,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#select-features-for-imputation">
-     2: Select features for imputation
+     2 | Select features for imputation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1029,7 +1034,7 @@ inputted.</p>
 </div>
 </section>
 <section id="select-features-for-imputation">
-<h3>2: Select features for imputation<a class="headerlink" href="#select-features-for-imputation" title="Permalink to this headline">#</a></h3>
+<h3>2 | Select features for imputation<a class="headerlink" href="#select-features-for-imputation" title="Permalink to this headline">#</a></h3>
 <p>The imputation procedures can be applied to the entire dataset or to
 subsets of the data. This is useful when there are different data
 domains (e.g., clinical and cognitive data) or even single
@@ -1046,6 +1051,10 @@ separate imputation routines.</p>
 <p>If you’re using the multivariate nearest-neighbors approach then you
 must define the number of nearest neighbors (e.g., subjects) to use for
 the calculation of the median value. The default is 7.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>We found that this step yields stable results when data is scaled prior to the imputation step, however the results become unstable when the data is standardized.</p>
+</div>
 </section>
 </section>
 <hr class="docutils" />

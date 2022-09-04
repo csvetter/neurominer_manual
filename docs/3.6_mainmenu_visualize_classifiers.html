@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Display training results" href="3.7_mainmenu_display_training_results.html" />
+    <link rel="next" title="Result Viewer" href="3.7_mainmenu_display_training_results.html" />
     <link rel="prev" title="Train supervised classifiers" href="3.5_mainmenu_train_supervised_classifiers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -203,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
-     Load training template
+     Inspect workspace
     </a>
    </li>
    <li class="toctree-l2">
@@ -245,22 +245,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
-   Display training results
+   Result Viewer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
-   Generate master files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+  <a class="reference internal" href="3.8_mainmenu_OOCV_analysis.html">
    Out of Sample Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+   Change working directory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+   Utilities
   </a>
  </li>
 </ul>
@@ -430,12 +435,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-results">
+   Mean results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grand-mean-results">
+   Grand mean results
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -447,6 +481,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-results">
+   Mean results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grand-mean-results">
+   Grand mean results
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -456,88 +508,37 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="visualize-classifiers">
 <span id="mainmenu-visualize-classifiers"></span><h1>Visualize classifiers<a class="headerlink" href="#visualize-classifiers" title="Permalink to this headline">#</a></h1>
-<!-- A standard NeuroMiner analysis will produce the predictive accuracy of
-the models using the preprocessed data (e.g., the scaled PCA
-components). This means that the model weights (e.g., from an SVM) are
-only available within this space (e.g., a weight for each PCA
-component). For accurate interpretation, it is necessary to project
-these weights back to the original data and this is called
-\"visualisation\" within NeuroMiner. The term visualisation applies best
-to NeuroImaging data where the weights are projected back to the
-original voxel space and then can be visualized, but also applies to
-matrix data where the results for each test (e.g., for each
-questionnaire item) can be visualized in a graph. Running the
-visualization routine in NeuroMiner will produce three different types
-of results that represent how the classifier relates to the original
-data: mean results, grand mean results, and z/p value results associated
-with the individual feature weights.
-
-Visualisation in NeuroMiner also applies to the calculation of the
-model-based permutation p-values that can be selected in the
-\"Visualisation\" menu.
-
-**Mean Results**
-
-\*\*\_Mean\_\*\
-This image represents the median of the weights across all models
-selected during the CV1 cycle. For example, if you have a 10x10
-cross-validation cycle and you're selecting the winner for each fold,
-then it will create a median across 100 models.\
-\*\*\_SE\_\*\
-The standard error of the weights across all models selected during the
-CV1 cycle.\
-\*\*\_CVratio\_\*\
-This is the sum of the median weights across all CV1 folds divided by
-the standard error. It is a measure of stability.
-
-**Grand Mean Results**
-
-\*\*\_Mean-GrM\_\*\
-Within a nested cross-validation framework, the grand median (GrM) in
-NeuroMiner is defined as the sum of the median weights of selected CV1
-models for each CV2 fold, divided by the number of CV2 folds.\
-\*\*\_SE-GrM\_\*\
-The grand median standard error is the sum of the standard error values
-of selected CV1 models for each CV2 fold, divided by the number of CV2
-folds.\
-\*\*\_CVratio-GrM\_\*\
-The grand median CV ratio is the sum across CV2 folds of the selected
-CV1 median weights divided by the selected CV1 standard error. This
-value is then divided by the number of CV2 folds.\
-\*\*\_Mean-gr-SE-GrM\_\*\
-Across selected models for CV2 folds, this is the grand median
-thresholded to only display the voxels where the median is greater than
-the standard error.\
-\*\*\_Prob95CI-GrM\_\*\
-Across selected models for CV2 folds, this is the amount of times that
-the median value has been greater or less than the 95% confidence
-interval.\
-\*\*\_Sign-Based-Consistency\_\*\
-Sign-based consistency mapping for features is based on the logic
-outlined in [Gomez-Verdejo et al.,
-2019](https://www.csie.ntu.edu.tw/~cjlin/libsvm/)Sign-based consistency
-mappin. The importance is calculated as the number of times that the
-sign of the feature (i.e., a positive \"+\" or negative \"-\" sign) is
-consistent within an ensemble (e.g., number of times that it is
-consistently positive) multiplied by the number of times that the
-variable was non-zero (e.g., in the case of a L1-regularized SVM or
-regression, the weights can be set to zero and thus the more that this
-happens the lower the importance of the feature). The measure is between
-0 to 1, with 1 representing perfect consistency within the ensemble and
-0 if the weights are equally positive and negative or when the feature
-is omitted with a zero weight. A p-value is then calculated by defining
-a hypothesis test for the importance score with a null hypothesis of 0
-and an alternative hypothesis of \>0. A z-score was calculated as the
-importance divided by the square root of the variance of the importance
-scores. A standard p-value was then calculated using a normal cumulative
-distribution function to choose the right-tailed significance. P-values
-are then corrected using the false-discovery rate.
-
-**Z and P score images** Visualisation can also include the derivation
-of Z or P scores for the entire models (i.e., not the individual
-features) using permutation testing. These are outlined in
-[\[3.2.06_visualization_options\]](#3.2.06_visualization_options){reference-type="ref"
-reference="3.2.06_visualization_options"}. -->
+<p>A standard NeuroMiner analysis will produce the predictive accuracy of the models using the preprocessed data (e.g., the scaled PCA components). This means that the model weights (e.g., from an SVM) are only available within this space (e.g., a weight for each PCA component). For accurate interpretation, it is necessary to project these weights back to the original data and this is called ”visualization” within NeuroMiner. The term visualization applies best to neuroimaging data where the weights are projected back to the original voxel space and then can be visualized, but also applies to matrix data where the results for each test (e.g., for each questionnaire item) can be visualized in a graph. Running the visualization routine in NeuroMiner will produce three different types of results that represent how the classifier relates to the original data: mean results, grand mean results, and z/p value results associated with the individual feature weights.
+Visualization in NeuroMiner also applies to the calculation of the model-based permutation p-values that can be selected in the ”Visualization” menu.</p>
+<section id="mean-results">
+<h2>Mean results<a class="headerlink" href="#mean-results" title="Permalink to this headline">#</a></h2>
+<p>This image represents the median of the weights across all models selected during the CV1 cycle. For example, if you have a 10x10 cross-validation cycle and you’re selecting the winner for each fold, then it will create a median across 100 models.</p>
+<p><strong>Mean</strong></p>
+<p>This image represents the median of the weights across all models selected during the CV1 cycle. For example, if you have a 10x10 cross-validation cycle and you’re selecting the winner for each fold, then it will create a median across 100 models.</p>
+<p><strong>SE</strong></p>
+<p>The standard error of the weights across all models selected during the CV1 cycle</p>
+<p><strong>CVratio</strong></p>
+<p>This is the sum of the median weights across all CV1 folds divided by the standard error. It is a measure of stability.</p>
+</section>
+<section id="grand-mean-results">
+<h2>Grand mean results<a class="headerlink" href="#grand-mean-results" title="Permalink to this headline">#</a></h2>
+<p><strong>Mean-GrM</strong></p>
+<p>Within a nested cross-validation framework, the grand median (GrM) in Neu roMiner is defined as the sum of the median weights of selected CV1 models for each CV2 fold, divided by the number of CV2 folds.</p>
+<p><strong>SE-GrM</strong></p>
+<p>The grand median standard error is the sum of the standard error values of selected CV1 models for each CV2 fold, divided by the number of CV2 folds.</p>
+<p><strong>CVratio-GrM</strong></p>
+<p>The grand median CV ratio is the sum across CV2 folds of the selected CV1 median weights divided by the selected CV1 standard error. This value is then divided by the number of CV2 folds.</p>
+<p><strong>Mean-gr-SE-GrM</strong></p>
+<p>Across selected models for CV2 folds, this is the grand median thresholded to only display the voxels where the median is greater than the standard error.</p>
+<p><strong>Prob95CI-GrM</strong></p>
+<p>Across selected models for CV2 folds, this is the amount of times that the median value has been greater or less than the 95% confidence interval.</p>
+<p><strong>Sign-Based-Consistency</strong></p>
+<p>Sign-based consistency mapping for features is based on the logic outlined in Gomez-Verdejo et al., 2019. Sign-based consistency mappin. The importance is calculated as the number of times that the sign of the feature (i.e., a positive ”+” or negative ”-” sign) is consistent within an ensemble (e.g., number of times that it is consistently positive) multiplied by the number of times that the variable was non-zero (e.g., in the case of a L1-regularized SVM or regression, the weights can be set to zero and thus the more that this happens the lower the importance of the feature). The measure is between 0 to 1, with 1 representing perfect consistency within the ensemble and 0 if the weights are equally positive and negative or when the feature is omitted with a zero weight. A p-value is then calculated by defining a hypothesis test for the importance score with a null hypothesis of 0 and an alternative hypothesis of ¿0. A z-score was calculated as the importance divided by the square root of the variance of the importance scores. A standard p-value was then calculated using a normal cumulative distribution function to choose the right-tailed significance. P-values are then corrected using the false-discovery rate.</p>
+<div class="admonition-z-and-p-score-images admonition">
+<p class="admonition-title">Z and P score images</p>
+<p>Visualization can also include the derivation of Z or P scores for the entire models (i.e., not the individual features) using permutation testing. These are outlined in <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html#paramtemp-visualization-options"><span class="std std-ref">visualization options</span></a>.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -577,7 +578,7 @@ reference="3.2.06_visualization_options"}. -->
     <a class='right-next' id="next-link" href="3.7_mainmenu_display_training_results.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Display training results</p>
+        <p class="prev-next-title">Result Viewer</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

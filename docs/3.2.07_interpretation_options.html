@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
-     Load training template
+     Inspect workspace
     </a>
    </li>
    <li class="toctree-l2">
@@ -243,22 +243,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
-   Display training results
+   Result Viewer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
-   Generate master files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+  <a class="reference internal" href="3.8_mainmenu_OOCV_analysis.html">
    Out of Sample Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+   Change working directory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+   Utilities
   </a>
  </li>
 </ul>
@@ -428,12 +433,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-occlusion-method">
+   Define occlusion method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-no-of-iterations">
+   Define no. of iterations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-fraction-of-features-to-be-visited-per-iteration">
+   Define fraction of features to be visited per iteration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-map-from-model-visualization-to-operate-in-predetermined-feature-space">
+   Use map from model visualization to operate in predetermined feature space
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -445,6 +489,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-occlusion-method">
+   Define occlusion method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-no-of-iterations">
+   Define no. of iterations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-fraction-of-features-to-be-visited-per-iteration">
+   Define fraction of features to be visited per iteration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-map-from-model-visualization-to-operate-in-predetermined-feature-space">
+   Use map from model visualization to operate in predetermined feature space
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -452,8 +524,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="prediction-interpretation-options">
-<h1>Prediction interpretation options<a class="headerlink" href="#prediction-interpretation-options" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="prediction-interpretation-options">
+<span id="interpretation-options"></span><h1>Prediction interpretation options<a class="headerlink" href="#prediction-interpretation-options" title="Permalink to this headline">#</a></h1>
+<p>To increase clinical significance, individual explanations for predictions are essential. In this regard, NeuroMiner offers different methods to obtain interpretable and transparent models.</p>
+<figure class="align-default" id="fig-nm-paramtemp-mli">
+<img alt="neurominer mli options" src="../_images/NM_paramtemp_mli.png" />
+</figure>
+<section id="define-occlusion-method">
+<h2>Define occlusion method<a class="headerlink" href="#define-occlusion-method" title="Permalink to this headline">#</a></h2>
+<p>Interpretability in NeuroMiner is based on occlusion methods where a fraction of features will be occluded and the change in prediction outcome will be quantified. Four different occlusion methods are  available:</p>
+<figure class="align-default" id="fig-nm-paramtemp-occlusion">
+<img alt="neurominer occlusion options" src="../_images/NM_paramtemp_occlusion.png" />
+</figure>
+<p>A fraction of the features will be replaced by 1) extreme values (upper and lower percentile that can be chosen by the user); 2) the median of each feature’s training sample; 3) the feature value with the median quantile added or subtracted (depending on whether that individual’s feature is below or above the training sample median) ; or 4) a random value from each feature’s training sample.</p>
+</section>
+<section id="define-no-of-iterations">
+<h2>Define no. of iterations<a class="headerlink" href="#define-no-of-iterations" title="Permalink to this headline">#</a></h2>
+<p>Here the number of iterations can be defined, i.e. how often a fraction of features should be occluded. The default value is 1000 but one has to keep in mind that this might be limited by the number of possible combinations, especially if the number of input features is low.</p>
+</section>
+<section id="define-fraction-of-features-to-be-visited-per-iteration">
+<h2>Define fraction of features to be visited per iteration<a class="headerlink" href="#define-fraction-of-features-to-be-visited-per-iteration" title="Permalink to this headline">#</a></h2>
+<p>Here the user can define the fraction of features to be occluded each iteration.</p>
+</section>
+<section id="use-map-from-model-visualization-to-operate-in-predetermined-feature-space">
+<h2>Use map from model visualization to operate in predetermined feature space<a class="headerlink" href="#use-map-from-model-visualization-to-operate-in-predetermined-feature-space" title="Permalink to this headline">#</a></h2>
+<p>When the visualization module will be run, one can specify a map here, which will narrow down the feature space that will be evaluated by the interpretability module. The user can choose from different maps which will be created during visualization. If you enable this option, the menu will show two additional suboptions in the menu:</p>
+<blockquote>
+<div><p>7 | Define which map to use                           [Cross-validation ratio map]
+8 | Define cutoff value (scalar or 2-value vector)    [-2 2]</p>
+</div></blockquote>
+<p>ADD REST</p>
+<p>7 | Produce z-normalized prediction change estimates	[ None ]</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Load training template" href="3.2.13_paramtemp_load_training_template.html" />
-    <link rel="prev" title="Load training template" href="3.2.11_paramtemp_inspect_workspace.html" />
+    <link rel="prev" title="Inspect workspace" href="3.2.11_paramtemp_inspect_workspace.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -203,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.11_paramtemp_inspect_workspace.html">
-     Load training template
+     Inspect workspace
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -245,22 +245,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.7_mainmenu_display_training_results.html">
-   Display training results
+   Result Viewer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.8_mainmenu_generate_master_files.html">
-   Generate master files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_OOCV_analysis.html">
+  <a class="reference internal" href="3.8_mainmenu_OOCV_analysis.html">
    Out of Sample Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+   Change working directory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+   Utilities
   </a>
  </li>
 </ul>
@@ -456,6 +461,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="save-parameter-template">
 <span id="paramtemp-save-parameter-template"></span><h1>Save parameter template<a class="headerlink" href="#save-parameter-template" title="Permalink to this headline">#</a></h1>
+<p>Once the parameters are defined in the above steps, they will be included within the ”NM” MATLAB structure and will be ready to be ”initialized” in the previous menu. However, the user also has the option here of saving the parameter settings into a separate .mat file so that they could re-load them for another analysis. This allows the user to be certain that the same parameters are applied in analyses with different data.
+Please note when saving that loading parameter templates from different versions of NeuroMiner is currently unsupported.</p>
 <!-- Once the parameters are defined in the above steps, they will be
 included within the \"NM\" MATLAB structure and will be ready to be
 \"initialised\" in the previous menu. However, the user also has the
@@ -499,7 +506,7 @@ versions of NeuroMiner is currently unsupported. -->
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Load training template</p>
+            <p class="prev-next-title">Inspect workspace</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="3.2.13_paramtemp_load_training_template.html" title="next page">
