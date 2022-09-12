@@ -131,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -254,17 +254,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -516,33 +526,33 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#sequence-optimization">
      Sequence Optimization
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optimization-based-on">
-     Optimization based on…
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-computation-mode-for-combining-sequential-predictions">
-     Define computation mode for combining sequential predictions
-    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#define-propagation-algorithm-s-anchor">
-       Define propagation algorithm’s anchor
+      <a class="reference internal nav-link" href="#define-the-population-the-deferral-optimization-will-be-based-on">
+       1 | Define the population the deferral optimization will be based on
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#define-how-to-combine-sequential-predictions">
+       2 | Define how to combine sequential predictions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#define-how-the-deferral-window-is-anchored">
+       3 | Define how the deferral window is anchored
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#define-optimization-criterion-fro-deferral-learning">
-       Define optimization criterion fro deferral learning
+       4 | Define optimization criterion fro deferral learning
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sequences-to-be-tested">
+       5 | Sequences to be tested
       </a>
      </li>
     </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sequences-to-be-tested">
-     Sequences to be tested
-    </a>
    </li>
   </ul>
  </li>
@@ -624,33 +634,33 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#sequence-optimization">
      Sequence Optimization
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optimization-based-on">
-     Optimization based on…
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-computation-mode-for-combining-sequential-predictions">
-     Define computation mode for combining sequential predictions
-    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#define-propagation-algorithm-s-anchor">
-       Define propagation algorithm’s anchor
+      <a class="reference internal nav-link" href="#define-the-population-the-deferral-optimization-will-be-based-on">
+       1 | Define the population the deferral optimization will be based on
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#define-how-to-combine-sequential-predictions">
+       2 | Define how to combine sequential predictions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#define-how-the-deferral-window-is-anchored">
+       3 | Define how the deferral window is anchored
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#define-optimization-criterion-fro-deferral-learning">
-       Define optimization criterion fro deferral learning
+       4 | Define optimization criterion fro deferral learning
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sequences-to-be-tested">
+       5 | Sequences to be tested
       </a>
      </li>
     </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sequences-to-be-tested">
-     Sequences to be tested
-    </a>
    </li>
   </ul>
  </li>
@@ -666,7 +676,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="classification-algorithm">
 <span id="paramtemp-classification-algorithm"></span><h1>Classification algorithm<a class="headerlink" href="#classification-algorithm" title="Permalink to this headline">#</a></h1>
-<p>Support Vector Machine algorithms are the base of the evaluation core of NeuroMiner. However, a variety of other methods such as k-Nearest Neighbors and Random Forests are also available. In this distribution we rely on the <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/">LIBSVM</a> / <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/liblinear/">LIBLINEAR</a> toolboxes for the implementation of support vector based classifiers and regressors. matLearn is also now introduced and requires the Statistics and Optimization Toolbox.</p>
+<p>Support Vector Machine algorithms are the base of the evaluation core of NeuroMiner. However, a variety of other methods such as k-Nearest Neighbors and Random Forests are also available. In this distribution we rely on the <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/">LIBSVM</a> / <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/liblinear/">LIBLINEAR</a> toolboxes for the implementation of support vector based classifiers and regressors. <a class="reference external" href="https://www.cs.ubc.ca/~schmidtm/Software/matLearn.html">matLearn</a> is also now introduced and requires the Statistics and Optimization Toolbox.</p>
 <p>The NeuroMiner interface will change according to the evaluation type selected during data import. Two operation modes are implemented: Classification and Regression. The following will refer to each of these separately.</p>
 <section id="classification-mode">
 <h2>Classification mode<a class="headerlink" href="#classification-mode" title="Permalink to this headline">#</a></h2>
@@ -674,7 +684,7 @@ title="Print to PDF"
 Neurominer.</p>
 <section id="define-prediction-performance-criterion">
 <h3>Define prediction performance criterion<a class="headerlink" href="#define-prediction-performance-criterion" title="Permalink to this headline">#</a></h3>
-<p>During machine learning, models will be optimized and evaluated based on a criterion. For classification problems NeuroMiner provides the following performances measures:</p>
+<p>During machine learning, models will be optimized and evaluated based on a criterion. For classification problems NeuroMiner provides the following performance measures:</p>
 <figure class="align-default" id="fig-3-2-03-nm-classific-metrics">
 <img alt="neurominer preprocessing pruning" src="../_images/NM_classific_metrics.png" />
 </figure>
@@ -768,6 +778,7 @@ This will display the following options:</p>
 </div></blockquote>
 <p>Once these settings are defined, you will be directed back to the main menu for this section and you can proceed to the main parameter menu where you can configure the <span class="xref myst">learning algorithm</span>).</p>
 </section>
+<hr class="docutils" />
 <section id="regression-mode">
 <h3>Regression mode<a class="headerlink" href="#regression-mode" title="Permalink to this headline">#</a></h3>
 <p>If you have defined a regression framework during <span class="xref myst">data input</span> then a different menu will appear
@@ -832,6 +843,7 @@ label prediction)</p></li>
 </ol>
 </div></blockquote>
 </section>
+<hr class="docutils" />
 <section id="optimize-decision-threshold-based-on-roc-expert-mode">
 <h3>Optimize decision threshold based on ROC (expert mode)<a class="headerlink" href="#optimize-decision-threshold-based-on-roc-expert-mode" title="Permalink to this headline">#</a></h3>
 <p>If you’ve opened NM in expert mode (by calling “nm expert” instead of “nm”), you will have this option (5) in your model setup menu:</p>
@@ -857,7 +869,11 @@ label prediction)</p></li>
 </section>
 <section id="sequence-optimization">
 <h3>Sequence Optimization<a class="headerlink" href="#sequence-optimization" title="Permalink to this headline">#</a></h3>
-<p>When in the NeuroMiner ”expert” mode (i.e., loading NeuroMiner with the command ”nm nosplash expert”) another option in the ”model algorithm” menu is to conduct sequence optimization. This option was designed to simulate the clinical decision making associated with additional testing. In a clinical environment, the decision to conduct another assessment on an individual is normally done in situations of uncertainty to confirm a diagnosis – e.g., coronavirus is suspected based on a clinical assessment and then a nasal swab is conducted to confirm this diagnosis. In a machine learning context, uncertainty can be quantified with either the distance from the decision boundary in the case of an SVM (i.e., with cases closer to the decision line being the most uncertain) or with a median using any other scores.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Yu need to enter NeuroMiner in EXPERT mode for this (i.e., load NeuroMiner with the command ”nm nosplash expert” or “nm expert”).</p>
+</div>
+<p>When in the NeuroMiner ”expert” mode, another option in the ”model algorithm” menu is to conduct sequence optimization. This option was designed to simulate the clinical decision making associated with additional testing. In a clinical environment, the decision to conduct another assessment on an individual is normally done in situations of uncertainty to confirm a diagnosis – e.g., coronavirus is suspected based on a clinical assessment and then a nasal swab is conducted to confirm this diagnosis. In a machine learning context, uncertainty can be quantified with either the distance from the decision boundary in the case of an SVM (i.e., with cases closer to the decision line being the most uncertain) or with a median using any other scores.</p>
 <p>NeuroMiner is able to test sequences of assessments (e.g., clinical, cognitive, imaging) based on the modalities entered during data entry or it is able to build optimal sequences based on different models (e.g., linear and non-linear SVM). The pipelines need to have been analyzed before sequencing can be activated. The procedure is to:</p>
 <ol class="simple">
 <li><p>Process multiple analyses as usual from different modalities or using different settings</p></li>
@@ -868,47 +884,51 @@ label prediction)</p></li>
 <li><p>Select the item ”SEQOPT → Predictive sequence optimization algorithm (Stacking only)”</p></li>
 <li><p>To configure the sequence algorithm, select the option to ”Configure Sequence Optimizer”</p></li>
 </ol>
-</section>
-<section id="optimization-based-on">
-<h3>Optimization based on…<a class="headerlink" href="#optimization-based-on" title="Permalink to this headline">#</a></h3>
+<p>You will then see this menu:</p>
+<figure class="align-default" id="fig-nm-seqopt-menu">
+<img alt="neurominer sequential optimizer menu options" src="../_images/NM_SEQOPT_menu.png" />
+</figure>
+<section id="define-the-population-the-deferral-optimization-will-be-based-on">
+<h4>1 | Define the population the deferral optimization will be based on<a class="headerlink" href="#define-the-population-the-deferral-optimization-will-be-based-on" title="Permalink to this headline">#</a></h4>
 <blockquote>
-<div><p>1 |  The population to be propagated<br />
-2 |  The entire population</p>
+<div><p>1 |  The population to be propagated</p>
+<p>2 |  The entire population</p>
 </div></blockquote>
 <p>NeuroMiner will attempt to optimize two factors: 1) the criterion that the user decides in the previous step (e.g., BAC); 2) the least number of assessments necessary. These optimizations can be for only the cases that have uncertain decision or probability scores (option 1) or for the entire population.</p>
 </section>
-<section id="define-computation-mode-for-combining-sequential-predictions">
-<h3>Define computation mode for combining sequential predictions<a class="headerlink" href="#define-computation-mode-for-combining-sequential-predictions" title="Permalink to this headline">#</a></h3>
+<section id="define-how-to-combine-sequential-predictions">
+<h4>2 | Define how to combine sequential predictions<a class="headerlink" href="#define-how-to-combine-sequential-predictions" title="Permalink to this headline">#</a></h4>
 <blockquote>
-<div><p>1 |  Sequential<br />
-2 |  Integrative</p>
+<div><p>1 |  Sequential</p>
+<p>2 |  Integrative</p>
 </div></blockquote>
 <p>This option defines the computation mode for combining sequential predictions. When a case is deferred to another model because the first prediction was uncertain, then either its former decision score can be replace with latter predictions in the sequence (“Sequential” computation) or a mean across the predictions in the sequence can be computed (“Integrative” computation, i.e., this becomes bagging or ”late fusion” in NeuroMiner terminology).</p>
-<section id="define-propagation-algorithm-s-anchor">
-<h4>Define propagation algorithm’s anchor<a class="headerlink" href="#define-propagation-algorithm-s-anchor" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="define-how-the-deferral-window-is-anchored">
+<h4>3 | Define how the deferral window is anchored<a class="headerlink" href="#define-how-the-deferral-window-is-anchored" title="Permalink to this headline">#</a></h4>
 <blockquote>
-<div><p>1 | Decision boundary<br />
-2 |  Median</p>
+<div><p>1 | Decision boundary</p>
+<p>2 |  Median</p>
 </div></blockquote>
-<p>As mentioned above, either the decision boundary can be used to define un certain cases (i.e., near the boundary) or the median of other scores can be taken. The first item uses the decision boundary and the second item uses the median to quantify the uncertainty (i.e., the median of scores that range from very likely group 1 to very likely group 2 is assumed to be uncertain here).</p>
+<p>As mentioned above, either the decision boundary can be used to define uncertain cases (i.e., near the boundary) or the median of other scores can be taken. The first item uses the decision boundary and the second item uses the median to quantify the uncertainty (i.e., the median of scores that range from very likely group 1 to very likely group 2 is assumed to be uncertain here).</p>
 </section>
 <section id="define-optimization-criterion-fro-deferral-learning">
-<h4>Define optimization criterion fro deferral learning<a class="headerlink" href="#define-optimization-criterion-fro-deferral-learning" title="Permalink to this headline">#</a></h4>
+<h4>4 | Define optimization criterion fro deferral learning<a class="headerlink" href="#define-optimization-criterion-fro-deferral-learning" title="Permalink to this headline">#</a></h4>
 <blockquote>
-<div><p>1 | Current optimization criterion<br />
-2 | Mean decision distance</p>
+<div><p>1 | Current optimization criterion</p>
+<p>2 | Mean decision distance</p>
 </div></blockquote>
-<p>Here the user can select whether to optimize on the criterion previously selected (e.g., the BAC) or on the mean decision distance (only works for SVM or algorithms with decision scores). In the second case, the underlying idea is that the optimization is better the further away the score is from the decision boundary.</p>
-</section>
+<p>Here the user can select whether to optimize the criterion previously selected (e.g., the BAC) or the mean decision distance (only works for SVM or algorithms with decision scores). In the second case, the underlying idea is that the optimization is better the further away the score is from the decision boundary.</p>
 </section>
 <section id="sequences-to-be-tested">
-<h3>Sequences to be tested<a class="headerlink" href="#sequences-to-be-tested" title="Permalink to this headline">#</a></h3>
+<h4>5 | Sequences to be tested<a class="headerlink" href="#sequences-to-be-tested" title="Permalink to this headline">#</a></h4>
 <blockquote>
 <div><p>1 | Define sequences matrix to be evaluated</p>
 </div></blockquote>
 <p>Here the user can define what sequences are to be evaluated. This step is dependent on the identification of models to be included in the ”1: Define meta learning/stacking options”. The idea is that rather than testing all combinations of the models (e.g., model 1 - model 2 - model 3 and then all other combinations of these), the user can specify the models that they want to test. This is because usually there is a rationale for testing model sequences based on clinical experience and also cost (e.g., clinical assessment, then cognitive assessment, then imaging if necessary).</p>
 <p>Sequences of assessments need to be specified here either directly or using a MATLAB variable. For example, if you wanted to specify a sequence of model 1 - model 2 - model 3 then you would enter [1 2 3]. If you wanted to specify this and also models 2 1 3 then you would enter [1 2 3; 2 1 3]. If you want to specify more, you can create a MATLAB variable with more sequences in rows and you can enter the variable name into this section.</p>
 <p>Afterwards you can return to the main menu, initialize your analyses and train as indicated in <span class="xref myst">stacking</span>.</p>
+</section>
 </section>
 </section>
 </section>

@@ -131,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -254,17 +254,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -547,8 +557,8 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#enter-name-of-matrix-variable-cell-array-of-string-in-matlab-workspace">
-       Enter name of matrix variable (cell array of string) in MATLAB workspace
+      <a class="reference internal nav-link" href="#enter-name-of-matrix-variable-containing-the-predictor-data">
+       Enter name of matrix variable containing the predictor data.
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -817,8 +827,8 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#enter-name-of-matrix-variable-cell-array-of-string-in-matlab-workspace">
-       Enter name of matrix variable (cell array of string) in MATLAB workspace
+      <a class="reference internal nav-link" href="#enter-name-of-matrix-variable-containing-the-predictor-data">
+       Enter name of matrix variable containing the predictor data.
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -1018,7 +1028,7 @@ menu that is configured for classification using NIFTI (neuroimaging) :</p>
 <figure class="align-default" id="fig-3-0-nm-dataentry-select-data-origin">
 <img alt="neurominer data entry types" src="../_images/NM_dataentry_select_data_origin.png" />
 </figure>
-<p>These <a class="reference internal" href="#datainput-format"><span class="std std-ref"><strong>data input format</strong></span></a> options will be described in more detail in the following sections.</p>
+<p>These <a class="reference internal" href="#datainput-format"><span class="std std-ref">data input format</span></a> options will be described in more detail in the following sections.</p>
 <div class="admonition-notification-warning-error-messages admonition">
 <p class="admonition-title">Notification, Warning, &amp; Error Messages</p>
 <p>When data is entered, NeuroMiner checks whether it has been successfully entered and performs a number of pre-screening quality control measures. Messages related to successful data entry (<span style="color:blue">blue</span>), unsuccessful data entry (<span style="color:red">red</span>), or warnings (<span style="color:cyan">cyan</span>) are issued at the top of the screen, such as:</p>
@@ -1052,11 +1062,11 @@ menu that is configured for classification using NIFTI (neuroimaging) :</p>
 </section>
 <section id="describe-data">
 <h4>Describe data<a class="headerlink" href="#describe-data" title="Permalink to this headline">#</a></h4>
-<p>Enter a short description of this data for later reference if there is more than one modality; e.g., ”COBRE structural imaging data”.</p>
+<p>Describe data Enter a description of the data. This is important if you are entering multiple modalities.</p>
 </section>
 <section id="import">
 <h4>IMPORT<a class="headerlink" href="#import" title="Permalink to this headline">#</a></h4>
-<p>Once the template is completed, you will be given the option to import the data into the NeuroMiner structure (i.e., the NM structure) in the MATLAB workspace. The subject identifiers will be the unique fields in the paths to the files (e.g., the subject directory or filename).</p>
+<p>Once the template is completed, you will be given the option to import the data into the NeuroMiner structure (“NM”) in the MATLAB workspace. The subject identifiers will be the unique fields in the paths to the files (e.g., the subject directory or filename).</p>
 <div class="admonition-space-defining-image admonition">
 <p class="admonition-title">Space-defining image</p>
 <p>In NeuroMiner, a ”space-defining image” refers to an image that will define two things: 1) the voxel dimensions; and 2) the mask used to select the data. This means that <strong>all images will be resliced to the mask dimensions</strong>. NeuroMiner has two options for the mask: 1) Select a mask using WFU Pickatlas if it is installed in your SPM path; 2) your own space-defining image (e.g., the ICBM template).
@@ -1119,8 +1129,8 @@ Inspect image information and check registration This option will allow the user
 <figure class="align-default" id="fig-3-0-nm-dataentry-matrix-workspace">
 <img alt="neurominer menu for data entry for matrix data from MATLAB workspace" src="../_images/NM_dataentry_matrix_workspace.png" />
 </figure>
-<section id="enter-name-of-matrix-variable-cell-array-of-string-in-matlab-workspace">
-<h4>Enter name of matrix variable (cell array of string) in MATLAB workspace<a class="headerlink" href="#enter-name-of-matrix-variable-cell-array-of-string-in-matlab-workspace" title="Permalink to this headline">#</a></h4>
+<section id="enter-name-of-matrix-variable-containing-the-predictor-data">
+<h4>Enter name of matrix variable containing the predictor data.<a class="headerlink" href="#enter-name-of-matrix-variable-containing-the-predictor-data" title="Permalink to this headline">#</a></h4>
 <p>Enter the matrix containing the features (i.e., variables or predictors) that you want to use to predict the labels (i.e., the target or outcome variable). This variable must be a standard [n x m] MATLAB double (subjects = n; features = m). That is, the subjects must be entered row-wise and the features are column-wise.</p>
 </section>
 <section id="enter-name-of-label-variable-cell-array-of-strings-in-matlab-workspace">
@@ -1128,7 +1138,7 @@ Inspect image information and check registration This option will allow the user
 <p>Labels are the targets of the prediction. For classification, these are group names or values (e.g., ”Control” and ”Patient”) and <strong>must</strong> be entered in a cell array of strings (see Box: Data types in NeuroMiner). We strongly discourage the use of numbers to represent groups (e.g., ”1” and ”2”) due to display and visualization later in processing.</p>
 <div class="admonition-data-types-in-neurominer admonition">
 <p class="admonition-title">Data types in NeuroMiner</p>
-<p>In NeuroMiner there are two types in MATLAB that are used: standard double matrix and a cell array of strings. A standard double is what is created by default in MATLAB. A cell array of strings is when you have independent strings (e.g., char(’CTRL’)) stored in a cell string array (e.g., cellstr([’CTRL’;’PAT’])).
+<p>There are two MATLAB data types used in NeuroMiner: standard double matrix and a cell array of strings. A standard double is what is created by default in MATLAB. A cell array of strings is when you have independent strings (e.g., char(’CTRL’)) stored in a cell string array (e.g., cellstr([’CTRL’;’PAT’])).
 A common situation is when you have a vector containing numbers representing groups of interest (e.g., groups = [1; 1; 2; 1; 2]). We strongly recommend changing this to have string variables representing the groups (i.e., ”CTRL” and ”PAT”).</p>
 </div>
 </section>
@@ -1142,7 +1152,7 @@ A common situation is when you have a vector containing numbers representing gro
 </section>
 <section id="inspect-matrix-data-and-select-features-for-import">
 <h4>Inspect matrix data and select features for import<a class="headerlink" href="#inspect-matrix-data-and-select-features-for-import" title="Permalink to this headline">#</a></h4>
-<p>Once the previous settings are entered, this option appears. It will open a results display where the data can be viewed as a heatmap, scaled, and features can be added or removed either by the user or they can be filtered based on a threshold (see <a class="reference internal" href="#fig-3-1-nm-feature-selector"><span class="std std-numref">Fig. 5</span></a>). For example, after scaling features, you could establish a threshold where features with a scaled value above 0.8 are removed from the analysis. Alternatively, you might be concerned about the number of NaN (”Not a Number”) values being pruned or imputed in later analyses and so you could filter out the features with more than 25% missing values.</p>
+<p>Once the previous settings are entered, this option appears. It will open a results display where the data can be viewed as a heatmap, scaled, and features can be added or removed either by the user or they can be filtered based on a threshold (see <a class="reference internal" href="#fig-3-1-nm-feature-selector"><span class="std std-numref">Fig. 3</span></a>). For example, after scaling features, you could establish a threshold where features with a scaled value above 0.8 are removed from the analysis. Alternatively, you might be concerned about the number of NaN (”Not a Number”) values being pruned or imputed in later analyses and so you could filter out the features with, for example, more than 25% missing values.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The formatting of the item selector along with some functionalities might alter between MATLAB versions older than 2021a and more recent versions. This is due to incompatibilities of MATLAB’s App Designer with these older versions.</p>
@@ -1150,7 +1160,7 @@ A common situation is when you have a vector containing numbers representing gro
 <figure class="align-left" id="fig-3-1-nm-feature-selector">
 <img alt="feature selector app in neurominer" src="../_images/NM_item_selector.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">You can inspect the data in the matrix inspector to understand the data, identify errors, and exclude features or subjects. The descriptive statistics that can be displayed by using the drop-down list at the top right are the mean, median, variance, interquartile range, %(Nan) (i.e., ”Not a Number” missing values), kurtosis, or skewness. The data can also be scaled using the button underneath the drop-down list. Once a descriptive option is selected, you can then enter a filter to exclude either Ff(Feats) or Fc(Cases) based on a value. When a feature filter is used, a red line will appear that signifies the filter value and features above this value will be excluded and moved to the ”Feature pool” at the bottom left of the screen. You can manually add or subtract features or subjects using the arrows &gt; between the feature pool and the features to import. Once features have been understood, filtered, or removed, press OK and return to the main menu.</span><a class="headerlink" href="#fig-3-1-nm-feature-selector" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Matrix Inspector. You can inspect the data in the matrix inspector to understand the data, identify errors, and exclude features or subjects. The descriptive statistics that can be displayed by using the drop-down list at the top right are the mean, median, variance, interquartile range, %(Nan) (i.e., ”Not a Number” missing values), kurtosis, or skewness. The data can also be scaled using the button underneath the drop-down list. Once a descriptive option is selected, you can then enter a filter to exclude either Ff(Feats) or Fc(Cases) based on a value. When a feature filter is used, a red line will appear that signifies the filter value and features above this value will be excluded and moved to the ”Feature pool” at the bottom left of the screen. You can manually add or subtract features or subjects using the arrows (&gt;, &lt;, &gt;&gt;, &lt;&lt;) between the feature pool and the features to import. Once features have been understood, filtered, or removed, press OK and return to the main menu.</span><a class="headerlink" href="#fig-3-1-nm-feature-selector" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1169,7 +1179,7 @@ A common situation is when you have a vector containing numbers representing gro
 <figure class="align-left" id="fig-3-0-nm-dataentry-matrix-matfile">
 <img alt="../_images/NM_dataentry_matrix_matfile.png" src="../_images/NM_dataentry_matrix_matfile.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">NeuroMiner data entry menu for matrix data from .mat file</span><a class="headerlink" href="#fig-3-0-nm-dataentry-matrix-matfile" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">NeuroMiner data entry menu for matrix data from .mat file</span><a class="headerlink" href="#fig-3-0-nm-dataentry-matrix-matfile" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1185,7 +1195,7 @@ A common situation is when you have a vector containing numbers representing gro
 </section>
 <section id="specify-column-header-containing-the-label-data">
 <h4>Specify column header containing the label data<a class="headerlink" href="#specify-column-header-containing-the-label-data" title="Permalink to this headline">#</a></h4>
-<p>Write the column header variable name for the label data in your CSV file; e.g., ”Illness” or ”PANSS General”. For classification, the variable must be string variables instead of numerical coding (i.e., must be ’CTRL’ and ’SCZ’ instead of numbers representing these groups).</p>
+<p>Write the column header variable name for the label data in your CSV file; e.g., ”Illness” or ”PANSS General”. For classification, the variable must consist of strings instead of numerical coding in case of classification (i.e., must be ’CTRL’ and ’SCZ’ instead of numbers representing these groups). It has to be numeric values in the regression mode.</p>
 </section>
 <section id="define-column-header-containing-the-case-ids">
 <h4>Define column header containing the case IDs<a class="headerlink" href="#define-column-header-containing-the-case-ids" title="Permalink to this headline">#</a></h4>
@@ -1193,7 +1203,7 @@ A common situation is when you have a vector containing numbers representing gro
 </section>
 <section id="id4">
 <h4>Inspect matrix data and select features for import<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
-<p>This feature opens a results display where the data can be viewed as a heatmap, scaled, and features can be added or removed either by the user or they can be filtered based on a threshold (see <a class="reference internal" href="#fig-3-1-nm-feature-selector"><span class="std std-numref">Fig. 5</span></a>). For example, after scaling features, you could establish a threshold where features with a scaled value above 0.8 are removed from the analysis or features that have more than 10% NaN (”Not a Number”) features are removed.</p>
+<p>This feature opens a results display where the data can be viewed as a heatmap, scaled, and features can be added or removed either by the user or they can be filtered based on a threshold (see Figure 4). For example, after scaling features, you could establish a threshold where features with a scaled value above 0.8 are removed from the analysis or features that, for example, have more than 25% NaN (”Not a Number”) features are removed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The formatting of the item selector along with some functionalities might alter between MATLAB versions older than 2021a and more recent versions. This is due to incompatibilities of MATLAB’s App Designer with these older versions.</p>
@@ -1201,11 +1211,11 @@ A common situation is when you have a vector containing numbers representing gro
 </section>
 <section id="id5">
 <h4>Describe data<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
-<p>Enter a description of the data. This is important if you are entering multiple modalities.</p>
+<p>Describe data Enter a description of the data. This is important if you are entering multiple modalities.</p>
 </section>
 <section id="id6">
 <h4>IMPORT data<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
-<p>Import data into the NM structure.</p>
+<p>IMPORT data This option will import the entered data to the NeuroMiner structure (”NM”).</p>
 </section>
 </section>
 <section id="matrix-data-from-a-spreadsheet">
@@ -1220,11 +1230,11 @@ A common situation is when you have a vector containing numbers representing gro
 </section>
 <section id="id7">
 <h4>Specify column header containing the label data<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
-<p>Write the column header variable name for the label data in your spreadsheet file; e.g., ”Illness” or ”PANSS-General”. For classification, the variable must be string variables instead of numerical coding (i.e., must be ’CTRL’ and ’SCZ’ instead of numbers representing these groups).</p>
+<p>Write the column header variable name for the label data in your spreadsheet file; e.g., ”Illness” or ”PANSS-General”. For classification, the variable <strong>must</strong> be string variables instead of numerical coding (i.e., must be ’CTRL’ and ’SCZ’ instead of numbers representing these groups).</p>
 </section>
 <section id="id8">
 <h4>Define column header containing the case IDs<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
-<p>Write name of the column header variable name for the case IDs in your spreadsheet file; e.g., ”ID”. These must be string variables (i.e., ’ID123’ instead of 123).</p>
+<p>Write name of the column header variable name for the case IDs in your spreadsheet file; e.g., ”ID”. These <strong>must</strong> be string variables (i.e., ’ID123’ instead of 123).</p>
 </section>
 <section id="id9">
 <h4>Inspect matrix data and select features for import<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h4>
@@ -1236,11 +1246,11 @@ A common situation is when you have a vector containing numbers representing gro
 </section>
 <section id="id10">
 <h4>Describe data<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
-<p>Enter a description of the data. This is important if you are entering multiple modalities.</p>
+<p>Describe data Enter a description of the data. This is important if you are entering multiple modalities.</p>
 </section>
 <section id="id11">
 <h4>IMPORT data<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h4>
-<p>Import data into the NM structure.</p>
+<p>IMPORT data This option will import the entered data to the NeuroMiner structure (”NM”).</p>
 <hr class="docutils" />
 </section>
 </section>
@@ -1253,7 +1263,7 @@ A common situation is when you have a vector containing numbers representing gro
 </figure>
 <section id="add-modality-to-nm-workspace">
 <h3>1 | Add modality to NM workspace<a class="headerlink" href="#add-modality-to-nm-workspace" title="Permalink to this headline">#</a></h3>
-<p>This option gives you the ability to add another dataset to the workspace in order for later data fusion or stacked generalization. It can be another modality (e.g., matrix data and then neuroimaging data) or it can be the same modality (e.g., structural neuroimaging data of one type and then of another type). The user will then be presented with the options that have been described above to repeat the process of data entry for another modality.</p>
+<p>This option gives you the ability to add another dataset to the workspace for later data fusion or stacked generalization. It can be another modality (e.g., matrix data and then neuroimaging data) or the same modality (e.g., structural neuroimaging data of one type and then of another type). The user will then be presented with the options that have been described above to repeat the process of data entry for another modality.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>It is critical to note that the subject identifiers have to be the same for each modality. In the case of NIfTI or SPM import, NeuroMiner will identify the subject IDs from the unique data in the file paths and thus any other data needs to have the same subject IDs (e.g., matrix data).</p>

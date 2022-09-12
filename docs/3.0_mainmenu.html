@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data entry in NeuroMiner" href="3.1_mainmenu_input_data.html" />
-    <link rel="prev" title="Getting Started" href="1.2_gettingstarted.html" />
+    <link rel="prev" title="Installation &amp; Configuration" href="1.2_gettingstarted.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -131,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -254,17 +254,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -484,7 +494,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#preprocess-features">
-     4: Preprocess Features
+     4. Preprocess Features
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -580,7 +590,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#preprocess-features">
-     4: Preprocess Features
+     4. Preprocess Features
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -647,24 +657,18 @@ the MATLAB command line. This implies that all analyses are implemented
 by selecting options from text menus and entering parameters when asked
 to do so. Each of the menus share a similar format as described in the
 following example.</p>
-<p>After the neuroimaging paths have been established, the first time that
-NeuroMiner is run the user will see the <strong>MAIN INTERFACE</strong> (see
-<a class="reference internal" href="#fig-3-0-nm-start-screen"><span class="std std-numref">Fig. 2</span></a>) that consists of 4 different options
-that are numbered 1-4 as well as the
-option to go <strong>Back/Quit (Q)</strong>. To select an option, simply enter the number associated with it. The number you’ve entered will appear next to “Menu choice (1-4/Q) (Default: Q)?”, if you made a mistake, you can simply delete it and type again. If you’ve entered the correct number, press “Enter”.</p>
-<figure class="align-left" id="fig-3-0-nm-start-screen">
+<p>After the neuroimaging paths have been established, you can start NeuroMiner by typing ‘nm’ (or ‘nm expert for expert mode). The initial <strong>MAIN INTERFACE</strong>, when no data has been entered yet looks like this:</p>
+<figure class="align-default" id="fig-3-0-nm-start-screen">
 <img alt="neurominer start display" src="../_images/NM_start_window.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">NeuroMiner main interface</span><a class="headerlink" href="#fig-3-0-nm-start-screen" title="Permalink to this image">#</a></p>
-</figcaption>
 </figure>
+<p>It consists of 4 options that are numbered 1-4 as well as the option to go <strong>Back/Quit (Q)</strong>. To select an option, simply enter the number associated with it. The number you’ve entered will appear next to “Menu choice (1-4/Q) (Default: Q)?”, if you made a mistake, you can simply delete it and type again. If you’ve entered the correct number, press “Enter”.</p>
 <p>The user can now do one of three things:</p>
 <ol class="simple">
 <li><p>Select one of the 5 numerals corresponding to each option and press the enter key on the keyboard;</p></li>
 <li><p>Enter ”Q” or “6” to go back to the previous menu, or if they are in the MAIN INTERFACE this will quit the program;</p></li>
 <li><p>Simply press the enter key and the program will activate the default option – in this case, to quit the program.</p></li>
 </ol>
-<p>For example, a user could press <strong>2</strong> if they wanted  to <strong>load a NeuroMiner structure</strong>. The NeuroMiner MATLAB structure (”NM”) is the primary variable that NeuroMiner uses to store data, settings, analyses, and results. For example, when a user inputs data into NeuroMiner it is stored in the NM structure as a data matrix. Then when the user chooses settings or performs an analysis, all of these inputs and outputs are stored in the structure as well. This means that the NM structure forms the core of any analysis within NeuroMiner.</p>
+<p>For example, a user could press <strong>2</strong> if they wanted to <strong>load a NeuroMiner structure</strong>. The NeuroMiner MATLAB structure (”NM”) is the primary variable that NeuroMiner uses to store data, settings, analyses, and results. For example, when a user inputs data into NeuroMiner it is stored in the NM structure as a data matrix. Then when the user chooses settings or performs an analysis, all of these inputs and outputs are stored in the structure as well. This means that the NM structure forms the core of any analysis within NeuroMiner.</p>
 <p>Alternatively, to set up a new NM structure, starting with the data input, press <strong>1</strong> to select <strong>Load data for model discovery and cross-validation</strong>. We will cover that in a <a class="reference internal" href="3.1_mainmenu_input_data.html#mainmenu-input-data"><span class="std std-ref">later chapter</span></a> in more detail.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -679,22 +683,19 @@ two main criteria:</p>
 <p>For example, if a NM structure is loaded prior to the start of a NeuroMiner session then the program will automatically detect this and the <strong>MAIN INTERFACE</strong> will specifically relate to the loaded structure. Similarly, if specific options are chosen during the establishment of the analysis, the menus will adapt to the chosen settings and options that do not apply to the analysis will be removed.</p>
 <section id="the-main-interface-after-data-has-been-loaded-and-processed">
 <h2>The main interface after data has been loaded and processed<a class="headerlink" href="#the-main-interface-after-data-has-been-loaded-and-processed" title="Permalink to this headline">#</a></h2>
-<p>Once the user has [entered and processed data] (3.1_mainmenu_input_data), the <strong>MAIN INTERFACE</strong> will
+<p>Once the user has <a class="reference internal" href="3.1_mainmenu_input_data.html#mainmenu-input-data"><span class="std std-ref">entered and processed data</span></a>, the <strong>MAIN INTERFACE</strong> will
 change to the following:</p>
-<figure class="margin-caption align-left" id="fig-3-0-nm-mainmenu-after-dataentry">
-<img alt="../_images/NM_mainmenu_after_dataentry.png" src="../_images/NM_mainmenu_after_dataentry.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">NeuroMiner main interface after data has been loaded and processed</span><a class="headerlink" href="#fig-3-0-nm-mainmenu-after-dataentry" title="Permalink to this image">#</a></p>
-</figcaption>
+<figure class="align-default" id="fig-3-0-nm-mainmenu-after-dataentry">
+<img alt="neurominer main menu after data entry" src="../_images/NM_mainmenu_after_dataentry.png" />
 </figure>
-<p>These options are major functional domains related to the methods and stages of machine learning analysis using NeuroMiner. The contents of each of these options are described throughout the manual, but it is important to understand the overall analytic workflow that the program uses (see <a class="reference internal" href="#fig-3-0-nm-workflow"><span class="std std-numref">Fig. 4</span></a>) by briefly describing each of the options above.</p>
+<p>These options are major functional domains related to the methods and stages of machine learning analysis using NeuroMiner. The contents of each of these options are described throughout the manual, but it is important to understand the overall analytic workflow that the program uses (see <a class="reference internal" href="#fig-3-0-nm-workflow"><span class="std std-numref">Fig. 2</span></a>) by briefly describing each of the options above.</p>
 </section>
 <section id="the-neurominer-workflow">
 <span id="workflow"></span><h2>The NeuroMiner workflow<a class="headerlink" href="#the-neurominer-workflow" title="Permalink to this headline">#</a></h2>
 <figure class="align-left" id="fig-3-0-nm-workflow">
 <img alt="neurominer flowchart" src="../_images/nm_flowchart.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><strong>A flow chart for NeuroMiner.</strong> The main processing steps involve entering data and then defining a parameter template with the settings that are required for an analysis. It is recommended that the data are preprocessed (i.e., that feature engineering takes place) before the models can be trained. After training, the user has the option to ’visualize’ the classifiers, where the model and other statistics on each individual feature are calculated. The user can display the performance of the models in a results screen.</span><a class="headerlink" href="#fig-3-0-nm-workflow" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text"><strong>A flow chart for NeuroMiner.</strong> The main processing steps involve entering data and then defining a parameter template with the settings that are required for an analysis. It is recommended that the data are preprocessed (i.e., that feature engineering takes place) before the models can be trained. After training, the user has the option to ’visualize’ the classifiers, where the model and other statistics on each individual feature are calculated. The user can display the performance of the models in a results screen.</span><a class="headerlink" href="#fig-3-0-nm-workflow" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="input-data-into-nm">
@@ -712,7 +713,7 @@ change to the following:</p>
 <p>After the entry of all the settings for an analysis, the user can ’initialize’ these settings in preparation for processing. This option saves the parameters in an analysis structure, which the user can then select when going to process the data. This is a great feature because it allows the user to define multiple different analyses for the same dataset by changing parameters in the ’parameter template’ and initializing separate analyses.</p>
 </section>
 <section id="preprocess-features">
-<h3>4: Preprocess Features<a class="headerlink" href="#preprocess-features" title="Permalink to this headline">#</a></h3>
+<h3>4. Preprocess Features<a class="headerlink" href="#preprocess-features" title="Permalink to this headline">#</a></h3>
 <p>In NeuroMiner, the analysis can be split into two parts: preprocessing features and training supervised classifiers. Preprocessing in NeuroMiner can also be called ’feature preparation and selection’, and involves preparing the data for machine learning analysis (e.g., a support vector machine). For example, the researcher may want to covary for age and sex, perform a Principal Components Analysis (PCA), and scale neuroimaging data prior to analysis. NeuroMiner performs all preprocessing steps within the cross-validation structure, which is recognized as the most valid approach. Allowing the user to preprocess their data first within the cross-validation structure can save a lot of computational resources and time because it means that the researcher can run multiple analyses from the same preprocessed data.</p>
 </section>
 <section id="train-supervised-classifiers">
@@ -741,103 +742,15 @@ change to the following:</p>
 </section>
 <section id="change-working-directory">
 <h3>12. Change working directory<a class="headerlink" href="#change-working-directory" title="Permalink to this headline">#</a></h3>
-<p>Like most neuroimaging software, NeuroMiner operates from a ”working directory” where preprocessing or anal ysis files are saved during any analysis. The working directory is automatically the directory where NeuroMiner is started, but can be changed using this item.</p>
+<p>Like most neuroimaging software, NeuroMiner operates from a ”working directory” where preprocessing or analysis files are saved during any analysis. The working directory is automatically the directory where NeuroMiner is started, but can be changed using this item.</p>
 </section>
 <section id="investigate-sample-size">
 <h3>13. Investigate sample size<a class="headerlink" href="#investigate-sample-size" title="Permalink to this headline">#</a></h3>
+<p>ADD</p>
 </section>
 <section id="utilities">
 <h3>14. Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">#</a></h3>
-<p>Contains functions related to FreeSurfer and ability to add SPM/FreeSurfer paths to the NeuroMiner environment. Moreover, it gives different options to generate master files. As mentioned above, NeuroMiner stores settings and analysis results in the NM structure within MATLAB, which is visible in the workspace. In addition to this, NeuroMiner can also store individual files related to steps (e.g., preprocessing, training, visualization). When NeuroMiner does this, it stores a single file for each permutation within the cross-validation framework–as described later. These individual files can then be saved as ”master files” using this option.</p>
-<!-- Load NeuroMiner structure
--------------------------
-
-As outlined in section [1](#mainmenu){reference-type="ref"
-reference="mainmenu"}, the NM structure is the core structure that
-NeuroMiner uses to store and process data. This option allows the user
-to load it from a .mat file.
-
-Save NeuroMiner structure
--------------------------
-
-This option allows the user to save the NeuroMiner structure (NM) as a
-.mat file in a folder of the users choosing. Notably, any changes that
-are made to the settings of NeuroMiner during an active session are
-stored within the NM structure in the workspace. However, program
-crashes can lead to the loss of information. We recommend to save the NM
-structure at critical points of the analysis: 1) After data entry; 2)
-after structure initialization; and 3) after preprocessing or analysis.
-This ensures that no data is lost.
-
-Clear NeuroMiner structure
---------------------------
-
-This option will clear the NeuroMiner structure **from the workspace**.
-This will allow the user to select another structure or enter different
-data.
-
-Change Working Directory
-------------------------
-
-NeuroMiner will save files in the directory that it is loaded from. This
-option allows the user to change the working directory.
-
-Open Manual
------------
-
-This feature is currently not functional. Please open the manual
-normally.
-
-Utilities
----------
-
-#### 1: Set root paths of neuroimaging tools (SPM/FreeSurfer)
-
-If you want to process structural MRI (nii) or surface files from
-FreeSurfer (mgz) then the paths of these tools need to be established.
-This option will establish the paths. If the user does not establish the
-paths, then the neuroimaging functions will not be displayed.
-
-#### 2: Create PreprocData path master
-
-The option allows the user to update the existing path for only the
-pre-processed data.
-
-#### 3: Create CVdatamat path master
-
-This option facilitates the user to update path for the cross-validated
-data.
-
-#### 4: Create CVresults path master
-
-This enables to user to configure the cross-validated results in a new
-directory.
-
-#### 5: Create VISdatamat path master
-
-This option sets up the user defined-updated path after running the
-visualisation.
-
-#### 6: Create OptPreprocParam path master
-
-This is to create a master file that can be used for batch scripts or
-when repetitive actions are carried out on a set of files the user
-creates the file list once and does not waste to search specific file
-sets
-
-#### 7: Create OptModel path master
-
-this is to create a master file that can be used for batch scripts or
-when repetitive actions are carried out on a set of files the user
-creates the file list once and does not waste to search specific file
-sets.
-
-#### 8: Update analyses' paths to new root directory
-
-This is an important utility option which allows the users to update the
-NM structure path, if the user wants to continue the analysis in another
-directory. By selecting this option, all the paths in the NM structure
-are updated according to the new/selected location. -->
+<p>Contains functions related to FreeSurfer and ability to add SPM/FreeSurfer paths to the NeuroMiner environment. Moreover, it gives different options to generate master files. As mentioned above, NeuroMiner stores settings and analysis results in the NM structure within MATLAB, which is visible in the workspace. In addition to this, NeuroMiner can also store individual files related to steps (e.g., preprocessing, training, visualization). When NeuroMiner does this, it stores a single file for each permutation within the cross-validation framework – as described later. These individual files can then be saved as ”master files” using this option.</p>
 </section>
 </section>
 </section>
@@ -873,7 +786,7 @@ are updated according to the new/selected location. -->
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Getting Started</p>
+            <p class="prev-next-title">Installation &amp; Configuration</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="3.1_mainmenu_input_data.html" title="next page">

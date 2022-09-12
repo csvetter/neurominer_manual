@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -256,17 +256,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -688,11 +698,14 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="preprocessing-pipeline">
 <span id="paramtemp-preprocessing-pipeline"></span><h1>Preprocessing pipeline<a class="headerlink" href="#preprocessing-pipeline" title="Permalink to this headline">#</a></h1>
-<p>An important part of any machine learning analysis is how the data is prepared or ’preprocessed’ prior to its analysis with a classification algorithm. This is also known as ’feature extraction’ because the features are extracted from the existing data before analysis. NeuroMiner has a number of options to prepare data and can be tailored to a users specific data problem.</p>
+<p>An important part of any machine learning analysis is how the data is prepared or ’preprocessed’ prior to its analysis with a classification algorithm. This is also known as ’feature extraction’ because the features are extracted from the existing data before analysis. NeuroMiner has a number of options to prepare data and can be tailored to a user’s specific data problem.</p>
 <p>It’s important to note that NeuroMiner performs preprocessing steps within the cross-validation framework. This means that when the option to preprocess the data is selected, it preprocesses the training data and applies the ’learned’ preprocessing parameters to the CV1 and CV2 test data partitions.</p>
 <p>When the preprocessing module is loaded the user will see the following:</p>
 <figure class="align-default" id="fig-3-2-02-nm-preproc-menu">
 <img alt="neurominer preprocessing pipeline menu" src="../_images/NM_preproc_menu_imaging.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">NeuroMiner preprocessing pipeline setup</span><a class="headerlink" href="#fig-3-2-02-nm-preproc-menu" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -704,7 +717,7 @@ title="Print to PDF"
 <figure class="align-default" id="fig-3-2-02-nm-preproc-add">
 <img alt="neurominer preprocessing options" src="../_images/NM_preproc_add.png" />
 </figure>
-<p>If you are using volumetric neuroimaging data, then there will also be an option included at the top of the list to: 1 : Enable spatial operations using Spatial OP Wizard. This is a special module designed to optimize filtering and smoothing within the cross-validation process and is always performed before any other preprocessing steps across the entire dataset (i.e., on test and training data). Once the user has selected one of the steps, for example to perform a dimensionality reduction, they are then redirected to the main preprocessing menu that will add the processing step; for example:</p>
+<p>If you are using volumetric neuroimaging data, then there will also be an option included at the top of the list to: <strong>1 | Enable spatial operations using Spatial OP Wizard</strong>. This is a special module designed to optimize filtering and smoothing within the cross-validation process and is always performed before any other preprocessing steps across the entire dataset (i.e., on test and training data). Once the user has selected one of the steps, for example to perform a dimensionality reduction, they are redirected to the main preprocessing menu that will add the processing step; for example:</p>
 <figure class="align-default" id="fig-3-2-02-nm-preproc-pipe">
 <img alt="neurominer preprocessing pipeline" src="../_images/NM_preproc_pipe.png" />
 </figure>
@@ -717,9 +730,9 @@ title="Print to PDF"
 </section>
 <section id="enable-spatial-operations-using-spatial-op-wizard">
 <span id="spatial-op"></span><h2>Enable spatial operations using Spatial OP Wizard<a class="headerlink" href="#enable-spatial-operations-using-spatial-op-wizard" title="Permalink to this headline">#</a></h2>
-<p>If your active data modality is neuroimaging data, you should see the following option (see also {numref}(fig:3.2.02_nm_preproc_menu)):</p>
+<p>If your active data modality is neuroimaging data, you should see the following option (see also <a class="reference internal" href="#fig-3-2-02-nm-preproc-menu"><span class="std std-numref">Fig. 9</span></a>):</p>
 <p><strong>1 | Select spatial operation [ No filtering ]</strong></p>
-<p>On turning on this mode, you will see the following menu:</p>
+<p>After enabling this mode, you will see the following menu:</p>
 <figure class="align-default" id="fig-3-2-02-nm-preproc-filter-options">
 <img alt="neurominer preprocessing spatial smoothing" src="../_images/NM_preproc_smoothing.png" />
 </figure>
@@ -741,18 +754,18 @@ title="Print to PDF"
 <p>This is regular voxel resampling as used in neuroimaging toolboxes. In similarity to smoothing, the advantage of having it in NeuroMiner is that you can optimize across different resampling parameters to find the best combination of resampling, preprocessing, and training.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>A critical point to remember in this mode is that if the user is interested in observing the Z-score by using <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html#mainmenu-visualize-classifiers"><span class="std std-ref"><strong>visualization</strong></span></a>, it is essential for the user to use smooth data first. Applying a scaling model to unsmoothed imaging data will likely result in extremely high/low values in the test data due to non-overlap of tissue borders between training and test cases.</p>
+<p>A critical point to remember in this mode is that if the user is interested in observing the Z-score by using <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html#mainmenu-visualize-classifiers"><span class="std std-ref"><strong>visualization</strong></span></a>, it is essential for the user to use smoothed data first. Applying a scaling model to unsmoothed imaging data will likely result in extremely high/low values in the test data due to non-overlap of tissue borders between training and test cases.</p>
 </div>
 </section>
 <section id="regress-out-nuisance-covariates">
 <h2>Regress out nuisance covariates<a class="headerlink" href="#regress-out-nuisance-covariates" title="Permalink to this headline">#</a></h2>
-<p>If covariates have been entered when the data was entered into NeuroMiner (see 4.1.8), then you can apply the correction using this step. This option is designed to remove the variance associated with a nuisance variable (e.g., age, sex, study center) from the data within each CV fold. When chosen it will reveal the following options:</p>
+<p>If covariates have been entered alongside the <a class="reference internal" href="3.1_mainmenu_input_data.html#mainmenu-input-data"><span class="std std-ref">data</span></a>, you can apply covariate correction using this step. This option is designed to remove the variance associated with a nuisance variable (e.g., age, sex, study center) from the data within each CV fold. When chosen it will reveal the following options:</p>
 <p><strong>1 | Select method</strong></p>
-<p>The first option gives you two possible methods to regress out the covariates: Partial Correlations and ComBat. Partial correlations method computes the coefficients that generate the chosen covariate effects in the data with a general linear model. In addition to the partial correlations method, ComBat method also scales the variance estimators. It allows to separate the label (eg. disease) effects and the covariate effects in the data to some degree. For more detailed information about the ComBat method please check <a class="reference external" href="https://academic.oup.com/biostatistics/article/8/1/118/252073">Johnson et al.,
-2007</a>).</p>
+<p>The first option gives you two possible methods to regress out the covariates: Partial Correlations and ComBat. Partial correlations method computes the coefficients that generate the chosen covariate effects in the data with a general linear model. In addition to the partial correlations method, ComBat also scales the variance estimators. It allows to separate the label (e.g., disease) effects and the covariate effects in the data to some degree. For more detailed information about the ComBat method please check <a class="reference external" href="https://academic.oup.com/biostatistics/article/8/1/118/252073">Johnson et al.,
+2007</a>. Currently, Combat can only be used to correct for batch effects (e.g. site, sex). It requires a numeric vector encoding batch effects to be modeled out. In contrast, partial correlations should be used with a dummy-coded matrix if the user wants to correct for batch effects using this method.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please be aware that ComBat does not provide you with an external validation mode if new sites appear in the test data. For this case, there is a function in NeuroMiner called nk_MultiCentIntensNorm2.m. This function binarizes the interacting covariate and finds the bin with the largest overlap (N) between sites. In this subgroup it computes partial correlation coefficients or offsets and applies those to the entire group to correct for site effects.</p>
+<p>Please be aware that ComBat does not provide you with an external validation mode if new sites appear in the test data. For this case, there is a function in NeuroMiner called nk_MultiCentIntensNorm2.m. This function binarizes the interacting covariate and finds the bin with the largest overlap (N) between sites. In this subgroup it computes partial correlation coefficients or offsets and applies those to the entire group to correct for group effects.</p>
 </div>
 <p><strong>2 | Select covariates from NM covariates matrix</strong></p>
 <p>Selecting the second option will allow you to choose the covariates that you want to control the data with. You select the covariate(s) by entering in either a single numeral (e.g., 1) or many (e.g., 1:2) relating to the covariates that have been previously entered. Once these are selected, the user will be returned to the partial correlations setup menu.</p>
@@ -809,7 +822,7 @@ When the option to reduce dimensionality is selected, the user will be shown the
 <div><p>1 | Define extraction mode for PCA [ Energy range ]
 2 | Define extraction range [ 1 ]</p>
 </div></blockquote>
-<p>Using these functions you can then select the components that you want to retain without having to run separate dimensionality reduction analyses. For example, you can retain 100% of the energy in the first step of a PCA to reduce the data dimensions and then retain a range of subspaces of components in the second step; e.g., [0.2 0.4 0.6 0.8]. This dramatically increases processing time.
+<p>Using these functions you can then select the components that you want to retain without having to run separate dimensionality reduction analyses. For example, you can retain 100% of the energy in the first step of a PCA to reduce the data dimensions and then retain a range of subspaces of components in the second step; e.g., [0.2 0.4 0.6 0.8]. This drastically increases processing time.
 The following advanced dimensionality reduction techniques are also offered by NeuroMiner, and the settings will change based on the technique. We recommend to follow the links provided below to determine the settings that are required or to evaluate the default settings offered within NeuroMiner.</p>
 <div class="admonition-dimensionality-reduction-techniques admonition">
 <p class="admonition-title">Dimensionality Reduction Techniques</p>
@@ -832,18 +845,13 @@ This is a ‘statistical segmentation’ tool.</p></li>
 Maaten</a></p></li>
 <li><p>Probabilistic PCA - <a class="reference external" href="https://lvdmaaten.github.io/drtoolbox/">MTDR; van der
 Maaten</a>
-This is for low dimensional problems only, it requires</p></li>
-</ol>
-<blockquote>
-<div><p>32GB RAM for high-D data.</p>
-</div></blockquote>
-<ol class="simple">
+This option is only for low dimensional problems, it requires
+more than 32GB RAM for high-D data.</p></li>
 <li><p>Factor analysis - <a class="reference external" href="https://lvdmaaten.github.io/drtoolbox/">MTDR; van der
 Maaten</a></p></li>
-<li><p>Locality Preserving Projections – <a class="reference external" href="https://lvdmaaten.github.io/drtoolbox/">MTDR; van der
+<li><p>Locality Preserving Projections - <a class="reference external" href="https://lvdmaaten.github.io/drtoolbox/">MTDR; van der
 Maaten</a>
-This is for low-dimensional problems only. Number of cases needs to
-be &gt; no. features.</p></li>
+This option is only for low-dimensional problems. Number of cases needs to be greater than the number of features.</p></li>
 <li><p>Linear Local Tangent Space Alignment - <a class="reference external" href="https://lvdmaaten.github.io/drtoolbox/">MTDR; van der
 Maaten</a>
 For low-D only, requires &gt;32 GB RAM for high-D
@@ -855,10 +863,9 @@ Maaten</a>
 Low dimensional data only.</p></li>
 <li><p>Neighborhood Component Analysis <a class="reference external" href="https://lvdmaaten.github.io/drtoolbox/">MTDR; van der
 Maaten</a>
-Low dimensional data only.</p></li>
+This option is only for low-dimensional problems.</p></li>
 </ol>
-<p><em>For all techniques see nk_PerfRedObj.m</em>
-<em>For implementation of all functions, please see nk_PerfRedObj.m and files in the preproc directory.</em></p>
+<p><em>For an overview and the implementation of all techniques see nk_PerfRedObj.m and files in the preproc directory.</em></p>
 </div>
 </section>
 </section>
@@ -878,20 +885,20 @@ Low dimensional data only.</p></li>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ol class="simple">
-<li><p>calculates the Z-score using the median (i.e., (score -median) / standard deviation).</p></li>
+<li><p>calculates the Z-score using the median (i.e., (score -median) / standard deviation / interquartile range).</p></li>
 <li><p>calculates the Z-score using the mean.</p></li>
 <li><p>mean-centers all features (i.e., subtraction of the mean for the feature across all scores).</p></li>
-<li><p>L1-median centering calculates the multivariate L1-median and then takes the derivatives from this as features (see nk PerfStandardizeObj.m; Hossjer and Crous (1995) Generalizing univariate signed rank statistics for testing and estimating a multivariate location parameter, Non-parametric statistics, 4, 293-308).</p></li>
-<li><p>and 6. are alternatives to the median absolute deviation for standardizing multivariate data (see <a class="reference external" href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476408?journalCode=uasa20">Rousseeuw and Croux (1993)</a>.</p></li>
+<li><p>calculates the multivariate L1-median and then takes the derivatives from this as features (see nk_PerfStandardizeObj.m; <a class="reference external" href="https://doi.org/10.1080/10485259508832620">Hossjer and Crous (1995)</a>.</p></li>
+<li><p>and 6. are alternatives to the median absolute deviation for standardizing multivariate data (see <a class="reference external" href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476408?journalCode=uasa20">Rousseeuw and Croux (1993)</a>).</p></li>
 </ol>
 </div>
-<p><strong>2 | Compute standardization using a subgroup of cases [no]</strong></p>
+<p><strong>2 | Compute standardization using a subgroup of cases</strong></p>
 <p>User can compute the standardization using a subgroup of cases.</p>
-<p><strong>3 | Apply standardization model to a subgroup of cases [no]</strong></p>
+<p><strong>3 | Apply standardization model to a subgroup of cases</strong></p>
 <p>User can apply the standardization model to a subgroup of cases.</p>
-<p><strong>4 | Winsorize data (clamping of outliers) [no]</strong></p>
+<p><strong>4 | Winsorize data (clamping of outliers)</strong></p>
 <p>The user also has the option to Winsorize or ’censor’ the data. This technique was introduced to account for outliers. After standardization, the elements which are outside of a user-defined range (e.g., 4 standard deviations) are set to their closest percentile. For example, data above the 95th percentile is set to the value of the 95th percentile. The feature is then re-centered using the new censored values.</p>
-<p><strong>5 | Zero-out completely non-finite features [yes]</strong></p>
+<p><strong>5 | Zero-out completely non-finite features</strong></p>
 <p>If there are entries in the user’s feature data that are non-numeric (i.e., ”NaN” or ”not a number” elements), then these will not be considered during the calculation of the mean and standard deviation (NeuroMiner uses the nanmean function). However, after the data has been standardized, these values will be added back to the feature matrix. As such, NeuroMiner gives the option to change these to zero in step four. It is important to note that once the data has been standardized, zero values reflect the mean of the feature and are thus a form of mean imputation. If the user wants to use other imputation options, they can select ’no’ to this option and then impute the data using the preprocessing imputation option.</p>
 </section>
 <hr class="docutils" />
@@ -904,13 +911,13 @@ Low dimensional data only.</p></li>
 <p><strong>1 | Scale across features or each feature independently [each feature independently]</strong></p>
 <p>Here you have the choice between scaling  ”each feature independently” or ”across the entire matrix”. If each feature independently is selected, then the data will be scaled within the desired range for each feature (i.e., each voxel or each questionnaire). If the entire matrix is selected then each value in the matrix will be scaled according to the range of all the data (e.g., all voxels or all questionnaires).</p>
 <p><strong>2 | Define scale range [0,1]</strong></p>
-<p>The user then has the option to define the scale range between 0 and 1 or between -1 to 1. These two chices are provided because some machine learning algorithms require the data to be scaled differently; e.g., the liblinear options require the data to be scaled between -1 to 1.</p>
+<p>The user then has the option to define the scale range between 0 and 1 or between -1 to 1. These two chices are provided because some machine learning algorithms require the data to be scaled differently; e.g., the <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/liblinear/">LIBLINEAR</a> options require the data to be scaled between -1 to 1.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Make sure to check whether the algorithm of your choice requires a certain scale!</p>
 </div>
 <p><strong>3 | Zero-out completely non-finite features [yes]</strong></p>
-<p>Non-numeric values are not taken into account during scaling and are added back to the matrix after scaling. The third option gives the user the ability to either change these values to zero following scaling by selecting ”yes” for the third option to ”zero-out completely non-finite features”. It is critical to note that in this case the values will be considered to be the absolute minimum of the scale for future analyses (e.g., if IQ is scaled, then these individuals will have an IQ value of 0). For questionnaire data, it is recommended that this option is changed to ”no”, and instead imputation is performed after scaling for the NaN elements. Alternatively, for imaging data, it is recommended that NaN values are excluded by using a brainmask during data input.</p>
+<p>Non-numeric values are not taken into account during scaling and are added back to the matrix after scaling. The third option gives the user the ability to either change these values to zero following scaling by selecting ”yes” for the third option to ”zero-out completely non-finite features”. It is critical to note that in this case the values will be considered to be the absolute minimum of the scale for future analyses (e.g., if IQ is scaled, then these individuals will have an IQ value of 0). For questionnaire data, it is recommended that this option is changed to ”no”, and instead imputation is performed for the NaN elements after scaling. Alternatively, for imaging data, it is recommended that NaN values are excluded by using a brainmask during data input.</p>
 </section>
 <hr class="docutils" />
 <section id="normalize-to-group-mean">
@@ -929,7 +936,11 @@ Low dimensional data only.</p></li>
 <figure class="align-default" id="fig-3-2-02-nm-preproc-binning">
 <img alt="neurominer preprocessing binning menu" src="../_images/NM_preproc_binning.png" />
 </figure>
-<p>Discretization basically just forms bins based on the standard deviation. You first establish a vector using a start value, a stepping value, and a stop value called alpha (e.g., the default setting is [0 0.5 1 1.5 2 2.5 3 3.5 4]). It then discretizes each feature by the mean +/- alpha*std. For example, for the first value of alpha, it finds the feature values that are above and below the mean and gives them a new value (i.e., 1 or -1). Then in the next step it finds the values that are above and below the mean +/- half of the standard deviation and gives them a new value (i.e., 2 or -2). In the next step it finds values that are above and below one standard deviation from the mean and gives them a new value (i.e., 3 or -3). And so on. In this way, bins are created with a width that is determined by the standard deviation. It is important to note that this function will perform Winsorization (i.e., clamping) because values the stop value of alpha (e.g., above 4 standard deviations above or below the mean) will be given the final value.</p>
+<p>Discretization basically just forms bins based on the standard deviation. You first establish a vector using a start value, a stepping value, and a stop value called alpha (e.g., the default setting is [0 0.5 1 1.5 2 2.5 3 3.5 4]). It then discretizes each feature by the mean +/- alpha*std. For example, for the first value of alpha, it finds the feature values that are above and below the mean and gives them a new value (i.e., 1 or -1). Then in the next step it finds the values that are above and below the mean +/- half of the standard deviation and gives them a new value (i.e., 2 or -2). In the next step it finds values that are above and below one standard deviation from the mean and gives them a new value (i.e., 3 or -3). And so on. In this way, bins are created with a width that is determined by the standard deviation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function will perform winsorization (i.e., clamping) because values the stop value of alpha (e.g., above 4 standard deviations above or below the mean) will be given the final value.</p>
+</div>
 <p>Manually determining the bins is a good way to discretize data if you have a firm idea about the problem, but if you do not then it is useful to find an optimal bin width for a feature by taking into account the information content of the data. This can be done in NeuroMiner by changing the ”1: Select binning method” to ”Unsupervised entropy-based symbolization”. It tries to find an optimal bin width for a feature by taking into account the entropy. It will do this within the range that you specify in the following settings:</p>
 <figure class="align-default" id="fig-3-2-02-nm-preproc-binning-method">
 <img alt="neurominer preprocessing binning methods" src="../_images/NM_preproc_binning_method.png" />
@@ -953,15 +964,15 @@ NeuroMiner performs imputation using either single-subject median replacement, f
 <h3>1 | Define imputation method<a class="headerlink" href="#define-imputation-method" title="Permalink to this headline">#</a></h3>
 <p>You have to first define the imputation method using the following menu:</p>
 <blockquote>
-<div><p>1 | Median of non-NaN values in given case<br />
-2 | Mean of non-NaN values in given feature<br />
-3 | MANHATTAN distance-based nearest-neighbor search<br />
-4 | EUCLIDEAN distance-based nearest-neighbor search<br />
-5 | SEUCLIDEAN distance-based nearest-neighbor search<br />
-6 | COSINE similarity-based nearest-neighbor search<br />
-7 | HAMMING distance-based nearest-neighbor search<br />
-8 | JACCARD distance-based nearest-neighbor search<br />
-9 | Nearest-neighbor imputation using hybrid method</p>
+<div><p>1 | Median of non-NaN values in given case</p>
+<p>2 | Mean of non-NaN values in given feature</p>
+<p>3 | MANHATTAN distance-based nearest-neighbor search</p>
+<p>4 | EUCLIDEAN distance-based nearest-neighbor search</p>
+<p>5 | SEUCLIDEAN distance-based nearest-neighbor search</p>
+<p>6 | COSINE similarity-based nearest-neighbor search</p>
+<p>7 | HAMMING distance-based nearest-neighbor search</p>
+<p>8 | JACCARD distance-based nearest-neighbor search</p>
+<p>9 | Nearest-neighbor imputation using hybrid method</p>
 </div></blockquote>
 <p>For median or mean replacement, values are imputed based on the data
 either across features for one subject or across subjects within the
@@ -980,8 +991,7 @@ be used for data with a continuous measurement scale or the Hamming
 could be used for binary nominal data (i.e., 0 or 1) data (see Box:
 Nominal Data). There is also the option to use a hybrid approach that
 accounts for both continuous/ordinal and nominal data. It’s important to
-note that all options except for the Manhattan and Euclidean distances
-require the Statistics and Machine Learning Toolbox of MATLAB.</p>
+note that all options require the Statistics and Machine Learning Toolbox of MATLAB.</p>
 <p><strong>1 | Median of non-NaN values in given case</strong></p>
 <p>This function checks NaN values for each subject. When it finds a NaN
 value for a subject, it imputes the median of the non-NaN values across
@@ -995,16 +1005,10 @@ imputation” described below.</p>
 then it imputes the mean of non-NaN values.</p>
 <p><strong>3 | MANHATTAN distance-based nearest-neighbor search</strong></p>
 <p>This function determines the Manhattan distance between cases and then
-selects nearest-neighbors. It uses the ‘distance’ function from the
-Large Margins Nearest-Neighbors (LMNN) toolbox version 2.5 <a class="reference external" href="http://www.cs.cornell.edu/~kilian/code/lmnn/lmnn.html">(link)</a>. You
-must scale, unit-normalize or standardize the data first, otherwise the distance measure will be dominated by high-variance features.</p>
+selects nearest-neighbors. You must scale, unit-normalize or standardize the data first, otherwise the distance measure will be dominated by high-variance features.</p>
 <p><strong>4 | EUCLIDEAN distance-based nearest-neighbor search</strong></p>
 <p>Determines the Euclidean distance between cases and then selects
-nearest-neighbors. It uses the ‘distance2’ function from the Large
-Margins Nearest-Neighbors (LMNN) toolbox version 2.5
-<a class="reference external" href="http://www.cs.cornell.edu/~kilian/code/lmnn/lmnn.html">(link)</a>. You
-must scale, unit-normalize or standardize the data first, otherwise the
-distance measure will be dominated by high-variance features.</p>
+nearest-neighbors. You must scale, unit-normalize or standardize the data first, otherwise the distance measure will be dominated by high-variance features.</p>
 <p><strong>5 | SEUCLIDEAN distance-based nearest-neighbor search</strong></p>
 <p>The Seuclidean distance between cases is measured using the pdist2
 function that is built into the Statistics and Machine Learning Toolbox
@@ -1027,24 +1031,15 @@ MATLAB.</p>
 nominal features (e.g., Hamming or Jaccard) and then define a method for
 ordinal/continuous features (e.g., Euclidean or Cosine). The maximum
 number of unique values for nominal feature imputation must also be
-inputted.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Nominal Data. It is important to remember that nominal data with more than two categories needs to be dummy-coded for the results to make sense (i.e., 0 or 1 coding). NeuroMiner does not recognise the data-types and therefore nominal data that is coded with more than three categories (e.g., 1=De pression; 2=Bipolar; 3=Schizophrenia) will be used as a variable with meaningful relationships between the numbers when differences are actually arbitrary.</p>
+specified.</p>
+<div class="admonition-nominal-data admonition">
+<p class="admonition-title">Nominal Data</p>
+<p>It is important to remember that nominal data with more than two categories needs to be dummy-coded for the results to make sense (i.e., 0 or 1 coding). NeuroMiner does not recognize the types of a variable and therefore nominal data that is coded with more than three categories (e.g., 1=Depression; 2=Bipolar; 3=Schizophrenia) will be modeled as a variable with meaningful relationships between the numbers when differences are actually arbitrary.</p>
 </div>
 </section>
 <section id="select-features-for-imputation">
 <h3>2 | Select features for imputation<a class="headerlink" href="#select-features-for-imputation" title="Permalink to this headline">#</a></h3>
-<p>The imputation procedures can be applied to the entire dataset or to
-subsets of the data. This is useful when there are different data
-domains (e.g., clinical and cognitive data) or even single
-questionnaires (e.g., the PANSS) that you want to restrict the
-imputation to. A MATLAB logical vector (i.e., consisting of TRUE and
-FALSE fields that are depicted as [0 0 0 1 1 0 0 etc.]; you can
-convert a binary vector to a logical simply by typing
-logical(yourvector) on the command line) must be provided to select a
-subset. If you want to impute multiple subsets then you must add
-separate imputation routines.</p>
+<p>The imputation procedures can be applied to the entire dataset or to subsets of the data. This is useful when there are different data domains (e.g., clinical and cognitive data) or even single questionnaires (e.g., the PANSS) that you want to restrict the imputation to. A MATLAB logical vector (i.e., consisting of TRUE and FALSE fields that are depicted as [0 0 0 1 1 0 0 etc.]; you can convert a binary vector to a logical simply by typing logical(yourvector) on the command line) must be provided to select a subset. If you want to impute multiple subsets then you must add separate imputation routines. Please note: If previous preprocessing operations change the dimensionality of the feature space (e.g. <a class="reference internal" href="#preproc-prune"><span class="std std-ref">pruning</span></a>) these changes are propagated to the user-provided logical feature indices used by the imputation module.</p>
 </section>
 <section id="define-number-of-nearest-neighbors">
 <h3>3 | Define number of nearest-neighbors<a class="headerlink" href="#define-number-of-nearest-neighbors" title="Permalink to this headline">#</a></h3>
@@ -1055,11 +1050,11 @@ the calculation of the median value. The default is 7.</p>
 <p class="admonition-title">Caution</p>
 <p>We found that this step yields stable results when data is scaled prior to the imputation step, however the results become unstable when the data is standardized.</p>
 </div>
-</section>
-</section>
 <hr class="docutils" />
+</section>
+</section>
 <section id="prune-non-informative-columns-from-data-matrix">
-<h2>Prune non-informative columns from data matrix<a class="headerlink" href="#prune-non-informative-columns-from-data-matrix" title="Permalink to this headline">#</a></h2>
+<span id="preproc-prune"></span><h2>Prune non-informative columns from data matrix<a class="headerlink" href="#prune-non-informative-columns-from-data-matrix" title="Permalink to this headline">#</a></h2>
 <p>Data pruning is the removal of examples or features that will not work with machine learning algorithms or are redundant. In NeuroMiner, the machine learning algorithms that are used cannot work with missing values (i.e., ”Not a Number” (NaN) entries in MATLAB) or with infinite values (i.e., ”Inf” in MATLAB), which can occur due to previous processing steps. If the values of a feature do not change between participants (i.e., there is zero variance), then it is redundant to include the feature in the analysis as well. To correct for these problems, NeuroMiner offers the following options:</p>
 <figure class="align-default" id="fig-3-2-02-nm-preproc-prune">
 <img alt="neurominer preprocessing pruning" src="../_images/NM_preproc_prune.png" />
@@ -1078,7 +1073,7 @@ the calculation of the median value. The default is 7.</p>
 </div></blockquote>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Be careful with pruning It is important to note that even if there is one subject with one NaN or Inf within the fold NeuroMiner will remove the feature. The amount of removed features will be difficult to quantify. For matrix data, check the NaNs and potentially filter then prior to the entry into NeuroMiner (see <a class="reference internal" href="3.1_mainmenu_input_data.html#fig-3-1-nm-feature-selector"><span class="std std-numref">Fig. 5</span></a>).</p>
+<p>Be careful with pruning It is important to note that even if there is one subject with one NaN or Inf within the fold NeuroMiner will remove the feature. The amount of removed features will be difficult to quantify. For matrix data, check the NaNs and potentially filter them prior to the entry into NeuroMiner (see <a class="reference internal" href="3.1_mainmenu_input_data.html#fig-3-1-nm-feature-selector"><span class="std std-numref">Fig. 3</span></a>).</p>
 </div>
 <p><strong>4 | Prune features with single-value percentage over cutoff [ yes, 5 ]</strong></p>
 <blockquote>
@@ -1097,7 +1092,7 @@ the calculation of the median value. The default is 7.</p>
 al., 2003</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Wrappers and filters will further be discussed in <span class="xref myst">ensemble generation straqtegies</span>.</p>
+<p>Wrappers and will further be discussed in <span class="xref myst">ensemble generation straqtegies</span>.</p>
 </div>
 <p>Filter methods broadly involve the weighting and ranking of variables, and optionally the selection of top performing variables. This can be conducted either prior to the evaluation of the model during pre-processing or as part of model optimisation (discussed in section <span class="xref myst">ensemble generation straqtegies</span>). This option allows the user to weight variables in the training folds based on some criteria (e.g., Pearson’s correlation coefficient with the target variable) and then rank them in a specified order (e.g., descending order from most to least correlated). When this option is selected, the following will be displayed:</p>
 <figure class="align-default" id="fig-3-2-02-nm-preproc-rank">
@@ -1112,9 +1107,9 @@ feature. These are:</p>
 </figure>
 <ol class="simple">
 <li><p><strong>Pearson / Spearman correlation</strong>:
-Standard MATLAB functions for Pearson’s (corrcoef).</p></li>
+Standard MATLAB functions for Pearson’s (corrcoef.m).</p></li>
 <li><p><strong>Spearman correlation</strong>:
-Standard MATLAB function for Spearman’s (corr).</p></li>
+Standard MATLAB function for Spearman’s (corr.m).</p></li>
 <li><p>G-flip (Greedy Feature Flip):
 See <a class="reference external" href="http://www.cs.huji.ac.il/labs/learning/Papers/giladbachrachnavottishby04b.pdf">Gilad-Bachrach et al.
 (2004)</a>
@@ -1145,7 +1140,7 @@ functions on the differences between the groups when problem is
 classification.</p></li>
 <li><p>AUC:
 Calculates an area under the curve (AUC) for binary classifications
-based on the code of Chih-Jen Lin and then ranks the features based on
+based on the code of Chih-Jen Lin (<a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/papers/causality.pdf">Lin, 2008</a>)and then ranks the features based on
 this.</p></li>
 <li><p>FEAST:
 Implementation of the FEAST toolbox for feature selection

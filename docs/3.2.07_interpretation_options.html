@@ -129,7 +129,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -252,17 +252,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -475,6 +485,16 @@ title="Print to PDF"
    Use map from model visualization to operate in predetermined feature space
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#produce-z-normalized-prediction-change-estimates">
+   Produce z-normalized prediction change estimates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bind-data-modification-to-neuroanatomical-atlas">
+   Bind data modification to neuroanatomical atlas
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -514,6 +534,16 @@ title="Print to PDF"
    Use map from model visualization to operate in predetermined feature space
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#produce-z-normalized-prediction-change-estimates">
+   Produce z-normalized prediction change estimates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bind-data-modification-to-neuroanatomical-atlas">
+   Bind data modification to neuroanatomical atlas
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -532,11 +562,12 @@ title="Print to PDF"
 </figure>
 <section id="define-occlusion-method">
 <h2>Define occlusion method<a class="headerlink" href="#define-occlusion-method" title="Permalink to this headline">#</a></h2>
-<p>Interpretability in NeuroMiner is based on occlusion methods where a fraction of features will be occluded and the change in prediction outcome will be quantified. Four different occlusion methods are  available:</p>
+<p>Interpretability in NeuroMiner is based on <a class="reference external" href="https://towardsdatascience.com/inshort-occlusion-analysis-for-explaining-dnns-d0ad3af9aeb6">occlusion</a> methods where a fraction of features will be occluded and the change in prediction outcome in response to this occlusion will be quantified. Four different occlusion methods are  available:</p>
 <figure class="align-default" id="fig-nm-paramtemp-occlusion">
 <img alt="neurominer occlusion options" src="../_images/NM_paramtemp_occlusion.png" />
 </figure>
-<p>A fraction of the features will be replaced by 1) extreme values (upper and lower percentile that can be chosen by the user); 2) the median of each feature’s training sample; 3) the feature value with the median quantile added or subtracted (depending on whether that individual’s feature is below or above the training sample median) ; or 4) a random value from each feature’s training sample.</p>
+<p>A fraction of the features will be replaced by 1) extreme values (upper and lower percentile that can be chosen by the user); 2) the median of each feature’s training sample; 3) the feature value with the median quantile added or subtracted (depending on whether that individual’s feature is below or above the training sample median); or 4) a random value from each feature’s training sample distribution.</p>
+<p>Please note that the third method might not be suitable for ordinally scaled data. Moreover, if the number of features is very low the number of possible permutations will also be low. In these scenarios the fourth occlusion method, e.g. occlude by random value from each feature’s training sample should be selected to obtain reasonable results.</p>
 </section>
 <section id="define-no-of-iterations">
 <h2>Define no. of iterations<a class="headerlink" href="#define-no-of-iterations" title="Permalink to this headline">#</a></h2>
@@ -548,13 +579,20 @@ title="Print to PDF"
 </section>
 <section id="use-map-from-model-visualization-to-operate-in-predetermined-feature-space">
 <h2>Use map from model visualization to operate in predetermined feature space<a class="headerlink" href="#use-map-from-model-visualization-to-operate-in-predetermined-feature-space" title="Permalink to this headline">#</a></h2>
-<p>When the visualization module will be run, one can specify a map here, which will narrow down the feature space that will be evaluated by the interpretability module. The user can choose from different maps which will be created during visualization. If you enable this option, the menu will show two additional suboptions in the menu:</p>
+<p>When the visualization module will be run, one can specify a map here, which will narrow down the feature space that will be evaluated by the interpretability module. The user can choose from different maps which will be created during <a class="reference internal" href="3.2.06_paramtemp_visualization_options.html#paramtemp-visualization-options"><span class="std std-ref">visualization</span></a>. If a map will be used, the user can threshold the map by defining a cutoff value or range, a cutoff method and a cutoff operator (e.g. to determine whether features below or above a specified cutoff value or within or outside a specified range should be included for prediction interpretation).</p>
+<p>If you enable this option, the menu will show two additional suboptions in the menu:</p>
 <blockquote>
 <div><p>7 | Define which map to use                           [Cross-validation ratio map]
 8 | Define cutoff value (scalar or 2-value vector)    [-2 2]</p>
 </div></blockquote>
-<p>ADD REST</p>
-<p>7 | Produce z-normalized prediction change estimates	[ None ]</p>
+</section>
+<section id="produce-z-normalized-prediction-change-estimates">
+<h2>Produce z-normalized prediction change estimates<a class="headerlink" href="#produce-z-normalized-prediction-change-estimates" title="Permalink to this headline">#</a></h2>
+<p>It can be specified whether the prediction change estimates, i.e. the output of the interpretability module, shall be reported and plotted (in the <a class="reference internal" href="3.7_mainmenu_display_training_results.html#mainmenu-display-training-results"><span class="std std-ref">MLI Viewer</span></a>) as they are (i.e. option “None”),  mean centered or z-normalized.</p>
+</section>
+<section id="bind-data-modification-to-neuroanatomical-atlas">
+<h2>Bind data modification to neuroanatomical atlas<a class="headerlink" href="#bind-data-modification-to-neuroanatomical-atlas" title="Permalink to this headline">#</a></h2>
+<p>This option is specific to neuroimaging data. Especially for image data the dimensions are not independent. Hence, it might be more meaningful instead of randomly modifying individual voxels to bind the manipulations to brain regions. To define these brain regions the user can read in a neuroanatomical atlas. This requires an atlas imaging file, i.e. a nifti image, and an atlas descriptor file listing the ROIs (a csv or txt file). For the atlas descriptor file, the user can specify the delimiter and the column names where the ROI IDs and the ROI names are specified. Several neuroanatomical atlases are provided within the NeuroMiner software folder (“/NeuroMIner/interpretable/anatomical”). When the files are correctly specified, the user needs to “Import atlas descriptor file“.</p>
 </section>
 </section>
 

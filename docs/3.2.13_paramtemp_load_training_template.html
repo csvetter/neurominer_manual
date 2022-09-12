@@ -131,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -254,17 +254,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -461,7 +471,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="load-training-template">
 <span id="paramtemp-load-training-template"></span><h1>Load training template<a class="headerlink" href="#load-training-template" title="Permalink to this headline">#</a></h1>
-<p>When a parameter template has been saved in the previous menu item, it can be loaded with this feature. This will parameterize all settings within the template of the new NM structure, and thus will allow it to be initialized in the next step. Please note that you will see a menu item warning about the cross-validation set-up. This warning is to highlight the fact that if you have different data then you need to re-create the cross-validation structure.</p>
+<p>When a parameter template has been saved in the previous menu item, it can be loaded with this feature. This will parameterize all settings within the template of the new NM structure, and thus will allow it to be initialized in the next step. Please note that you will see a menu item warning about the cross-validation set-up. This warning is to highlight the fact that if you have different data then you need to recreate the cross-validation structure.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Loading parameter templates from different versions of NeuroMiner is currently unsupported.</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

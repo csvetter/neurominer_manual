@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Change working directory" href="3.9_mainmenu_change_wd.html" />
+    <link rel="next" title="Load NeuroMiner structure" href="3.9_mainmenu_load_struct.html" />
     <link rel="prev" title="Result Viewer" href="3.7_mainmenu_display_training_results.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -131,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -254,17 +254,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -689,8 +699,10 @@ title="Print to PDF"
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>NeuroMiner has two modes, <strong>discovery mode</strong> and <strong>application mode</strong>.</p>
-<p><strong>Discovery mode</strong> refers to the model training phase discussed in the previous sections.</p>
-<p><strong>Application mode</strong> refers to the model application to external validation samples.</p>
+<ul class="simple">
+<li><p><strong>Discovery mode</strong> refers to the model training phase discussed in the previous sections.</p></li>
+<li><p><strong>Application mode</strong> refers to the model application to external validation samples.</p></li>
+</ul>
 <p>This distinction ensures that the <em>discovered</em> models are not retrained on the validation sets.</p>
 </div>
 <p>To enter application mode and apply your model to an external sample, the first step is locking your analyses. In order to do that, you must make sure all of your analyses have been computed. If there are analyses you don’t want to compute, please <span class="xref myst">remove them</span> before continuing.</p>
@@ -714,13 +726,13 @@ title="Print to PDF"
 <figure class="align-default" id="fig-nm-oocv-mainmenu">
 <img alt="neurominer application mode main menu" src="../_images/NM_oocv_mainmenu.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">NeuroMiner’s main menu in application mode</span><a class="headerlink" href="#fig-nm-oocv-mainmenu" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">NeuroMiner’s main menu in application mode</span><a class="headerlink" href="#fig-nm-oocv-mainmenu" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If the analyses of the NM model are trained from another location, please update the root path of all analyses to the current file path where the NM structure is saved at. To do that, please select <strong>1 | Update analyses’ root paths</strong> and follow the instruction.</p>
+<p>If the analyses of the NM model are trained from another location, please update the root path of all analyses to the current file path where the NM structure is saved at. To do that, please select <strong>1 | Update analyses’ root paths</strong> and follow the instructions.</p>
 </div>
 <hr class="docutils" />
 <section id="load-data-for-model-application">
@@ -775,7 +787,7 @@ be loaded into the matlab workspace (see <a class="reference internal" href="3.1
 <p class="admonition-title">Important</p>
 <p>The covariates table of the validation sample needs to contain the same covariates in the same order as for the discovery data. NeuroMiner will assume that this is the case and will <strong>not</strong> ask you to define the covariate names anymore.</p>
 </div>
-<p>Once you are finished with data entry, return to the main menu of the application mode (<a class="reference internal" href="#fig-nm-oocv-mainmenu"><span class="std std-numref">Fig. 18</span></a>).</p>
+<p>Once you are finished with data entry, return to the main menu of the application mode (<a class="reference internal" href="#fig-nm-oocv-mainmenu"><span class="std std-numref">Fig. 26</span></a>).</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -795,7 +807,7 @@ be loaded into the matlab workspace (see <a class="reference internal" href="3.1
 <section id="aggregate-all-base-learners-into-one-ensembe-mode">
 <h5>Aggregate ALL base learners into ONE ensembe mode<a class="headerlink" href="#aggregate-all-base-learners-into-one-ensembe-mode" title="Permalink to this headline">#</a></h5>
 <p>When you use a cross-validation design to train your models, all models relate
-to one of the outer, CV2, folds. In contrast, in the case of external validation, all the models will be applied to this one sample. This means that the procedure applied to the external validation sample is <strong>different</strong> to what is applied to the discovery sample.</p>
+to one of the outer, CV2, folds. In contrast, in the case of external validation, all the models will be applied to this one sample. This means that the procedure applied to the external validation sample is <strong>different</strong> from what is applied to the discovery sample.</p>
 </section>
 <section id="compute-mean-decisions-of-cv1-partition-ensembles-before-aggregating">
 <h5>Compute mean decisions of CV1 partition ensembles before aggregating<a class="headerlink" href="#compute-mean-decisions-of-cv1-partition-ensembles-before-aggregating" title="Permalink to this headline">#</a></h5>
@@ -824,13 +836,13 @@ to ‘Use all available CV data (CV1+CV2)’.</p>
 <p>The first option is recommended if the point of the analysis is to validate the original models that will be displayed in a paper.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The gold standard though would be to save the models and use the exact models calculated in the discovery cohort for the external validation cohort, which can be done during <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html#mainmenu-visualize-classifiers"><span class="std std-ref">Visualisation</span></a> in NeuroMiner. The reason for this is that there can be minor changes to the models when they use non-deterministic procedures (e.g., gradient descent).</p>
+<p>The gold standard though would be to save the models and use the exact models calculated in the discovery cohort for the external validation cohort, which can be done during <a class="reference internal" href="3.6_mainmenu_visualize_classifiers.html#mainmenu-visualize-classifiers"><span class="std std-ref">Visualization</span></a> in NeuroMiner. The reason for this is that there can be minor changes to the models when they use non-deterministic procedures (e.g., gradient descent).</p>
 </div>
 </section>
 <section id="use-all-available-cv-data-cv1-cv2">
 <h5>2 | Use all available CV data (CV1 + CV2)<a class="headerlink" href="#use-all-available-cv-data-cv1-cv2" title="Permalink to this headline">#</a></h5>
 <p>ADD: WHEN would you use this?</p>
-<p>After setting up the parameters, you can return to the main menu of the application mode (<a class="reference internal" href="#fig-nm-oocv-mainmenu"><span class="std std-numref">Fig. 18</span></a>). Now the menu options include <strong>4 | Apply classifiers to independent data</strong>.</p>
+<p>After setting up the parameters, you can return to the main menu of the application mode (<a class="reference internal" href="#fig-nm-oocv-mainmenu"><span class="std std-numref">Fig. 26</span></a>). Now the menu options include <strong>4 | Apply classifiers to independent data</strong>.</p>
 </section>
 </section>
 </section>
@@ -846,6 +858,9 @@ to ‘Use all available CV data (CV1+CV2)’.</p>
 <section id="open-nm-results-viewer">
 <h3>5 | Open NM Results Viewer<a class="headerlink" href="#open-nm-results-viewer" title="Permalink to this headline">#</a></h3>
 <p>This option takes you to the <a class="reference internal" href="3.7_mainmenu_display_training_results.html#mainmenu-display-training-results"><span class="std std-ref"><strong>Results Viewer</strong></span></a> as in the <strong>discovery mode</strong>. If you click on the second drop-down box then there will be an option to select the external validation data for the selected analysis that you entered.</p>
+<figure class="align-default" id="fig-nm-oocv-resultviewer">
+<img alt="Neurominer result viewer for application mode" src="../_images/NM_oocv_resultviewer.png" />
+</figure>
 </section>
 <section id="shred-input-data-in-nm-structure-external-validation">
 <h3>6 | Shred input data in NM structure (external validation)<a class="headerlink" href="#shred-input-data-in-nm-structure-external-validation" title="Permalink to this headline">#</a></h3>
@@ -888,10 +903,10 @@ to ‘Use all available CV data (CV1+CV2)’.</p>
             <p class="prev-next-title">Result Viewer</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3.9_mainmenu_change_wd.html" title="next page">
+    <a class='right-next' id="next-link" href="3.9_mainmenu_load_struct.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Change working directory</p>
+        <p class="prev-next-title">Load NeuroMiner structure</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

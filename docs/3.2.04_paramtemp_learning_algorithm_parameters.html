@@ -131,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1.2_gettingstarted.html">
-   Getting Started
+   Installation &amp; Configuration
   </a>
  </li>
 </ul>
@@ -254,17 +254,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.9_mainmenu_change_wd.html">
+  <a class="reference internal" href="3.9_mainmenu_load_struct.html">
+   Load NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.10_mainmenu_save_struct.html">
+   Save NeuroMiner structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.11_mainmenu_change_wd.html">
    Change working directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.10_mainmenu_investigate_sample_size.html">
+  <a class="reference internal" href="3.12_mainmenu_investigate_sample_size.html">
    Investigate sample size (simulation)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="3.11_mainmenu_utilities.html">
+  <a class="reference internal" href="3.13_mainmenu_utilities.html">
    Utilities
   </a>
  </li>
@@ -467,19 +477,12 @@ title="Print to PDF"
 <p>Here we show an example for a RBF-Gaussian kernel Support Vector Machine classifier.</p>
 <blockquote>
 <div><p>1 | Define Slack/Regularization parameter(s)</p>
-<p>2 | <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define Kernel parameter(s)</a></p>
-<p>3 | <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define Weighting exponents</a></p>
+<p>2 | <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/faq.html#f410">Define RBF/Gaussian kernel parameter(s)</a></p>
+<p>3 | Specify cross-parameter model selection process</p>
 </div></blockquote>
-<p>Model selection regularization option controls the optimization module in NeuroMiner. When a selection of parameter(s) is necessary regularization might be advisable. If you answer yes to this question the following options will be available.</p>
-<blockquote>
-<div><p>1 | Criterion for cross-parameter model selection</p>
-<p>2 | Suboption 1 dependent on (a)</p>
-<p>3 | Suboption 2 dependent on (a)</p>
-<p>4 | Specify cross-parameter model selection process.</p>
-</div></blockquote>
-<p><strong>4 | Specify cross-parameter model selection process</strong></p>
+<p><strong>3 | Specify cross-parameter model selection process</strong></p>
 <p>This option controls the number of models (parameters combination) selected. One optimal model based on the criteria and regularization defined previously or an ensemble of the top performing models
-You are given the possibility to select between: (1) select a single optimum parameter node which returns one optimal model based on the criteria, (2) generate cross-node ensemble by aggregating base learners above a predefined percentile which results in an ensemble of the top performing models or (3) automatically determine optimal percentile for optimum cross-node ensemble performance which depends on the regularization that is explained above.</p>
+You are given the possibility to select between: (1) select a single optimum parameter node which returns one optimal model based on the criteria, (2) generate cross-node ensemble by aggregating base learners above a predefined percentile which results in an ensemble of the top performing models or (3) automatically determine optimal percentile for optimum cross-node ensemble performance which depends on the regularization.</p>
 </section>
 
     <script type="text/x-thebe-config">
